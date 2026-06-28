@@ -58,31 +58,16 @@
     .masthead-art img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
     h1 { margin: 0; font-size: clamp(2.8rem, 8vw, 5.4rem); line-height: 0.92; letter-spacing: 0; text-align: center; }
     .masthead-rule {
-      width: min(560px, 100%);
-      margin: 10px auto 4px;
-      color: var(--brass);
-      display: grid;
-      grid-template-columns: minmax(42px, 1fr) auto minmax(42px, 1fr);
-      align-items: center;
-      gap: 12px;
+      width: min(800px, 100%);
+      margin: 0 auto 2px;
     }
-    .masthead-rule::before,
-    .masthead-rule::after {
-      content: "";
-      height: 1px;
-      background: currentColor;
-      box-shadow: 0 3px 0 rgba(167, 123, 36, 0.38);
+    .masthead-rule img {
+      width: 100%;
+      height: auto;
+      display: block;
+      mix-blend-mode: multiply;
     }
-    .masthead-rule svg {
-      width: 58px;
-      height: 27px;
-      stroke: currentColor;
-      fill: rgba(167, 123, 36, 0.1);
-      stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .deck { max-width: none; margin: 4px auto 0; text-align: center; color: var(--muted); font: 600 0.82rem/1.5 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.22em; }
+    .deck { max-width: none; margin: 0 auto; text-align: center; color: var(--muted); font: 600 0.82rem/1.5 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.22em; }
     h2 { margin: 30px 0 12px; font-size: 1.5rem; letter-spacing: 0; }
     h3 { margin: 0 0 8px; font-size: 1.08rem; letter-spacing: 0; }
     p { max-width: 72ch; }
@@ -217,14 +202,7 @@
       <div>
         <h1>Privacy Draft</h1>
         <div class="masthead-rule" aria-hidden="true">
-          <svg viewBox="0 0 96 42" focusable="false">
-            <path d="M8 30h78" />
-            <path d="M13 21h27l6-9h17l8 9h12v9H13z" />
-            <path d="M43 21h28M20 16h16M70 9v12M65 9h15" />
-            <path d="M19 30a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm22 0a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm34 0a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" />
-            <path d="M19 35h56" />
-            <path d="M24 24h7m25 0h6m8 0h5" />
-          </svg>
+          <img src="assets/shughart-portal/masthead-bridge-rule.png" alt="">
         </div>
         <p class="deck">Public news & events | Community voice | Rail heritage</p>
       </div>
