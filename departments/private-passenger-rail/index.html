@@ -232,25 +232,41 @@
 	    .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
 	    .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
 	    .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
-	    .department-hero {
-	      display: grid;
-	      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
-	      gap: 24px;
-	      align-items: start;
-	      border-top: 3px double var(--rail);
-	      border-bottom: 1px solid var(--line);
-	      padding: 20px 0;
-	      margin-bottom: 18px;
-	    }
-	    .department-hero h2 {
-	      margin: 0;
-	      color: var(--rail);
-	      font-size: clamp(2rem, 5vw, 3.5rem);
-	      line-height: 1;
-	    }
-	    .department-deck {
-	      margin-top: 0;
-	      color: var(--muted);
+		    .department-hero {
+		      display: grid;
+		      grid-template-columns: minmax(220px, 0.48fr) minmax(280px, 1.52fr);
+		      gap: 24px;
+		      align-items: start;
+		      border-top: 3px double var(--rail);
+		      border-bottom: 1px solid var(--line);
+		      padding: 20px 0;
+		      margin-bottom: 18px;
+		    }
+		    .department-hero h2 {
+		      margin: 0 0 14px;
+		      color: var(--rail);
+		      font-size: clamp(2rem, 5vw, 3.5rem);
+		      line-height: 1;
+		    }
+		    .department-hero-picture {
+		      margin: 0;
+		      min-height: 260px;
+		      border: 1px solid rgba(167, 123, 36, 0.54);
+		      background: rgba(255, 247, 223, 0.72);
+		      display: grid;
+		      place-items: center;
+		      padding: 22px;
+		    }
+		    .department-hero-picture img {
+		      width: min(100%, 240px);
+		      height: auto;
+		      object-fit: contain;
+		      mix-blend-mode: multiply;
+		    }
+		    .department-copy { max-width: 76ch; }
+		    .department-deck {
+		      margin-top: 0;
+		      color: var(--muted);
 	      font-size: 1.08rem;
 	      line-height: 1.55;
 	    }
@@ -424,15 +440,20 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-		      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .places-intro, .place-tools, .department-hero { grid-template-columns: 1fr; }
-	      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	    }
+      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .places-intro, .place-tools, .department-hero { grid-template-columns: 1fr; }
+      .department-hero-picture {
+        width: min(300px, 100%);
+        min-height: 220px;
+      }
+      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
     @media (max-width: 560px) {
       header, main, footer { padding: 16px; }
       .eyebrow { margin: -16px -16px 16px; padding-inline: 16px; }
       nav a { flex: 1 1 50%; }
       .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
       .desks { grid-template-columns: 1fr; }
+      .department-hero-picture { margin-inline: auto; min-height: 190px; }
       .place-stats { grid-template-columns: 1fr; }
       .story-row { grid-template-columns: 1fr; }
       table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -473,11 +494,12 @@
       <h2>Private Passenger Rail</h2>
     </section>
     <section class="department-hero">
-      <div>
+      <figure class="department-hero-picture" aria-hidden="true">
+        <img src="../../assets/shughart-portal/icon-private-varnish.png" alt="">
+      </figure>
+      <div class="department-copy">
         <p class="story-label">Private Passenger Rail</p>
         <h2>Private varnish needs romance, but it also needs operating rules.</h2>
-      </div>
-      <div>
         <p class="department-deck">Private passenger rail can look like a luxury story from the outside, but the better story is stewardship. A private car carries hospitality, mechanical care, railroad rules, preservation money, and the memory of travel done with intention.</p>
         <p class="department-deck">Most people will never buy the expensive ticket. This room lets them understand the craft for free, then points serious inquiries back to the official source that owns the timetable and the responsibility.</p>
       </div>
