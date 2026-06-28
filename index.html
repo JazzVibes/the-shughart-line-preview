@@ -150,6 +150,32 @@
     .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
     .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
+    .global-dispatch {
+      margin-top: 24px;
+      padding: 22px;
+      border-top: 2px solid var(--rail);
+      border-bottom: 2px solid var(--rail);
+      background: rgba(232, 240, 234, 0.72);
+    }
+    .global-dispatch .section-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 16px;
+    }
+    .global-dispatch h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.04; }
+    .global-dispatch p { margin: 0; }
+    .dispatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .dispatch-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.92);
+      padding: 14px;
+      min-height: 100%;
+    }
+    .dispatch-card h3 { color: var(--rail); }
+    .dispatch-card .meta { margin: 0 0 8px; }
+    .dispatch-card p { margin: 0 0 10px; }
     .news-archive { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 26px; margin-top: 24px; }
     .story-list { display: grid; gap: 12px; }
     .story-row { display: grid; grid-template-columns: minmax(138px, 0.42fr) minmax(0, 1fr); gap: 16px; padding-top: 12px; border-top: 1px solid var(--line); align-items: center; }
@@ -191,7 +217,7 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-      .event-strip, .lead-grid, .lead-story, .news-archive { grid-template-columns: 1fr; }
+      .event-strip, .lead-grid, .lead-story, .news-archive, .global-dispatch .section-intro { grid-template-columns: 1fr; }
       .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 560px) {
@@ -208,7 +234,7 @@
 </head>
 <body>
   <header>
-    <div class="eyebrow">News, events & stories for S gauge, American Flyer, toy trains, Florida rail & private passenger rail enthusiasts</div>
+    <div class="eyebrow">News, events & stories connecting S gauge, American Flyer, toy train, rail heritage & private passenger rail communities</div>
     <div class="masthead">
       <div class="ticket">Preview Issue<strong>001</strong></div>
       <div>
@@ -216,7 +242,7 @@
         <div class="masthead-rule" aria-hidden="true">
           <img src="assets/shughart-portal/masthead-bridge-rule.png" alt="">
         </div>
-        <p class="deck">Public news & events | Community voice | Rail heritage</p>
+        <p class="deck">Public news & events | Global community voice | Rail heritage</p>
       </div>
       <div class="masthead-art"><img src="assets/shughart-portal/masthead-train.png" alt=""></div>
     </div>
@@ -264,7 +290,7 @@
         <div>
           <p class="story-label">Featured Story</p>
           <h2>Build the first desk around Larry as a source, not just a subject</h2>
-          <p>The mission is simple: report what matters across S gauge, American Flyer, toy-train collecting, private passenger rail, and Florida rail history while linking readers back to the original source.</p>
+          <p>The mission is simple: report what matters across S gauge, American Flyer, toy-train collecting, private passenger rail, Florida rail history, and global model-rail communities while linking readers back to the original source.</p>
           <p><a href="https://www.nasg.org/Layouts/AF/indexShughartLarryYNorthern_Florida_Railway.php" target="_blank" rel="noopener noreferrer">Read the source trail</a></p>
         </div>
         <div class="rail-etching"><img src="assets/shughart-portal/feature-signal.png" alt=""></div>
@@ -345,6 +371,59 @@
         <a href="https://fcwinds.org/home/endowed-chairs" target="_blank" rel="noopener noreferrer">Check signal &amp; sound</a>
       </article>
     </section>
+    <section class="global-dispatch" aria-labelledby="global-dispatch-heading">
+      <div class="section-intro">
+        <div>
+          <p class="story-label">Global Dispatch</p>
+          <h2 id="global-dispatch-heading">One front desk for many railroad rooms</h2>
+        </div>
+        <p>Prototype meets, S-scale societies, model railroad groups, and rail heritage events already form a wider route map. The Shughart Line should help readers find those communities, then send them back to the controlling source for details.</p>
+      </div>
+      <div class="dispatch-grid">
+        <article class="dispatch-card">
+        <p class="story-label">United States, Canada, United Kingdom</p>
+        <h3>NASG Railroad Prototype Meets</h3>
+        <p class="meta">bridge page | global model rail community, event listing, S gauge / American Flyer</p>
+        <p>Shows RPMs as a distributed learning-and-conversation network and points to United States, Canadian, and UK show sources.</p>
+        <a href="https://www.nasg.org/Events/RPM.php" target="_blank" rel="noopener noreferrer">Open community source</a>
+      </article>
+<article class="dispatch-card">
+        <p class="story-label">United States, Australia, Canada</p>
+        <h3>Eric Hansmann RPM Event Calendar</h3>
+        <p class="meta">event calendar | global model rail community, event listing, prototype modeling</p>
+        <p>Public RPM calendar used by NASG as a United States show handoff.</p>
+        <a href="https://designbuildop.hansmanns.org/rpm-event-calendar/" target="_blank" rel="noopener noreferrer">Open community source</a>
+      </article>
+<article class="dispatch-card">
+        <p class="story-label">Canada</p>
+        <h3>The Model Railway Show Canadian Railway Hobby Events</h3>
+        <p class="meta">event calendar | global model rail community, event listing, Canadian model rail</p>
+        <p>Public Canadian model railway event list used by NASG as a Canadian show handoff.</p>
+        <a href="https://themodelrailwayshow.com/events/" target="_blank" rel="noopener noreferrer">Open community source</a>
+      </article>
+<article class="dispatch-card">
+        <p class="story-label">United Kingdom</p>
+        <h3>S Scale Model Railway Society UK Events</h3>
+        <p class="meta">event calendar | global model rail community, event listing, S gauge / American Flyer</p>
+        <p>Public UK S scale event source used by NASG as a UK show handoff.</p>
+        <a href="http://www.s-scale.org.uk/events.htm" target="_blank" rel="noopener noreferrer">Open community source</a>
+      </article>
+<article class="dispatch-card">
+        <p class="story-label">Australia</p>
+        <h3>Sydney RPM</h3>
+        <p class="meta">event calendar | global model rail community, event listing, prototype modeling</p>
+        <p>Australian prototype modeling meet and evidence that the RPM pattern travels beyond North America.</p>
+        <a href="https://sydneyrpm.com/" target="_blank" rel="noopener noreferrer">Open community source</a>
+      </article>
+<article class="dispatch-card">
+        <p class="story-label">Canada</p>
+        <h3>Waterloo Railway Expo</h3>
+        <p class="meta">event calendar | global model rail community, event listing, prototype modeling, rail heritage</p>
+        <p>Canadian prototype modeling and rail heritage event combining model displays, clinics, and full-size railway experiences.</p>
+        <a href="https://waterloorailexpo.ca/" target="_blank" rel="noopener noreferrer">Open community source</a>
+      </article>
+      </div>
+    </section>
     <section class="news-archive">
       <section>
       <h2>Latest Stories</h2>
@@ -374,6 +453,15 @@
             <h3>Private-car sources belong in context, not sales copy</h3>
             <p>A private varnish desk should explain source trails and constraints without outrunning approval or official inquiry paths.</p>
             <a href="https://www.amtrak.com/privately-owned-rail-cars" target="_blank" rel="noopener noreferrer">Open source trail</a>
+          </div>
+        </article>
+<article class="story-row">
+          <div class="story-mark"><img src="assets/story-art/global-community-dispatch.png" alt="Engraved world route map with model railway meets and signal flags" loading="lazy"></div>
+          <div>
+            <p class="story-label">Global Dispatch</p>
+            <h3>Prototype meets turn the source map into a wider route</h3>
+            <p>RPM, Canadian, UK, Australian, NMRA, and MOROP handoff sources show how the site can connect communities without copying their calendars.</p>
+            <a href="events/index.html">Open source trail</a>
           </div>
         </article>
       </div>

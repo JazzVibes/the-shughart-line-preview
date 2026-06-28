@@ -150,6 +150,32 @@
     .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
     .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
+    .global-dispatch {
+      margin-top: 24px;
+      padding: 22px;
+      border-top: 2px solid var(--rail);
+      border-bottom: 2px solid var(--rail);
+      background: rgba(232, 240, 234, 0.72);
+    }
+    .global-dispatch .section-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 16px;
+    }
+    .global-dispatch h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.04; }
+    .global-dispatch p { margin: 0; }
+    .dispatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .dispatch-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.92);
+      padding: 14px;
+      min-height: 100%;
+    }
+    .dispatch-card h3 { color: var(--rail); }
+    .dispatch-card .meta { margin: 0 0 8px; }
+    .dispatch-card p { margin: 0 0 10px; }
     .news-archive { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 26px; margin-top: 24px; }
     .story-list { display: grid; gap: 12px; }
     .story-row { display: grid; grid-template-columns: minmax(138px, 0.42fr) minmax(0, 1fr); gap: 16px; padding-top: 12px; border-top: 1px solid var(--line); align-items: center; }
@@ -191,7 +217,7 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-      .event-strip, .lead-grid, .lead-story, .news-archive { grid-template-columns: 1fr; }
+      .event-strip, .lead-grid, .lead-story, .news-archive, .global-dispatch .section-intro { grid-template-columns: 1fr; }
       .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 560px) {
@@ -208,7 +234,7 @@
 </head>
 <body>
   <header>
-    <div class="eyebrow">News, events & stories for S gauge, American Flyer, toy trains, Florida rail & private passenger rail enthusiasts</div>
+    <div class="eyebrow">News, events & stories connecting S gauge, American Flyer, toy train, rail heritage & private passenger rail communities</div>
     <div class="masthead">
       <div class="ticket">Preview Issue<strong>001</strong></div>
       <div>
@@ -216,7 +242,7 @@
         <div class="masthead-rule" aria-hidden="true">
           <img src="../assets/shughart-portal/masthead-bridge-rule.png" alt="">
         </div>
-        <p class="deck">Public news & events | Community voice | Rail heritage</p>
+        <p class="deck">Public news & events | Global community voice | Rail heritage</p>
       </div>
       <div class="masthead-art"><img src="../assets/shughart-portal/masthead-train.png" alt=""></div>
     </div>
@@ -301,6 +327,80 @@
       </tr>
       </tbody>
     </table>
+    <section>
+      <h2>Global Event Watch</h2>
+      <p>These sources are not copied calendars. They are monitored handoff points for RPMs, prototype meets, train shows, and model-rail events across regions.</p>
+      <table>
+        <thead>
+          <tr><th>Source</th><th>Region</th><th>Review cadence</th><th>Why it matters</th><th>Link</th></tr>
+        </thead>
+        <tbody>
+<tr>
+        <td>NASG Railroad Prototype Meets</td>
+        <td>United States, Canada, United Kingdom</td>
+        <td>monthly_or_before_event_publication</td>
+        <td>Shows RPMs as a distributed learning-and-conversation network and points to United States, Canadian, and UK show sources.</td>
+        <td><a href="https://www.nasg.org/Events/RPM.php" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>Eric Hansmann RPM Event Calendar</td>
+        <td>United States, Australia, Canada</td>
+        <td>weekly_event_check</td>
+        <td>Public RPM calendar used by NASG as a United States show handoff.</td>
+        <td><a href="https://designbuildop.hansmanns.org/rpm-event-calendar/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>The Model Railway Show Canadian Railway Hobby Events</td>
+        <td>Canada</td>
+        <td>weekly_event_check</td>
+        <td>Public Canadian model railway event list used by NASG as a Canadian show handoff.</td>
+        <td><a href="https://themodelrailwayshow.com/events/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>S Scale Model Railway Society UK Events</td>
+        <td>United Kingdom</td>
+        <td>monthly_or_before_event_publication</td>
+        <td>Public UK S scale event source used by NASG as a UK show handoff.</td>
+        <td><a href="http://www.s-scale.org.uk/events.htm" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>Sydney RPM</td>
+        <td>Australia</td>
+        <td>monthly_or_before_event_publication</td>
+        <td>Australian prototype modeling meet and evidence that the RPM pattern travels beyond North America.</td>
+        <td><a href="https://sydneyrpm.com/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>Waterloo Railway Expo</td>
+        <td>Canada</td>
+        <td>weekly_event_check</td>
+        <td>Canadian prototype modeling and rail heritage event combining model displays, clinics, and full-size railway experiences.</td>
+        <td><a href="https://waterloorailexpo.ca/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>Railway Modellers&#39; Meet of British Columbia</td>
+        <td>Canada</td>
+        <td>weekly_event_check</td>
+        <td>Canadian regional meet organized around learning, sharing, and connecting with regional and national counterparts.</td>
+        <td><a href="https://railwaymodellersmeetofbc.ca/wp/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>St. Louis RPM</td>
+        <td>United States</td>
+        <td>weekly_event_check</td>
+        <td>Major United States RPM source that can anchor prototype modeling coverage.</td>
+        <td><a href="https://www.stlrpm.com/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+<tr>
+        <td>Northeast Railroad Prototype Meet</td>
+        <td>United States</td>
+        <td>weekly_event_check</td>
+        <td>United States regional RPM source with clinic and presenter opportunities.</td>
+        <td><a href="https://www.nerpm.org/" target="_blank" rel="noopener noreferrer">Open source</a></td>
+      </tr>
+        </tbody>
+      </table>
+    </section>
   </main>
   <footer>
     Generated public preview. Public launch remains blocked until approval, source review, workload, sponsor, and privacy gates close.
