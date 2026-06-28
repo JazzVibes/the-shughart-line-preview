@@ -336,7 +336,7 @@
 	      gap: 12px;
 	    }
 	    .route-card h3 { color: var(--rail); }
-	    .route-card.source-rail { border-color: rgba(167, 123, 36, 0.7); }
+	    .route-card.host-source { border-color: rgba(167, 123, 36, 0.7); }
 	    .route-kind {
 	      display: inline-block;
 	      margin: 0 0 8px;
@@ -417,17 +417,17 @@
 	      gap: 14px;
 	    }
 	    .place-card h3 { color: var(--rail); }
-	    .candidate-section {
+	    .starter-section {
 	      border-top: 3px double var(--rail);
 	      margin-top: 26px;
 	      padding-top: 18px;
 	    }
-	    .candidate-section > p { color: var(--muted); }
-	    .candidate-card {
+	    .starter-section > p { color: var(--muted); }
+	    .starter-card {
 	      border-style: dashed;
 	      background: rgba(255, 250, 241, 0.9);
 	    }
-	    .candidate-card .story-label { color: var(--rail); }
+	    .starter-card .story-label { color: var(--rail); }
     .badge-row {
       display: flex;
       flex-wrap: wrap;
@@ -553,7 +553,7 @@
   </header>
   <main>
     <section class="page-heading">
-      <p class="story-label">Department</p>
+      <p class="story-label">Room</p>
       <h2>Toy Train Desk</h2>
     </section>
     <section class="department-hero">
@@ -567,7 +567,7 @@
         <p class="department-deck">This desk gives collectors, families, Lionel and American Flyer people, museum visitors, and meet-goers a place to understand the route before they leave for an outside club or association page.</p>
       </div>
     </section>
-    <section class="notice">You are still inside The Shughart Line. The source rails below are clearly marked before they open an official outside page in a new tab.</section>
+    <section class="notice">Begin here, then use the cards below to reach the host source. Outside pages open in a new tab, and the host keeps the current timetable.</section>
     <section>
       <h2>Start Inside The Shughart Line</h2>
       <div class="route-grid">
@@ -595,197 +595,218 @@
       </div>
     </section>
     <section>
-      <h2>Official Source Rails</h2>
-      <p class="route-note">These are launch points, not copied timetables. Confirm dates, hours, tickets, access, rules, and current details with the host source.</p>
+      <h2>Host Sources</h2>
+      <p class="route-note">These are starting points, not copied timetables. Confirm dates, hours, tickets, access, rules, and current details with the host source.</p>
       <div class="route-grid">
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Train Collectors Association</h3>
         <p class="meta">Toy train collecting | toy trains, Collectors, Museum, Library</p>
         <p>A national toy-train room with collector, museum, library, and education context.</p>
-        <p><a href="https://www.tcatrains.org/about-tca/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.tcatrains.org/about-tca/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Train Collectors Association Home</h3>
         <p class="meta">Toy train collecting | toy trains, Collectors, Museum, Library, Chapters</p>
         <p>The TCA front door for toy-train collecting, museum, library, chapter, and event context.</p>
-        <p><a href="https://www.tcatrains.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.tcatrains.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>TCA Divisions and Chapters</h3>
         <p class="meta">Toy train collecting | toy trains, Divisions, Chapters, Directory</p>
         <p>A division and chapter route for finding local toy-train people and meets.</p>
-        <p><a href="https://www.tcatrains.org/about-tca/divisions-chapters/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.tcatrains.org/about-tca/divisions-chapters/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>National Toy Train Museum</h3>
         <p class="meta">Toy train collecting | toy trains, Museum, American Flyer, Lionel, Family History Stop</p>
         <p>A public museum stop where toy-train memory can be visited in person.</p>
-        <p><a href="https://www.tcatrains.org/museum/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.tcatrains.org/museum/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>National Toy Train Library</h3>
         <p class="meta">Toy train collecting | toy trains, Library, Research, Archives, American Flyer</p>
         <p>A research shelf for catalogs, publications, and the paper trail behind the toy-train room.</p>
-        <p><a href="https://www.tcatrains.org/library/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.tcatrains.org/library/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Toy Train Operating Society</h3>
         <p class="meta">Toy train operating and collecting | toy trains, Collectors, Operators, Clubs, Events</p>
         <p>An operating-and-collecting society route for toy-train people who want trains moving on the table.</p>
-        <p><a href="https://www.ttos.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.ttos.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Lionel Collectors Club of America</h3>
         <p class="meta">Lionel and toy train collecting | Lionel, Collectors, Events, Archives</p>
         <p>A Lionel collector room for convention, archive, and club context.</p>
-        <p><a href="https://www.lionelcollectors.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.lionelcollectors.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Classic Toy Trains</h3>
         <p class="meta">Toy train collecting and operation | Toy Train, Lionel, American Flyer, Layouts, Repair, Collecting</p>
         <p>A current toy-train magazine room for collectors, operators, repair work, layouts, and product memory.</p>
-        <p><a href="https://www.trains.com/ctt/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.trains.com/ctt/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Roadside America Miniature Village</h3>
         <p class="meta">Toy train and miniature village heritage | toy trains, Miniature Village, model railroad, Archive</p>
-        <p>A preserved miniature-village source rail for toy-train memory, treated as heritage rather than a current travel stop.</p>
-        <p><a href="https://www.roadsideamericainc.com/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A preserved miniature-village room for toy-train memory, treated as heritage rather than a current travel stop.</p>
+        <p><a href="https://www.roadsideamericainc.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>MTH Electric Trains</h3>
         <p class="meta">Toy trains and model trains | Mth, Toy Train, Model Trains, Manufacturer</p>
-        <p>A manufacturer source rail for the MTH side of modern toy-train and model-train collecting.</p>
-        <p><a href="https://www.mthtrains.com/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A manufacturer room for the MTH side of modern toy-train and model-train collecting.</p>
+        <p><a href="https://www.mthtrains.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Menards Train Stuff</h3>
         <p class="meta">Toy train retail and accessories | Toy Train, Retail, Accessories, Family Layouts</p>
         <p>A retail shelf for the family-layout and accessory side of the toy-train market.</p>
-        <p><a href="https://www.menards.com/main/grocery-home/menards-collectibles/train-stuff/c-13318.htm" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.menards.com/main/grocery-home/menards-collectibles/train-stuff/c-13318.htm" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Lionel Operating Train Society</h3>
         <p class="meta">Toy train operating and collecting | Lionel, Toy Train, Operating, Collector Club, Events</p>
         <p>An operating-focused Lionel club room for conventions, club culture, and trains that move.</p>
-        <p><a href="https://lots-trains.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://lots-trains.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Greenberg&#39;s Train &amp; Toy Show</h3>
         <p class="meta">Toy train and model railroad events | Toy Train, Events, Shows, Families, Dealers</p>
-        <p>A show timetable rail for public train-and-toy gatherings where collectors, dealers, clubs, and families meet.</p>
-        <p><a href="https://www.greenbergshows.com/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A show timetable for public train-and-toy gatherings where collectors, dealers, clubs, and families meet.</p>
+        <p><a href="https://www.greenbergshows.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>World&#39;s Greatest Hobby</h3>
         <p class="meta">Model railroad and toy train on-ramp | model railroad, Toy Train, Beginner, Events, Clubs</p>
         <p>A beginner-friendly doorway for visitors who are just finding their way into model and toy railroading.</p>
-        <p><a href="https://greatesthobby.com/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://greatesthobby.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
+        <h3>Miniatur Wunderland Hamburg</h3>
+        <p class="meta">Model railway museums and attractions | model railroad, Miniature World, Museum, Visitor Experience</p>
+        <p>A Hamburg miniature-world stop that shows how model railroading can become a public wonder room.</p>
+        <p><a href="https://www.miniatur-wunderland.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
+      </article>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
+        <h3>HZERO Model Railway Museum</h3>
+        <p class="meta">Model railway museums and attractions | model railroad, Museum, Italy, Visitor Experience</p>
+        <p>A Florence model railway museum where craft, travel, and imagination meet.</p>
+        <p><a href="https://www.hzero.com/en/the-model-railway/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
+      </article>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
+        <h3>Hara Model Railway Museum</h3>
+        <p class="meta">Model railway museums and attractions | model railroad, Museum, Japan, Visitor Experience</p>
+        <p>A Yokohama model railway museum built around a major international collection.</p>
+        <p><a href="https://www.hara-mrm.com/english/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
+      </article>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>TCA PastPerfect Archives</h3>
         <p class="meta">Toy train collecting archives | Toy Train, Archives, Tca, Catalog, Ephemera</p>
         <p>A TCA archive catalog route for the paper, photos, and ephemera behind toy-train memory.</p>
-        <p><a href="https://traincollectors.pastperfectonline.com/Archive" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://traincollectors.pastperfectonline.com/Archive" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>York Train Fair Registration</h3>
         <p class="meta">Toy train shows and meets | Toy Train, Tca, York, Show, Events</p>
-        <p>A York train fair rail for one of the major toy-train gathering rooms.</p>
-        <p><a href="https://easterntca.com/registration-overview/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A York train fair room for one of the major toy-train gatherings.</p>
+        <p><a href="https://easterntca.com/registration-overview/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Eastern TCA Future Meet Dates</h3>
         <p class="meta">Toy train shows and meets | toy trains, Tca, York, event calendar</p>
-        <p>A York future-meet rail for collector travel planning and host-source date checks.</p>
-        <p><a href="https://easterntca.com/future-meet-dates/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A York future-meet timetable for collector travel planning and host-source date checks.</p>
+        <p><a href="https://easterntca.com/future-meet-dates/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Great Train Show</h3>
         <p class="meta">Toy train and model railroad shows | Toy Train, model railroad, Shows, Events, Families</p>
-        <p>A public show-circuit rail where families, clubs, vendors, and layouts meet.</p>
-        <p><a href="https://www.greattrainshow.com/great-train-show-information" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A public show circuit where families, clubs, vendors, and layouts meet.</p>
+        <p><a href="https://www.greattrainshow.com/great-train-show-information" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>TrainShow.com</h3>
         <p class="meta">Model railroad and toy train events | Train Shows, model railroad, toy trains, event calendar</p>
-        <p>A train-show timetable rail for model railroad and toy-train events across the public circuit.</p>
-        <p><a href="https://www.trainshow.com/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p>A train-show timetable for model railroad and toy-train events across the public circuit.</p>
+        <p><a href="https://www.trainshow.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Model Railroad News Timetable</h3>
         <p class="meta">Model railroad and toy train events | model railroad, Toy Train, Events, Calendar, Shows</p>
         <p>A timetable lead for finding shows and meets, then confirming the date at the host source.</p>
-        <p><a href="https://modelrailroadnews.com/timetable/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://modelrailroadnews.com/timetable/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>National Capital Trackers</h3>
         <p class="meta">Toy train operating clubs | Toy Train, O Gauge, Club, Public Displays, Washington Dc</p>
         <p>A capital-region operating toy-train club route with public display energy.</p>
-        <p><a href="https://www.nationalcapitaltrackers.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.nationalcapitaltrackers.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Canadian Toy Train Association</h3>
         <p class="meta">Toy train clubs | Toy Train, Club, Canada, Collecting</p>
         <p>A Canadian toy-train club route for broadening the toy-train board north of the border.</p>
-        <p><a href="https://www.canadiantoytrains.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://www.canadiantoytrains.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Toy Train Hall of Fame</h3>
         <p class="meta">Toy train museums and collecting | Toy Train, Museum, Lionel, Collecting, Postwar</p>
         <p>A museum stop for postwar Lionel and collector memory.</p>
-        <p><a href="https://toytrainhalloffame.com/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://toytrainhalloffame.com/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Naples Train Museum</h3>
         <p class="meta">Toy train museums and family rail heritage | Toy Train, Lionel, Museum, Family, Florida</p>
         <p>A Florida toy-train museum stop where family visits and Lionel memory share the same platform.</p>
-        <p><a href="https://naplestrainmuseum.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://naplestrainmuseum.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>Wheels O&#39; Time Museum</h3>
         <p class="meta">Toy train museums and family rail heritage | toy trains, Model Trains, Rail Museum, Family Visit</p>
         <p>An Illinois museum room where toy trains, model railroading, and family machinery memory meet.</p>
-        <p><a href="https://wheelsotime.org/" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://wheelsotime.org/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>NASG 2020 Northern Florida Railway Boxcar</h3>
         <p class="meta">Northern Florida Railway boxcar | Boxcar, Lionel, American Flyer, collector context</p>
         <p>A Northern Florida Railway boxcar trail where American Flyer, Lionel, and local club memory meet.</p>
-        <p><a href="https://nasg.org/Gallery/reports/BoxCars/ByModelYear/index2020Lionelsteel-sheathed%2C_single-door.php" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://nasg.org/Gallery/reports/BoxCars/ByModelYear/index2020Lionelsteel-sheathed%2C_single-door.php" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
-<article class="route-card source-rail">
-        <p class="route-kind">Official source rail</p>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>SGAUGERS Northern Florida Division Boxcar Page</h3>
         <p class="meta">Northern Florida Railway boxcar | Boxcar, Northern Florida Division, Club</p>
         <p>The SGAUGERS Northern Florida Division boxcar page for the local club side of the story.</p>
-        <p><a href="https://sgaugers.org/NFD/NFD-Boxcar-2020.html" target="_blank" rel="noopener noreferrer">Open official source</a></p>
+        <p><a href="https://sgaugers.org/NFD/NFD-Boxcar-2020.html" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
       </div>
     </section>
