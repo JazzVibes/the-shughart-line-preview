@@ -258,6 +258,88 @@
     .dispatch-card h3 { color: var(--rail); }
     .dispatch-card .meta { margin: 0 0 8px; }
     .dispatch-card p { margin: 0 0 10px; }
+    .places-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
+      gap: 18px;
+      align-items: start;
+      border-top: 3px double var(--rail);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      margin-bottom: 18px;
+    }
+    .places-intro p { margin-top: 0; }
+    .place-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 16px 0 0;
+    }
+    .place-stat {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.86);
+      padding: 10px;
+      font-family: system-ui, sans-serif;
+    }
+    .place-stat strong { display: block; color: var(--accent); font-size: 1.35rem; line-height: 1; }
+    .place-tools {
+      display: grid;
+      grid-template-columns: minmax(220px, 1.6fr) minmax(150px, 0.7fr) minmax(170px, 0.8fr);
+      gap: 10px;
+      margin: 18px 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.86);
+    }
+    .place-tools label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font: 800 0.72rem/1.2 system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .place-tools input,
+    .place-tools select {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      color: var(--ink);
+      padding: 10px;
+      font: 600 0.95rem/1.2 system-ui, sans-serif;
+    }
+    .place-count {
+      color: var(--muted);
+      font: 700 0.82rem/1.2 system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .place-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .place-card h3 { color: var(--rail); }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+    .badge-row span {
+      border: 1px solid rgba(167, 123, 36, 0.52);
+      background: #fff7df;
+      color: var(--rail);
+      padding: 4px 7px;
+      font: 700 0.72rem/1.1 system-ui, sans-serif;
+    }
+    .source-hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .source-hub h3 { color: var(--rail); }
     .news-archive { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 26px; margin-top: 24px; }
     .story-list { display: grid; gap: 12px; }
     .story-row { display: grid; grid-template-columns: minmax(138px, 0.42fr) minmax(0, 1fr); gap: 16px; padding-top: 12px; border-top: 1px solid var(--line); align-items: center; }
@@ -299,7 +381,7 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .global-dispatch .section-intro { grid-template-columns: 1fr; }
+	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .global-dispatch .section-intro, .places-intro, .place-tools { grid-template-columns: 1fr; }
 	      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	    }
     @media (max-width: 560px) {
@@ -308,6 +390,7 @@
       nav a { flex: 1 1 50%; }
       .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
       .desks { grid-template-columns: 1fr; }
+      .place-stats { grid-template-columns: 1fr; }
       .story-row { grid-template-columns: 1fr; }
       table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
       th, td { min-width: 9rem; }
@@ -331,13 +414,14 @@
     <nav aria-label="Preview navigation">
       <a href="../index.html">Front Desk</a>
       <a href="../events/index.html" aria-current="page">Events</a>
+      <a href="../places/index.html">Places</a>
       <a href="../sources/index.html">Directory</a>
       <a href="../archive/2026-06-06/index.html">Archive</a>
       <a href="../submit-news/index.html">Submit</a>
       <a href="../privacy.html">Privacy</a>
       <a href="../accessibility.html">Accessibility</a>
-      <form class="nav-search" role="search" action="../sources/index.html">
-        <input name="q" type="search" placeholder="Search stories, events, topics..." aria-label="Search stories, events, topics">
+      <form class="nav-search" role="search" action="../places/index.html">
+        <input name="q" type="search" placeholder="Search places, stories, events..." aria-label="Search places, stories, events">
         <button type="submit" aria-label="Search"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="14"/><path d="m39 39 11 11"/></svg></button>
       </form>
     </nav>

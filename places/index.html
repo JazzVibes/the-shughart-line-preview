@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rail Places Directory - The Shughart Line</title>
+  <link rel="icon" href="../assets/shughart-portal/masthead-train.png" type="image/png">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #52606d;
+      --line: #d5c49e;
+      --paper: #fbf6ea;
+      --paper-deep: #f2e5ca;
+      --accent: #9b2f23;
+      --accent-soft: #fff0e6;
+      --rail: #103f33;
+      --rail-soft: #e8f0ea;
+      --brass: #a77b24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Iowan Old Style", Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(16, 63, 51, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 63, 51, 0.025) 1px, transparent 1px),
+        #fffaf1;
+      background-size: 28px 28px;
+      line-height: 1.5;
+    }
+    header, main, footer { max-width: 1220px; margin: 0 auto; padding: 20px 24px; }
+    header { border-bottom: 3px double var(--rail); background: rgba(255, 250, 241, 0.94); }
+    .eyebrow {
+      color: #f6dfae;
+      background: var(--rail);
+      margin: -20px -24px 18px;
+      padding: 7px 24px;
+      text-align: center;
+      font: 700 0.72rem/1.2 system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    .masthead { display: grid; grid-template-columns: 120px 1fr 210px; gap: 22px; align-items: center; }
+    .ticket {
+      border: 1px dashed var(--brass);
+      background: #fff7df;
+      padding: 12px 10px;
+      text-align: center;
+      color: var(--accent);
+      font: 700 0.78rem/1.2 system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .ticket strong { display: block; color: var(--ink); font: 800 1.2rem/1.1 Georgia, serif; letter-spacing: 0; margin-top: 4px; }
+    .masthead-art img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+    h1 { margin: 0; font-size: clamp(2.8rem, 8vw, 5.4rem); line-height: 0.92; letter-spacing: 0; text-align: center; }
+    .masthead-rule {
+      width: min(800px, 100%);
+      margin: 0 auto 2px;
+    }
+    .masthead-rule img {
+      width: 100%;
+      height: auto;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+    .deck { max-width: none; margin: 0 auto; text-align: center; color: var(--muted); font: 600 0.82rem/1.5 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.22em; }
+    h2 { margin: 30px 0 12px; font-size: 1.5rem; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 1.08rem; letter-spacing: 0; }
+    p { max-width: 72ch; }
+    nav { display: flex; flex-wrap: wrap; gap: 0; margin-top: 22px; border-top: 1px solid var(--rail); border-bottom: 1px solid var(--rail); font-family: system-ui, sans-serif; }
+    nav a {
+      border-right: 1px dashed var(--line);
+      color: var(--ink);
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav a[aria-current="page"] { background: var(--rail); color: white; border-color: var(--rail); }
+    .nav-search { margin-left: auto; display: flex; align-items: center; min-width: min(320px, 100%); border-left: 1px dashed var(--line); }
+    .nav-search input {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      padding: 10px 12px;
+      font: 500 0.9rem/1.2 Georgia, serif;
+      outline: none;
+    }
+    .nav-search button {
+      width: 44px;
+      height: 100%;
+      border: 0;
+      border-left: 1px dashed var(--line);
+      background: transparent;
+      color: var(--rail);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+    .nav-search svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 3; stroke-linecap: round; }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      padding: 12px 14px;
+      max-width: 78ch;
+      font-family: system-ui, sans-serif;
+    }
+    .page-heading {
+      border-bottom: 1px solid var(--line);
+      margin: 0 0 18px;
+      padding-bottom: 12px;
+    }
+    .page-heading h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 5vw, 3.1rem);
+      line-height: 1.04;
+    }
+    .event-strip {
+      display: grid;
+      grid-template-columns: 160px repeat(4, minmax(0, 1fr)) 130px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.82);
+      margin: 22px 0 18px;
+    }
+    .event-label { background: var(--rail); color: white; padding: 14px 16px; font: 800 0.78rem/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.12em; display: flex; gap: 10px; align-items: center; }
+    .event-label svg { width: 34px; height: 34px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .event-chip { padding: 12px 16px; border-left: 1px dashed var(--line); text-decoration: none; color: var(--ink); }
+    .event-chip strong, .event-chip span { display: block; }
+    .event-chip strong { color: var(--accent); font: 800 0.72rem/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
+    .event-chip span { font-weight: 700; }
+    .event-chip em { color: var(--muted); font-style: normal; font-size: 0.9rem; }
+	    .event-more { padding: 18px 14px; border-left: 1px dashed var(--line); font: 800 0.75rem/1.2 system-ui, sans-serif; text-transform: uppercase; align-self: stretch; display: grid; place-items: center; text-align: center; }
+	    .lead-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr); gap: 26px; align-items: stretch; }
+	    .lead-story { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; border: 1px solid var(--line); padding: 22px; background: rgba(255, 253, 247, 0.9); }
+	    .lead-story h2 { margin-top: 0; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.02; }
+	    .story-label { color: var(--accent); font: 800 0.72rem/1.2 system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; }
+	    .rail-etching { min-height: 230px; display: grid; place-items: center; background: radial-gradient(circle at 40% 45%, rgba(167,123,36,0.12), transparent 48%); }
+	    .rail-etching img { width: min(100%, 390px); height: auto; display: block; mix-blend-mode: multiply; }
+	    .lead-portrait {
+	      border: 1px solid rgba(167, 123, 36, 0.5);
+	      background: #fff7df;
+	      overflow: hidden;
+	    }
+	    .lead-portrait img { width: 100%; max-width: 460px; padding: 0; }
+	    .feature-article {
+	      border: 0;
+	      background: transparent;
+	      padding: 0;
+	    }
+	    .feature-hero {
+	      display: grid;
+	      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+	      gap: 28px;
+	      align-items: start;
+	      border-top: 3px double var(--rail);
+	      border-bottom: 3px double var(--rail);
+	      padding: 24px 0;
+	      margin-bottom: 22px;
+	    }
+	    .feature-article h2 {
+	      margin-top: 0;
+	      font-size: clamp(2.3rem, 6vw, 4.4rem);
+	      line-height: 0.98;
+	    }
+	    .feature-deck {
+	      color: var(--muted);
+	      font-size: 1.18rem;
+	      line-height: 1.55;
+	      max-width: 64ch;
+	    }
+	    .feature-portrait {
+	      margin: 0;
+	      border: 1px solid var(--line);
+	      background: #fff7df;
+	      padding: 10px;
+	    }
+	    .feature-portrait img {
+	      width: 100%;
+	      height: auto;
+	      display: block;
+	      mix-blend-mode: multiply;
+	    }
+	    .feature-portrait figcaption {
+	      color: var(--muted);
+	      font: 600 0.78rem/1.35 system-ui, sans-serif;
+	      margin-top: 8px;
+	    }
+	    .feature-note {
+	      border-left: 4px solid var(--brass);
+	      background: #fff7df;
+	      padding: 12px 14px;
+	      margin: 16px 0 0;
+	      font-family: system-ui, sans-serif;
+	      max-width: 68ch;
+	    }
+	    .feature-body {
+	      max-width: 82ch;
+	      margin: 0 auto;
+	    }
+	    .feature-body p {
+	      font-size: 1.08rem;
+	      line-height: 1.68;
+	      max-width: 78ch;
+	    }
+	    .feature-body .pull-line {
+	      color: var(--rail);
+	      font-size: clamp(1.45rem, 4vw, 2.1rem);
+	      font-weight: 700;
+	      line-height: 1.15;
+	      margin: 28px 0;
+	    }
+	    .source-note {
+	      border-top: 1px solid var(--line);
+	      margin: 28px auto 0;
+	      padding-top: 18px;
+	      max-width: 82ch;
+	      font-family: system-ui, sans-serif;
+	    }
+	    .source-note h3 { color: var(--rail); }
+	    .desks { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); border-top: 2px solid var(--rail); border-bottom: 2px solid var(--rail); margin-top: 18px; }
+	    .desk { padding: 18px 16px; border-right: 1px dashed var(--line); text-align: center; background: rgba(255, 250, 241, 0.82); }
+    .desk:last-child { border-right: 0; }
+    .desk .icon { width: 96px; height: 96px; margin: 0 auto 8px; display: grid; place-items: center; background: transparent; }
+    .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
+    .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
+    .global-dispatch {
+      margin-top: 24px;
+      padding: 22px;
+      border-top: 2px solid var(--rail);
+      border-bottom: 2px solid var(--rail);
+      background: rgba(232, 240, 234, 0.72);
+    }
+    .global-dispatch .section-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 16px;
+    }
+    .global-dispatch h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.04; }
+    .global-dispatch p { margin: 0; }
+    .dispatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .dispatch-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.92);
+      padding: 14px;
+      min-height: 100%;
+    }
+    .dispatch-card h3 { color: var(--rail); }
+    .dispatch-card .meta { margin: 0 0 8px; }
+    .dispatch-card p { margin: 0 0 10px; }
+    .places-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
+      gap: 18px;
+      align-items: start;
+      border-top: 3px double var(--rail);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      margin-bottom: 18px;
+    }
+    .places-intro p { margin-top: 0; }
+    .place-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 16px 0 0;
+    }
+    .place-stat {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.86);
+      padding: 10px;
+      font-family: system-ui, sans-serif;
+    }
+    .place-stat strong { display: block; color: var(--accent); font-size: 1.35rem; line-height: 1; }
+    .place-tools {
+      display: grid;
+      grid-template-columns: minmax(220px, 1.6fr) minmax(150px, 0.7fr) minmax(170px, 0.8fr);
+      gap: 10px;
+      margin: 18px 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.86);
+    }
+    .place-tools label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font: 800 0.72rem/1.2 system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .place-tools input,
+    .place-tools select {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      color: var(--ink);
+      padding: 10px;
+      font: 600 0.95rem/1.2 system-ui, sans-serif;
+    }
+    .place-count {
+      color: var(--muted);
+      font: 700 0.82rem/1.2 system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .place-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .place-card h3 { color: var(--rail); }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+    .badge-row span {
+      border: 1px solid rgba(167, 123, 36, 0.52);
+      background: #fff7df;
+      color: var(--rail);
+      padding: 4px 7px;
+      font: 700 0.72rem/1.1 system-ui, sans-serif;
+    }
+    .source-hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .source-hub h3 { color: var(--rail); }
+    .news-archive { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 26px; margin-top: 24px; }
+    .story-list { display: grid; gap: 12px; }
+    .story-row { display: grid; grid-template-columns: minmax(138px, 0.42fr) minmax(0, 1fr); gap: 16px; padding-top: 12px; border-top: 1px solid var(--line); align-items: center; }
+    .story-mark { background: var(--paper-deep); border: 1px solid var(--line); display: grid; place-items: center; min-height: 104px; aspect-ratio: 13 / 8; color: var(--rail); overflow: hidden; }
+    .story-mark img { width: 100%; height: 100%; object-fit: contain; padding: 8px; display: block; mix-blend-mode: multiply; }
+    .story-mark svg { width: 42px; height: 42px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .archive-ticket-wrap { position: relative; width: min(100%, 310px); margin: 4px 0 14px; }
+    .archive-ticket { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+    .archive-ticket-copy {
+      position: absolute;
+      inset: 20% 14%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      pointer-events: none;
+    }
+    .archive-ticket-copy span { color: var(--rail); font: 700 0.64rem/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.14em; }
+    .archive-ticket-copy strong { display: block; color: var(--accent); font-size: 1.35rem; line-height: 1; letter-spacing: 0.05em; margin-top: 2px; }
+    .archive-ticket-copy em { display: block; color: var(--ink); font-style: normal; font-size: 0.95rem; margin-top: 2px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    article, .panel {
+      border: 1px solid var(--line);
+      border-radius: 0;
+      padding: 16px;
+      background: var(--paper);
+    }
+    .meta { color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.9rem; }
+    a { color: var(--rail); }
+    table { border-collapse: collapse; width: 100%; font-family: system-ui, sans-serif; font-size: 0.92rem; background: rgba(255,255,255,0.72); }
+    th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--rail-soft); }
+    .sponsor { border-color: var(--accent); background: #fffaf8; }
+    .sponsor strong { color: var(--accent); }
+    footer { color: var(--muted); border-top: 1px solid var(--line); font-family: system-ui, sans-serif; font-size: 0.9rem; }
+    @media (max-width: 900px) {
+      .masthead { grid-template-columns: 1fr; }
+      .ticket, .masthead-art { display: none; }
+      h1, .deck { text-align: center; }
+      .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
+	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .global-dispatch .section-intro, .places-intro, .place-tools { grid-template-columns: 1fr; }
+	      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	    }
+    @media (max-width: 560px) {
+      header, main, footer { padding: 16px; }
+      .eyebrow { margin: -16px -16px 16px; padding-inline: 16px; }
+      nav a { flex: 1 1 50%; }
+      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
+      .desks { grid-template-columns: 1fr; }
+      .place-stats { grid-template-columns: 1fr; }
+      .story-row { grid-template-columns: 1fr; }
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      th, td { min-width: 9rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">News, events & stories connecting S gauge, American Flyer, toy train, rail heritage & private passenger rail communities</div>
+    <div class="masthead">
+      <div class="ticket">Preview Issue<strong>001</strong></div>
+      <div>
+        <h1>The Shughart Line</h1>
+        <div class="masthead-rule" aria-hidden="true">
+          <img src="../assets/shughart-portal/masthead-bridge-rule.png" alt="">
+        </div>
+        <p class="deck">S gauge | American Flyer | Toy train | Rail heritage | Private passenger rail</p>
+      </div>
+      <div class="masthead-art"><img src="../assets/shughart-portal/masthead-train.png" alt=""></div>
+    </div>
+    <nav aria-label="Preview navigation">
+      <a href="../index.html">Front Desk</a>
+      <a href="../events/index.html">Events</a>
+      <a href="../places/index.html" aria-current="page">Places</a>
+      <a href="../sources/index.html">Directory</a>
+      <a href="../archive/2026-06-06/index.html">Archive</a>
+      <a href="../submit-news/index.html">Submit</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../accessibility.html">Accessibility</a>
+      <form class="nav-search" role="search" action="../places/index.html">
+        <input name="q" type="search" placeholder="Search places, stories, events..." aria-label="Search places, stories, events">
+        <button type="submit" aria-label="Search"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="14"/><path d="m39 39 11 11"/></svg></button>
+      </form>
+    </nav>
+  </header>
+  <main>
+    <section class="page-heading">
+      <p class="story-label">Places</p>
+      <h2>Rail Places Directory</h2>
+    </section>
+    <section data-place-directory>
+      <section class="places-intro">
+        <div>
+          <p class="story-label">Heritage Train Rides And Museums</p>
+          <h2>Find a railroad room worth visiting</h2>
+        </div>
+        <div>
+          <p>There are train rides, museums, depots, preserved lines, and railroad rooms in nearly every part of the world. We are building the board one source at a time, then sending you to the host source before you travel.</p>
+          <p>This is the first board, not the whole railroad map yet. It gives you a starting route and keeps room for the line to grow.</p>
+          <div class="place-stats" aria-label="Directory coverage">
+            <div class="place-stat"><strong>22</strong><span>first stops on the board</span></div>
+            <div class="place-stat"><strong>12</strong><span>countries in this seed</span></div>
+            <div class="place-stat"><strong>6</strong><span>source hubs for the next run</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="notice">Confirm dates, hours, tickets, accessibility, and route details with the linked host source. The Shughart Line should help you find the track, not take the timetable away from the railroad that keeps it.</section>
+      <section class="place-tools" aria-label="Search rail places">
+        <label for="place-search">Search by place, city, state, country, railway, museum, or ride
+          <input id="place-search" type="search" autocomplete="off" placeholder="Try steam, museum, Pennsylvania, Kyoto, narrow gauge">
+        </label>
+        <label for="place-country">Country
+          <select id="place-country">
+            <option value="">All countries</option>
+            <option value="Argentina">Argentina</option>
+<option value="Australia">Australia</option>
+<option value="Belgium">Belgium</option>
+<option value="Canada">Canada</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="India">India</option>
+<option value="Japan">Japan</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Switzerland">Switzerland</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States">United States</option>
+          </select>
+        </label>
+        <label for="place-experience">Experience
+          <select id="place-experience">
+            <option value="">All experiences</option>
+            <option value="archives">Archives</option>
+<option value="european_rail_history">European Rail History</option>
+<option value="family_history_stop">Family stop</option>
+<option value="family_ride">Family ride</option>
+<option value="heritage_railway">Heritage railway</option>
+<option value="heritage_train_ride">Heritage ride</option>
+<option value="high_speed_rail_context">High-speed rail context</option>
+<option value="locomotive_collection">Locomotive collection</option>
+<option value="mountain_rail_context">Mountain rail context</option>
+<option value="mountain_scenery">Mountain scenery</option>
+<option value="museum_collection">Museum collection</option>
+<option value="narrow_gauge">Narrow gauge</option>
+<option value="national_collection">National collection</option>
+<option value="outback_scenery">Outback scenery</option>
+<option value="pacific_northwest_rail_history">Pacific Northwest history</option>
+<option value="rail_heritage">Rail heritage</option>
+<option value="rail_history">Rail history</option>
+<option value="rail_museum">Railroad museum</option>
+<option value="shop_tour">Shop tour</option>
+<option value="station_history">Station history</option>
+<option value="steam_train_ride">Steam train ride</option>
+<option value="transport_history">Transport history</option>
+<option value="western_rail_history">Western rail history</option>
+          </select>
+        </label>
+      </section>
+      <p class="place-count" data-place-count>22 stops on the board</p>
+      <section class="place-grid" aria-label="Heritage rail places">
+<article class="place-card" data-place-card data-search="cumbres &amp; toltec scenic railroad united states colorado / new mexico chama / antonito scenic_heritage_railway a high-country narrow-gauge steam ride where the old mountain railroad story still moves on the timetable. cumbres toltec scenic railroad united states steam narrow gauge colorado new mexico chama antonito mountain scenery heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United States" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
+        <p class="story-label">United States</p>
+        <h3>Cumbres &amp; Toltec Scenic Railroad</h3>
+        <p class="meta">Chama / Antonito, Colorado / New Mexico / Scenic heritage railway</p>
+        <p>A high-country narrow-gauge steam ride where the old mountain railroad story still moves on the timetable.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Narrow gauge</span>
+          <span>Mountain scenery</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://cumbrestoltec.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="strasburg rail road united states pennsylvania strasburg heritage_train_ride a pennsylvania steam railroad stop for family rides, railroad craft, and a living line through farm country. strasburg rail road united states pennsylvania steam train family rides heritage railway lancaster county steam_train_ride family_ride rail_history heritage_railway" data-country="United States" data-experiences="steam_train_ride family_ride rail_history heritage_railway">
+        <p class="story-label">United States</p>
+        <h3>Strasburg Rail Road</h3>
+        <p class="meta">Strasburg, Pennsylvania / Heritage train ride</p>
+        <p>A Pennsylvania steam railroad stop for family rides, railroad craft, and a living line through farm country.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.strasburgrailroad.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="railroad museum of pennsylvania united states pennsylvania strasburg rail_museum a museum stop for pennsylvania railroad history, locomotives, rolling stock, exhibits, and preservation learning. railroad museum of pennsylvania united states strasburg locomotives rolling stock exhibits archives rail history rail_museum locomotive_collection family_history_stop archives" data-country="United States" data-experiences="rail_museum locomotive_collection family_history_stop archives">
+        <p class="story-label">United States</p>
+        <h3>Railroad Museum of Pennsylvania</h3>
+        <p class="meta">Strasburg, Pennsylvania / Railroad museum</p>
+        <p>A museum stop for Pennsylvania railroad history, locomotives, rolling stock, exhibits, and preservation learning.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Family stop</span>
+          <span>Archives</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.rrmuseumpa.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="california state railroad museum united states california sacramento rail_museum a sacramento museum stop for the western railroad story, preserved equipment, exhibits, and public rail history. california state railroad museum united states sacramento western rail history locomotives exhibits family rail_museum locomotive_collection western_rail_history family_history_stop" data-country="United States" data-experiences="rail_museum locomotive_collection western_rail_history family_history_stop">
+        <p class="story-label">United States</p>
+        <h3>California State Railroad Museum</h3>
+        <p class="meta">Sacramento, California / Railroad museum</p>
+        <p>A Sacramento museum stop for the western railroad story, preserved equipment, exhibits, and public rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Western rail history</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.californiarailroad.museum/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="nevada northern railway united states nevada ely living_railroad_museum a living railroad museum stop where rides, shops, equipment, and desert railroad history stay close to the source. nevada northern railway united states ely living railroad museum steam train shop tour heritage railway steam_train_ride rail_museum shop_tour heritage_railway" data-country="United States" data-experiences="steam_train_ride rail_museum shop_tour heritage_railway">
+        <p class="story-label">United States</p>
+        <h3>Nevada Northern Railway</h3>
+        <p class="meta">Ely, Nevada / Living railroad museum</p>
+        <p>A living railroad museum stop where rides, shops, equipment, and desert railroad history stay close to the source.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Railroad museum</span>
+          <span>Shop tour</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://nnry.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="exporail, the canadian railway museum canada quebec saint-constant rail_museum a canadian railway museum stop for preserved locomotives, cars, exhibits, and national rail memory. exporail canada canadian railway museum saint-constant quebec locomotives cars exhibits rail heritage rail_museum locomotive_collection family_history_stop rail_heritage" data-country="Canada" data-experiences="rail_museum locomotive_collection family_history_stop rail_heritage">
+        <p class="story-label">Canada</p>
+        <h3>Exporail, the Canadian Railway Museum</h3>
+        <p class="meta">Saint-Constant, Quebec / Railroad museum</p>
+        <p>A Canadian railway museum stop for preserved locomotives, cars, exhibits, and national rail memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Family stop</span>
+          <span>Rail heritage</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://exporail.org/en/home/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="railway museum of british columbia canada british columbia squamish rail_museum a squamish rail-preservation stop for british columbia railway history, exhibits, and equipment collections. railway museum of british columbia canada squamish wcra locomotives exhibits rail history rail_museum locomotive_collection pacific_northwest_rail_history family_history_stop" data-country="Canada" data-experiences="rail_museum locomotive_collection pacific_northwest_rail_history family_history_stop">
+        <p class="story-label">Canada</p>
+        <h3>Railway Museum of British Columbia</h3>
+        <p class="meta">Squamish, British Columbia / Railroad museum</p>
+        <p>A Squamish rail-preservation stop for British Columbia railway history, exhibits, and equipment collections.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Pacific Northwest history</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://wcra.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="national railway museum united kingdom england york rail_museum a york museum stop for britain&#39;s national railway collection, landmark locomotives, exhibits, and public rail history. national railway museum united kingdom york england britain national collection locomotives rail history rail_museum locomotive_collection national_collection rail_history" data-country="United Kingdom" data-experiences="rail_museum locomotive_collection national_collection rail_history">
+        <p class="story-label">United Kingdom</p>
+        <h3>National Railway Museum</h3>
+        <p class="meta">York, England / Railroad museum</p>
+        <p>A York museum stop for Britain&#39;s national railway collection, landmark locomotives, exhibits, and public rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>National collection</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.railwaymuseum.org.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="bluebell railway united kingdom england sheffield park / east grinstead heritage_train_ride a sussex heritage railway stop for steam rides, preserved stations, museum collections, and living railway craft. bluebell railway united kingdom sussex sheffield park east grinstead steam heritage railway museum family ride steam_train_ride heritage_railway museum_collection family_ride" data-country="United Kingdom" data-experiences="steam_train_ride heritage_railway museum_collection family_ride">
+        <p class="story-label">United Kingdom</p>
+        <h3>Bluebell Railway</h3>
+        <p class="meta">Sheffield Park / East Grinstead, England / Heritage train ride</p>
+        <p>A Sussex heritage railway stop for steam rides, preserved stations, museum collections, and living railway craft.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Museum collection</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.bluebell-railway.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="ffestiniog &amp; welsh highland railways united kingdom wales porthmadog / caernarfon scenic_heritage_railway a welsh narrow-gauge source stop for steam rides, mountain scenery, preserved railway craft, and long-distance heritage travel. ffestiniog welsh highland railways united kingdom wales porthmadog caernarfon steam narrow gauge mountain heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United Kingdom" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
+        <p class="story-label">United Kingdom</p>
+        <h3>Ffestiniog &amp; Welsh Highland Railways</h3>
+        <p class="meta">Porthmadog / Caernarfon, Wales / Scenic heritage railway</p>
+        <p>A Welsh narrow-gauge source stop for steam rides, mountain scenery, preserved railway craft, and long-distance heritage travel.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Narrow gauge</span>
+          <span>Mountain scenery</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.festrail.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="cite du train france grand est mulhouse rail_museum a mulhouse museum stop for french railway history, equipment, exhibits, and the wider european rail story. cite du train mulhouse france railway museum locomotives exhibits european rail history rail_museum locomotive_collection european_rail_history family_history_stop" data-country="France" data-experiences="rail_museum locomotive_collection european_rail_history family_history_stop">
+        <p class="story-label">France</p>
+        <h3>Cite du Train</h3>
+        <p class="meta">Mulhouse, Grand Est / Railroad museum</p>
+        <p>A Mulhouse museum stop for French railway history, equipment, exhibits, and the wider European rail story.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>European Rail History</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.citedutrain.com/accueil?lang=en" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="train world belgium brussels schaerbeek rail_museum a brussels railway museum stop where station architecture, historic equipment, and belgian rail memory meet. train world brussels schaerbeek belgium railway museum station locomotives rail history rail_museum locomotive_collection station_history family_history_stop" data-country="Belgium" data-experiences="rail_museum locomotive_collection station_history family_history_stop">
+        <p class="story-label">Belgium</p>
+        <h3>Train World</h3>
+        <p class="meta">Schaerbeek, Brussels / Railroad museum</p>
+        <p>A Brussels railway museum stop where station architecture, historic equipment, and Belgian rail memory meet.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Station history</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.trainworld.be/en" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="db museum germany bavaria nuremberg rail_museum a german railway museum stop for locomotives, exhibits, archives, and the long rail story around nuremberg. db museum nuremberg germany railway museum locomotives exhibits archives rail history rail_museum locomotive_collection european_rail_history archives" data-country="Germany" data-experiences="rail_museum locomotive_collection european_rail_history archives">
+        <p class="story-label">Germany</p>
+        <h3>DB Museum</h3>
+        <p class="meta">Nuremberg, Bavaria / Railroad museum</p>
+        <p>A German railway museum stop for locomotives, exhibits, archives, and the long rail story around Nuremberg.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>European Rail History</span>
+          <span>Archives</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.dbmuseum.de/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="swiss museum of transport switzerland lucerne lucerne transport_museum a lucerne transport museum stop with rail history among the broader swiss story of movement, engineering, and public travel. swiss museum of transport lucerne switzerland railway transport museum rail history engineering family rail_museum transport_history family_history_stop mountain_rail_context" data-country="Switzerland" data-experiences="rail_museum transport_history family_history_stop mountain_rail_context">
+        <p class="story-label">Switzerland</p>
+        <h3>Swiss Museum of Transport</h3>
+        <p class="meta">Lucerne, Lucerne / Transport museum</p>
+        <p>A Lucerne transport museum stop with rail history among the broader Swiss story of movement, engineering, and public travel.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Transport history</span>
+          <span>Family stop</span>
+          <span>Mountain rail context</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.verkehrshaus.ch/en" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="puffing billy railway australia victoria belgrave scenic_heritage_railway a victorian narrow-gauge steam stop for public rides, forest scenery, and preserved railway practice. puffing billy railway belgrave victoria australia steam narrow gauge forest heritage railway family ride steam_train_ride narrow_gauge family_ride heritage_railway" data-country="Australia" data-experiences="steam_train_ride narrow_gauge family_ride heritage_railway">
+        <p class="story-label">Australia</p>
+        <h3>Puffing Billy Railway</h3>
+        <p class="meta">Belgrave, Victoria / Scenic heritage railway</p>
+        <p>A Victorian narrow-gauge steam stop for public rides, forest scenery, and preserved railway practice.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Narrow gauge</span>
+          <span>Family ride</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://puffingbillyrailway.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="nsw rail museum australia new south wales thirlmere rail_museum a thirlmere museum stop for new south wales railway history, preserved equipment, events, and heritage rides. nsw rail museum thirlmere new south wales australia heritage train rides locomotives railway history rail_museum heritage_train_ride locomotive_collection family_history_stop" data-country="Australia" data-experiences="rail_museum heritage_train_ride locomotive_collection family_history_stop">
+        <p class="story-label">Australia</p>
+        <h3>NSW Rail Museum</h3>
+        <p class="meta">Thirlmere, New South Wales / Railroad museum</p>
+        <p>A Thirlmere museum stop for New South Wales railway history, preserved equipment, events, and heritage rides.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Heritage ride</span>
+          <span>Locomotive collection</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.nswrailmuseum.com.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="pichi richi railway australia south australia quorn scenic_heritage_railway a south australian heritage railway stop for rides through historic railway country and preservation work in motion. pichi richi railway quorn south australia steam heritage railway outback scenery rail history steam_train_ride heritage_railway outback_scenery rail_history" data-country="Australia" data-experiences="steam_train_ride heritage_railway outback_scenery rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Pichi Richi Railway</h3>
+        <p class="meta">Quorn, South Australia / Scenic heritage railway</p>
+        <p>A South Australian heritage railway stop for rides through historic railway country and preservation work in motion.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Outback scenery</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.pichirichirailway.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="glenbrook vintage railway new zealand auckland region glenbrook heritage_train_ride a new zealand heritage railway stop for public train rides, preservation, and a friendly route into rail history. glenbrook vintage railway new zealand auckland steam train ride heritage railway family rail history steam_train_ride heritage_railway family_ride rail_history" data-country="New Zealand" data-experiences="steam_train_ride heritage_railway family_ride rail_history">
+        <p class="story-label">New Zealand</p>
+        <h3>Glenbrook Vintage Railway</h3>
+        <p class="meta">Glenbrook, Auckland Region / Heritage train ride</p>
+        <p>A New Zealand heritage railway stop for public train rides, preservation, and a friendly route into rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.gvr.org.nz/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="kyoto railway museum japan kyoto prefecture kyoto rail_museum a kyoto museum stop for japan&#39;s railway story, preserved equipment, exhibits, and a bridge from steam to modern passenger rail. kyoto railway museum japan locomotives exhibits shinkansen steam passenger rail history rail_museum locomotive_collection high_speed_rail_context family_history_stop" data-country="Japan" data-experiences="rail_museum locomotive_collection high_speed_rail_context family_history_stop">
+        <p class="story-label">Japan</p>
+        <h3>Kyoto Railway Museum</h3>
+        <p class="meta">Kyoto, Kyoto Prefecture / Railroad museum</p>
+        <p>A Kyoto museum stop for Japan&#39;s railway story, preserved equipment, exhibits, and a bridge from steam to modern passenger rail.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>High-speed rail context</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.kyotorailwaymuseum.jp/en/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="the railway museum japan saitama prefecture saitama rail_museum a saitama museum stop for japan&#39;s railway development, preserved rolling stock, exhibits, and family learning. railway museum saitama japan locomotives rolling stock shinkansen exhibits family rail history rail_museum locomotive_collection high_speed_rail_context family_history_stop" data-country="Japan" data-experiences="rail_museum locomotive_collection high_speed_rail_context family_history_stop">
+        <p class="story-label">Japan</p>
+        <h3>The Railway Museum</h3>
+        <p class="meta">Saitama, Saitama Prefecture / Railroad museum</p>
+        <p>A Saitama museum stop for Japan&#39;s railway development, preserved rolling stock, exhibits, and family learning.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>High-speed rail context</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.railway-museum.jp/e/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="national rail museum india delhi new delhi rail_museum a new delhi museum stop for india&#39;s railway story, preserved equipment, exhibits, and public railway memory. national rail museum new delhi india railway museum locomotives exhibits rail history family rail_museum locomotive_collection family_history_stop rail_history" data-country="India" data-experiences="rail_museum locomotive_collection family_history_stop rail_history">
+        <p class="story-label">India</p>
+        <h3>National Rail Museum</h3>
+        <p class="meta">New Delhi, Delhi / Railroad museum</p>
+        <p>A New Delhi museum stop for India&#39;s railway story, preserved equipment, exhibits, and public railway memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Family stop</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.nrmindia.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="museo nacional ferroviario argentina buenos aires buenos aires rail_museum a buenos aires museum stop for argentina&#39;s railway memory, preserved material, and national rail heritage. museo nacional ferroviario argentina buenos aires railway museum national rail heritage locomotives rail_museum locomotive_collection national_collection rail_history" data-country="Argentina" data-experiences="rail_museum locomotive_collection national_collection rail_history">
+        <p class="story-label">Argentina</p>
+        <h3>Museo Nacional Ferroviario</h3>
+        <p class="meta">Buenos Aires, Buenos Aires / Railroad museum</p>
+        <p>A Buenos Aires museum stop for Argentina&#39;s railway memory, preserved material, and national rail heritage.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>National collection</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.argentina.gob.ar/transporte/fase/museo-nacional-ferroviario" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+      </section>
+      <section>
+        <h2>Source Hubs</h2>
+        <p>These association rooms are the wider discovery rails. We use them to find more stops, then check the host source before anything earns a public place on the board.</p>
+        <div class="source-hub-grid">
+<article class="source-hub">
+        <p class="story-label">United States and Canada</p>
+        <h3>HeritageRail Alliance Member Directory</h3>
+        <p>A North American directory stop for tourist railways, railway museums, and preservation organizations.</p>
+        <p class="meta">Good for: Tourist Railway, Rail Museum, Preservation Group</p>
+        <p><a href="https://heritagerail.org/visit/member-directory/" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">United Kingdom and Ireland</p>
+        <h3>Heritage Railway Association Find A Railway</h3>
+        <p>A public handoff for finding heritage railways, tramways, cliff railways, and rail museums across the UK heritage railway room.</p>
+        <p class="meta">Good for: Heritage Railway, Rail Museum, Tramway</p>
+        <p><a href="https://www.hra.uk.com/directory" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">Europe</p>
+        <h3>FEDECRAIL</h3>
+        <p>A European federation stop for museum and tourist railway organizations and cross-border preservation context.</p>
+        <p class="meta">Good for: Heritage Railway, Preservation Group, International Directory</p>
+        <p><a href="https://fedecrail.org/members/" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">Australia</p>
+        <h3>Australian Tourist and Heritage Railway Association</h3>
+        <p>An Australian association stop for heritage and tourist railway organizations.</p>
+        <p class="meta">Good for: Heritage Railway, Tourist Railway, Preservation Group</p>
+        <p><a href="https://www.athra.asn.au/membership/members/" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">New Zealand</p>
+        <h3>Federation of Rail Organisations of New Zealand</h3>
+        <p>A New Zealand federation stop for rail and tramway preservation organizations.</p>
+        <p class="meta">Good for: Heritage Railway, Rail Museum, Tramway, Preservation Group</p>
+        <p><a href="https://fronz.org.nz/members/" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">Asia-Pacific</p>
+        <h3>Asia Pacific Heritage and Tourist Rail Organisation</h3>
+        <p>An Asia-Pacific heritage and tourist rail stop for regional discovery before each place is checked against its host source.</p>
+        <p class="meta">Good for: Heritage Railway, Tourist Railway, International Directory</p>
+        <p><a href="https://aphtro.info/" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+        </div>
+      </section>
+    </section>
+    <script>
+(() => {
+  const root = document.querySelector("[data-place-directory]");
+  if (!root) {
+    return;
+  }
+  const search = root.querySelector("#place-search");
+  const country = root.querySelector("#place-country");
+  const experience = root.querySelector("#place-experience");
+  const count = root.querySelector("[data-place-count]");
+  const cards = [...root.querySelectorAll("[data-place-card]")];
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = params.get("q");
+  if (initialQuery) {
+    search.value = initialQuery;
+  }
+  function updateBoard() {
+    const query = search.value.trim().toLowerCase();
+    const countryValue = country.value;
+    const experienceValue = experience.value;
+    let visible = 0;
+    for (const card of cards) {
+      const matchesQuery = !query || card.dataset.search.includes(query);
+      const matchesCountry = !countryValue || card.dataset.country === countryValue;
+      const matchesExperience = !experienceValue || card.dataset.experiences.split(" ").includes(experienceValue);
+      const show = matchesQuery && matchesCountry && matchesExperience;
+      card.hidden = !show;
+      if (show) {
+        visible += 1;
+      }
+    }
+    count.textContent = visible === 1 ? "1 stop on the board" : visible + " stops on the board";
+  }
+  search.addEventListener("input", updateBoard);
+  country.addEventListener("change", updateBoard);
+  experience.addEventListener("change", updateBoard);
+  updateBoard();
+})();
+</script>
+  </main>
+  <footer>
+    Preview edition. Please confirm dates, hours, and details with the linked source before you travel.
+  </footer>
+</body>
+</html>
