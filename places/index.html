@@ -271,7 +271,7 @@
     .places-intro p { margin-top: 0; }
     .place-stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
       margin: 16px 0 0;
     }
@@ -282,6 +282,32 @@
       font-family: system-ui, sans-serif;
     }
     .place-stat strong { display: block; color: var(--accent); font-size: 1.35rem; line-height: 1; }
+    .scale-board {
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      background: rgba(255, 253, 247, 0.9);
+      padding: 18px;
+      margin: 18px 0;
+    }
+    .scale-board h2 { margin-top: 0; color: var(--rail); }
+    .scale-board p { max-width: 74ch; }
+    .scale-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .scale-card {
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      padding: 12px;
+    }
+    .scale-card h3 { color: var(--rail); }
+    .scale-number {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font: 900 1.55rem/1 system-ui, sans-serif;
+    }
     .place-tools {
       display: grid;
       grid-template-columns: minmax(220px, 1.6fr) minmax(150px, 0.7fr) minmax(170px, 0.8fr);
@@ -442,10 +468,66 @@
             <div class="place-stat"><strong>22</strong><span>first stops on the board</span></div>
             <div class="place-stat"><strong>12</strong><span>countries in this seed</span></div>
             <div class="place-stat"><strong>6</strong><span>source hubs for the next run</span></div>
+            <div class="place-stat"><strong>1,200+</strong><span>candidate signals in the yard</span></div>
           </div>
         </div>
       </section>
       <section class="notice">Confirm dates, hours, tickets, accessibility, and route details with the linked host source. The Shughart Line should help you find the track, not take the timetable away from the railroad that keeps it.</section>
+      <section class="scale-board">
+        <h2>The Board Gets Much Bigger</h2>
+        <p>You are right: the railroad room is much larger than a first board. These source rails already show 1,200+ stops, member lines, museums, tramways, and preservation rooms to sort before deduplication and host-source review.</p>
+        <p>When model clubs, toy-train rooms, depots, archives, historical societies, events, and private passenger rail sources join the route, the finished resource map should run into the thousands. The cards below stay reviewed first stops; the signals here show where the next run comes from.</p>
+        <div class="scale-card-grid">
+<article class="scale-card">
+        <p class="story-label">United States and Canada</p>
+        <h3>HeritageRail Alliance Institutional Members</h3>
+        <p class="scale-number">175+</p>
+        <p>A 2025 HeritageRail Alliance RFP states that the North American alliance maintains over 175 institutional members and dozens of commercial members.</p>
+        <p class="meta">Use as a candidate discovery signal; promote individual stops only after the host source is checked.</p>
+        <p><a href="https://heritagerail.org/wp-content/uploads/2025/04/HeritageRail-Alliance-RFP-for-Administrative-Services.pdf" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="scale-card">
+        <p class="story-label">United Kingdom and Ireland</p>
+        <h3>Heritage Railway Association Resources</h3>
+        <p class="scale-number">314</p>
+        <p>The HRA resources page cites 173 working railways, 9 operational tramways, 8 cliff railways, 24 museums and steam centres, and 100 societies, funding groups, and trusts.</p>
+        <p class="meta">Use as a candidate discovery signal; treat the HRA directory as the route back to the host source.</p>
+        <p><a href="https://www.hra.uk.com/resources" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="scale-card">
+        <p class="story-label">Europe</p>
+        <h3>FEDECRAIL Network Scope</h3>
+        <p class="scale-number">about 650</p>
+        <p>FEDECRAIL says it represents 58 national European members across 29 countries, encompassing approximately 650 to 700 individual railway attractions.</p>
+        <p class="meta">Use as a candidate discovery signal; deduplicate against national directories before publishing place cards.</p>
+        <p><a href="https://fedecrail.org/join-fedecrail-as-a-commercial-partner-or-trade-associate/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="scale-card">
+        <p class="story-label">Australia</p>
+        <h3>Australian Tourist and Heritage Railway Association Members</h3>
+        <p class="scale-number">93</p>
+        <p>The ATHRA members page exposes 93 member-table rows across Australian states and territories.</p>
+        <p class="meta">Use as a candidate discovery signal; check each railway, museum, or tramway at its own host source.</p>
+        <p><a href="https://www.athra.asn.au/membership/members/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="scale-card">
+        <p class="story-label">New Zealand and Rarotonga</p>
+        <h3>Federation of Rail Organisations of New Zealand Members</h3>
+        <p class="scale-number">60+</p>
+        <p>FRONZ describes itself as representing more than 60 heritage rail, tramway, and museum groups in New Zealand and Rarotonga.</p>
+        <p class="meta">Use as a candidate discovery signal; keep current trip details with the listed host organization.</p>
+        <p><a href="https://fronz.org.nz/members/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="scale-card">
+        <p class="story-label">Asia-Pacific</p>
+        <h3>Asia Pacific Heritage and Tourist Rail Organisation</h3>
+        <p class="scale-number">scope signal</p>
+        <p>APHTRO points toward heritage and tourist railway work across Oceania, East Asia, South Asia, Southeast Asia, and the Middle East.</p>
+        <p class="meta">Use as a candidate discovery rail for regional leads before any place earns a public card.</p>
+        <p><a href="https://aphtro.info/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+        </div>
+      </section>
       <section class="place-tools" aria-label="Search rail places">
         <label for="place-search">Search by place, city, state, country, railway, museum, or ride
           <input id="place-search" type="search" autocomplete="off" placeholder="Try steam, museum, Pennsylvania, Kyoto, narrow gauge">
