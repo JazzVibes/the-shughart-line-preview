@@ -285,12 +285,12 @@
       margin-bottom: 18px;
     }
     .places-intro p { margin-top: 0; }
-    .place-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 16px 0 0;
-    }
+	    .place-stats {
+	      display: grid;
+	      grid-template-columns: repeat(4, minmax(0, 1fr));
+	      gap: 10px;
+	      margin: 16px 0 0;
+	    }
     .place-stat {
       border: 1px solid var(--line);
       background: rgba(255, 253, 247, 0.86);
@@ -335,12 +335,23 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-    .place-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-    }
-    .place-card h3 { color: var(--rail); }
+	    .place-grid {
+	      display: grid;
+	      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	      gap: 14px;
+	    }
+	    .place-card h3 { color: var(--rail); }
+	    .candidate-section {
+	      border-top: 3px double var(--rail);
+	      margin-top: 26px;
+	      padding-top: 18px;
+	    }
+	    .candidate-section > p { color: var(--muted); }
+	    .candidate-card {
+	      border-style: dashed;
+	      background: rgba(255, 250, 241, 0.9);
+	    }
+	    .candidate-card .story-label { color: var(--rail); }
     .badge-row {
       display: flex;
       flex-wrap: wrap;
@@ -473,6 +484,7 @@
           <div class="place-stats" aria-label="Directory coverage">
             <div class="place-stat"><strong>73</strong><span>first stops on the board</span></div>
             <div class="place-stat"><strong>15</strong><span>countries on the board</span></div>
+            <div class="place-stat"><strong>77</strong><span>Americas source rails</span></div>
             <div class="place-stat"><strong>21</strong><span>source rails to follow</span></div>
           </div>
         </div>
@@ -488,18 +500,43 @@
             <option value="Argentina">Argentina</option>
 <option value="Australia">Australia</option>
 <option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Brazil">Brazil</option>
 <option value="Canada">Canada</option>
+<option value="Chile">Chile</option>
+<option value="Colombia">Colombia</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Cuba">Cuba</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="El Salvador">El Salvador</option>
 <option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
 <option value="Germany">Germany</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guyana">Guyana</option>
+<option value="Honduras">Honduras</option>
 <option value="India">India</option>
 <option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
 <option value="Japan">Japan</option>
+<option value="Mexico">Mexico</option>
 <option value="Netherlands">Netherlands</option>
 <option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Panama">Panama</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Suriname">Suriname</option>
 <option value="Switzerland">Switzerland</option>
 <option value="Taiwan">Taiwan</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
 <option value="United Kingdom">United Kingdom</option>
 <option value="United States">United States</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Venezuela">Venezuela</option>
           </select>
         </label>
         <label for="place-experience">Experience
@@ -508,6 +545,7 @@
             <option value="alaska_interior">Alaska interior</option>
 <option value="alaska_wilderness">Alaska wilderness</option>
 <option value="archives">Archives</option>
+<option value="canada_board">Canada board</option>
 <option value="coastal_scenery">Coastal scenery</option>
 <option value="cruise_rail">Cruise rail</option>
 <option value="dome_railcar">Dome railcar</option>
@@ -520,8 +558,11 @@
 <option value="heritage_train_ride">Heritage ride</option>
 <option value="high_speed_rail_context">High-speed rail context</option>
 <option value="industrial_heritage">Industrial heritage</option>
+<option value="industrial_rail_history">Industrial rail history</option>
 <option value="live_steam">Live steam</option>
+<option value="living_railroad_museum">Living Railroad Museum</option>
 <option value="locomotive_collection">Locomotive collection</option>
+<option value="mexico_central_caribbean_board">Mexico, Central America, and Caribbean</option>
 <option value="miniature_railway">Miniature railway</option>
 <option value="mining_railway">Mining railway</option>
 <option value="mountain_rail_context">Mountain rail context</option>
@@ -532,22 +573,28 @@
 <option value="national_park_route">National Park Route</option>
 <option value="outback_scenery">Outback scenery</option>
 <option value="pacific_northwest_rail_history">Pacific Northwest history</option>
+<option value="passenger_rail_source">Passenger rail source</option>
 <option value="rail_heritage">Rail heritage</option>
 <option value="rail_history">Rail history</option>
+<option value="rail_history_source">Rail history source</option>
 <option value="rail_museum">Railroad museum</option>
 <option value="scenic_heritage_railway">Scenic heritage railway</option>
 <option value="shop_tour">Shop tour</option>
 <option value="skagway_history">Skagway history</option>
+<option value="source_rail_to_confirm">Source rail to confirm</option>
+<option value="south_america_board">South America board</option>
 <option value="station_history">Station history</option>
 <option value="steam_train_ride">Steam train ride</option>
 <option value="tramway">Tramway</option>
 <option value="transport_history">Transport history</option>
+<option value="transport_museum">Transport Museum</option>
+<option value="us_state_board">U.S. state board</option>
 <option value="western_rail_history">Western rail history</option>
 <option value="winter_train">Winter train</option>
           </select>
         </label>
       </section>
-      <p class="place-count" data-place-count>73 stops on the board</p>
+      <p class="place-count" data-place-count>150 routes on the board</p>
       <section class="place-grid" aria-label="Heritage rail places">
 <article class="place-card" data-place-card data-search="cumbres &amp; toltec scenic railroad united states colorado / new mexico chama / antonito scenic_heritage_railway a high-country narrow-gauge steam ride where the old mountain railroad story still moves on the timetable. cumbres toltec scenic railroad united states steam narrow gauge colorado new mexico chama antonito mountain scenery heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United States" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
         <p class="story-label">United States</p>
@@ -1572,6 +1619,936 @@
         <p><a href="https://afrch.forest.gov.tw/EN" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
       </article>
       </section>
+      <section class="candidate-section">
+        <h2>Americas Source Rail Board</h2>
+        <p>Every U.S. state has a first source rail here, with Canada, Mexico, Central America, the Caribbean, and South America on the same board. Treat these as good leads to follow, then let the host source carry the timetable.</p>
+        <div class="place-grid" aria-label="Americas place and event source rails">
+<article class="place-card candidate-card" data-place-card data-search="alabama united states us_state us_state_board heart of dixie railroad museum calera heart of dixie railroad museum rail_museum candidate place rail: a museum and excursion source that can anchor alabama rail heritage, family rides, and restoration stories. heart of dixie railroad museum candidate event rail: check the host source for public rides, museum days, seasonal trains, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Alabama / United States</p>
+        <h3>Heart of Dixie Railroad Museum</h3>
+        <p class="meta">Calera / Railroad museum</p>
+        <p>Candidate place rail: a museum and excursion source that can anchor Alabama rail heritage, family rides, and restoration stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.hodrrm.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="alaska united states us_state us_state_board alaska railroad anchorage / statewide alaska railroad our trains passenger_rail_source candidate place rail: a statewide passenger railroad source for alaska routes, wilderness trains, cruise rail, and public travel leads. alaska railroad candidate event rail: check the host source for current train names, seasonal service, packages, and route details before you travel." data-country="United States" data-experiences="passenger_rail_source us_state_board source_rail_to_confirm">
+        <p class="story-label">Alaska / United States</p>
+        <h3>Alaska Railroad</h3>
+        <p class="meta">Anchorage / statewide / Passenger rail source</p>
+        <p>Candidate place rail: a statewide passenger railroad source for Alaska routes, wilderness trains, cruise rail, and public travel leads.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.alaskarailroad.com/ride-a-train/our-trains" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="arizona united states us_state us_state_board grand canyon railway williams grand canyon railway heritage_train_ride candidate place rail: a classic destination train that can connect arizona scenery, depot history, family travel, and rail tourism. grand canyon railway candidate event rail: check the host source for public departures, seasonal trains, packages, and current boarding details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Arizona / United States</p>
+        <h3>Grand Canyon Railway</h3>
+        <p class="meta">Williams / Heritage train ride</p>
+        <p>Candidate place rail: a classic destination train that can connect Arizona scenery, depot history, family travel, and rail tourism.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.thetrain.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="arkansas united states us_state us_state_board arkansas &amp; missouri railroad springdale / fort smith arkansas &amp; missouri railroad scenic_heritage_railway candidate place rail: an ozark-region railroad source for excursion rides, equipment interest, and freight-line heritage. arkansas &amp; missouri railroad candidate event rail: check the host source for excursion schedules, station details, tickets, and operating notices before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">Arkansas / United States</p>
+        <h3>Arkansas &amp; Missouri Railroad</h3>
+        <p class="meta">Springdale / Fort Smith / Scenic heritage railway</p>
+        <p>Candidate place rail: an Ozark-region railroad source for excursion rides, equipment interest, and freight-line heritage.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://amrailroad.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="california united states us_state us_state_board california state railroad museum sacramento california state railroad museum rail_museum candidate place rail: a major railroad museum source for western rail history, interpretation, and family visitor planning. california state railroad museum candidate event rail: check the host source for exhibits, museum programs, excursion notices, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">California / United States</p>
+        <h3>California State Railroad Museum</h3>
+        <p class="meta">Sacramento / Railroad museum</p>
+        <p>Candidate place rail: a major railroad museum source for western rail history, interpretation, and family visitor planning.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.californiarailroad.museum/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="colorado united states us_state us_state_board cumbres &amp; toltec scenic railroad antonito / chama cumbres &amp; toltec scenic railroad scenic_heritage_railway candidate place rail: a narrow-gauge mountain railway source for steam, high-country scenery, and shared colorado-new mexico heritage. cumbres &amp; toltec scenic railroad candidate event rail: check the host source for current departures, route choices, ticketing, and seasonal operating details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">Colorado / United States</p>
+        <h3>Cumbres &amp; Toltec Scenic Railroad</h3>
+        <p class="meta">Antonito / Chama / Scenic heritage railway</p>
+        <p>Candidate place rail: a narrow-gauge mountain railway source for steam, high-country scenery, and shared Colorado-New Mexico heritage.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://cumbrestoltec.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="connecticut united states us_state us_state_board essex steam train &amp; riverboat essex essex steam train &amp; riverboat heritage_train_ride candidate place rail: a new england steam-and-river source that can connect rail heritage, family rides, and destination travel. essex steam train &amp; riverboat candidate event rail: check the host source for public departures, special trains, riverboat pairings, and visitor details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Connecticut / United States</p>
+        <h3>Essex Steam Train &amp; Riverboat</h3>
+        <p class="meta">Essex / Heritage train ride</p>
+        <p>Candidate place rail: a New England steam-and-river source that can connect rail heritage, family rides, and destination travel.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://essexsteamtrain.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="delaware united states us_state us_state_board wilmington &amp; western railroad wilmington / greenbank wilmington &amp; western railroad heritage_train_ride candidate place rail: a delaware heritage railroad source for steam rides, volunteer preservation, and family train days. wilmington &amp; western railroad candidate event rail: check the host source for current rides, special events, tickets, and station details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Delaware / United States</p>
+        <h3>Wilmington &amp; Western Railroad</h3>
+        <p class="meta">Wilmington / Greenbank / Heritage train ride</p>
+        <p>Candidate place rail: a Delaware heritage railroad source for steam rides, volunteer preservation, and family train days.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.wwrr.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="florida united states us_state us_state_board florida railroad museum parrish florida railroad museum rail_museum candidate place rail: a florida museum and ride source that can support local rail heritage, family visits, and regional event leads. florida railroad museum candidate event rail: check the host source for train rides, museum events, volunteer days, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Florida / United States</p>
+        <h3>Florida Railroad Museum</h3>
+        <p class="meta">Parrish / Railroad museum</p>
+        <p>Candidate place rail: a Florida museum and ride source that can support local rail heritage, family visits, and regional event leads.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.frrm.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="georgia united states us_state us_state_board southeastern railway museum duluth southeastern railway museum rail_museum candidate place rail: a southeastern railroad museum source for collections, regional history, family visits, and preservation stories. southeastern railway museum candidate event rail: check the host source for exhibits, rides, museum days, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Georgia / United States</p>
+        <h3>Southeastern Railway Museum</h3>
+        <p class="meta">Duluth / Railroad museum</p>
+        <p>Candidate place rail: a Southeastern railroad museum source for collections, regional history, family visits, and preservation stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.train-museum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="hawaii united states us_state us_state_board hawaiian railway society ewa beach hawaiian railway society rail_museum candidate place rail: an island railway preservation source for plantation-era rail history, public rides, and volunteer heritage work. hawaiian railway society candidate event rail: check the host source for ride days, museum access, tickets, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Hawaii / United States</p>
+        <h3>Hawaiian Railway Society</h3>
+        <p class="meta">Ewa Beach / Railroad museum</p>
+        <p>Candidate place rail: an island railway preservation source for plantation-era rail history, public rides, and volunteer heritage work.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.hawaiianrailway.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="idaho united states us_state us_state_board nampa train depot museum nampa canyon county historical society nampa train depot rail_museum candidate place rail: a depot museum source that can anchor idaho rail heritage, station architecture, and local history leads. canyon county historical society nampa train depot candidate event rail: check the host source for opening days, exhibits, local programs, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Idaho / United States</p>
+        <h3>Nampa Train Depot Museum</h3>
+        <p class="meta">Nampa / Railroad museum</p>
+        <p>Candidate place rail: a depot museum source that can anchor Idaho rail heritage, station architecture, and local history leads.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://canyoncountyhistory.org/nampa-train-depot_1" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="illinois united states us_state us_state_board illinois railway museum union illinois railway museum living_railroad_museum candidate place rail: a large living railroad museum source for operating equipment, collections, preservation, and family train days. illinois railway museum candidate event rail: check the host source for operating days, special events, exhibits, and current visitor details before you travel." data-country="United States" data-experiences="living_railroad_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Illinois / United States</p>
+        <h3>Illinois Railway Museum</h3>
+        <p class="meta">Union / Living railroad museum</p>
+        <p>Candidate place rail: a large living railroad museum source for operating equipment, collections, preservation, and family train days.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.irm.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="indiana united states us_state us_state_board nickel plate express noblesville nickel plate express heritage_train_ride candidate place rail: a central indiana heritage ride source for public trips, family events, and railroad preservation stories. nickel plate express candidate event rail: check the host source for ride themes, dates, tickets, and boarding details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Indiana / United States</p>
+        <h3>Nickel Plate Express</h3>
+        <p class="meta">Noblesville / Heritage train ride</p>
+        <p>Candidate place rail: a central Indiana heritage ride source for public trips, family events, and railroad preservation stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://nickelplateexpress.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="iowa united states us_state us_state_board boone &amp; scenic valley railroad boone boone &amp; scenic valley railroad scenic_heritage_railway candidate place rail: an iowa scenic railroad source for bridge views, museum context, excursions, and family train days. boone &amp; scenic valley railroad candidate event rail: check the host source for public rides, museum access, tickets, and current route details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">Iowa / United States</p>
+        <h3>Boone &amp; Scenic Valley Railroad</h3>
+        <p class="meta">Boone / Scenic heritage railway</p>
+        <p>Candidate place rail: an Iowa scenic railroad source for bridge views, museum context, excursions, and family train days.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://bsvrr.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="kansas united states us_state us_state_board abilene &amp; smoky valley railroad abilene abilene &amp; smoky valley railroad heritage_train_ride candidate place rail: a kansas heritage railroad source for excursion rides, small-town railroad history, and seasonal public trips. abilene &amp; smoky valley railroad candidate event rail: check the host source for ride days, equipment notes, tickets, and boarding details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Kansas / United States</p>
+        <h3>Abilene &amp; Smoky Valley Railroad</h3>
+        <p class="meta">Abilene / Heritage train ride</p>
+        <p>Candidate place rail: a Kansas heritage railroad source for excursion rides, small-town railroad history, and seasonal public trips.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://asvrr.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="kentucky united states us_state us_state_board kentucky railway museum new haven kentucky railway museum rail_museum candidate place rail: a kentucky museum and excursion source for rail preservation, family rides, and local history leads. kentucky railway museum candidate event rail: check the host source for train rides, museum hours, special events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Kentucky / United States</p>
+        <h3>Kentucky Railway Museum</h3>
+        <p class="meta">New Haven / Railroad museum</p>
+        <p>Candidate place rail: a Kentucky museum and excursion source for rail preservation, family rides, and local history leads.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.kyrail.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="louisiana united states us_state us_state_board southern forest heritage museum long leaf southern forest heritage museum industrial_rail_history candidate place rail: an industrial heritage source where logging, mills, railroad work, and southern preservation stories meet. southern forest heritage museum candidate event rail: check the host source for open days, demonstrations, heritage programs, and current visitor details before you travel." data-country="United States" data-experiences="industrial_rail_history us_state_board source_rail_to_confirm">
+        <p class="story-label">Louisiana / United States</p>
+        <h3>Southern Forest Heritage Museum</h3>
+        <p class="meta">Long Leaf / Industrial rail history</p>
+        <p>Candidate place rail: an industrial heritage source where logging, mills, railroad work, and Southern preservation stories meet.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://forestheritagemuseum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="maine united states us_state us_state_board maine narrow gauge railroad co. &amp; museum portland maine narrow gauge railroad co. &amp; museum rail_museum candidate place rail: a maine narrow-gauge source for museum visits, waterfront rail history, and family train rides. maine narrow gauge railroad co. &amp; museum candidate event rail: check the host source for ride days, exhibits, special trains, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Maine / United States</p>
+        <h3>Maine Narrow Gauge Railroad Co. &amp; Museum</h3>
+        <p class="meta">Portland / Railroad museum</p>
+        <p>Candidate place rail: a Maine narrow-gauge source for museum visits, waterfront rail history, and family train rides.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://mainenarrowgauge.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="maryland united states us_state us_state_board b&amp;o railroad museum baltimore b&amp;o railroad museum rail_museum candidate place rail: a foundational american railroad museum source for baltimore rail history, collections, and family programs. b&amp;o railroad museum candidate event rail: check the host source for exhibits, programs, ride days, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Maryland / United States</p>
+        <h3>B&amp;O Railroad Museum</h3>
+        <p class="meta">Baltimore / Railroad museum</p>
+        <p>Candidate place rail: a foundational American railroad museum source for Baltimore rail history, collections, and family programs.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.borail.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="massachusetts united states us_state us_state_board berkshire scenic railway museum lenox / adams berkshire scenic railway museum heritage_train_ride candidate place rail: a western massachusetts railway source for scenic rides, station heritage, and public rail programs. berkshire scenic railway museum candidate event rail: check the host source for rides, station access, events, and current visitor details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Massachusetts / United States</p>
+        <h3>Berkshire Scenic Railway Museum</h3>
+        <p class="meta">Lenox / Adams / Heritage train ride</p>
+        <p>Candidate place rail: a western Massachusetts railway source for scenic rides, station heritage, and public rail programs.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://berkshiretrains.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="michigan united states us_state us_state_board steam railroading institute owosso steam railroading institute rail_museum candidate place rail: a michigan steam preservation source for locomotive stories, shop work, excursions, and family rail events. steam railroading institute candidate event rail: check the host source for public rides, shop access, special trains, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Michigan / United States</p>
+        <h3>Steam Railroading Institute</h3>
+        <p class="meta">Owosso / Railroad museum</p>
+        <p>Candidate place rail: a Michigan steam preservation source for locomotive stories, shop work, excursions, and family rail events.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://michigansteamtrain.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="minnesota united states us_state us_state_board lake superior railroad museum duluth lake superior railroad museum rail_museum candidate place rail: a duluth rail museum source for great lakes rail history, collections, and nearby excursion leads. lake superior railroad museum candidate event rail: check the host source for exhibits, rides, museum events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Minnesota / United States</p>
+        <h3>Lake Superior Railroad Museum</h3>
+        <p class="meta">Duluth / Railroad museum</p>
+        <p>Candidate place rail: a Duluth rail museum source for Great Lakes rail history, collections, and nearby excursion leads.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://lsrm.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="mississippi united states us_state us_state_board mccomb railroad depot museum mccomb mccomb railroad depot museum rail_museum candidate place rail: a mississippi railroad museum source for depot history, local rail labor, and community heritage. mccomb railroad depot museum candidate event rail: check the host source for open days, exhibits, community events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Mississippi / United States</p>
+        <h3>McComb Railroad Depot Museum</h3>
+        <p class="meta">McComb / Railroad museum</p>
+        <p>Candidate place rail: a Mississippi railroad museum source for depot history, local rail labor, and community heritage.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.mcrrmuseum.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="missouri united states us_state us_state_board national museum of transportation st. louis national museum of transportation transport_museum candidate place rail: a transportation museum source with major rail collections, st. louis context, and family visitor appeal. national museum of transportation candidate event rail: check the host source for exhibits, train operations, museum days, and current visitor details before you travel." data-country="United States" data-experiences="transport_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Missouri / United States</p>
+        <h3>National Museum of Transportation</h3>
+        <p class="meta">St. Louis / Transport museum</p>
+        <p>Candidate place rail: a transportation museum source with major rail collections, St. Louis context, and family visitor appeal.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://tnmot.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="montana united states us_state us_state_board charlie russell chew choo lewistown montana dinner train heritage_train_ride candidate place rail: a montana dinner-train source for prairie scenery, destination travel, and local railroad storytelling. montana dinner train candidate event rail: check the host source for ride dates, meal service, ticketing, and boarding details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Montana / United States</p>
+        <h3>Charlie Russell Chew Choo</h3>
+        <p class="meta">Lewistown / Heritage train ride</p>
+        <p>Candidate place rail: a Montana dinner-train source for prairie scenery, destination travel, and local railroad storytelling.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://montanadinnertrain.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="nebraska united states us_state us_state_board the durham museum omaha the durham museum transport_museum candidate place rail: an omaha station and museum source for union station history, rail collections, and public exhibits. the durham museum candidate event rail: check the host source for exhibits, programs, ticketing, and current visitor details before you travel." data-country="United States" data-experiences="transport_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Nebraska / United States</p>
+        <h3>The Durham Museum</h3>
+        <p class="meta">Omaha / Transport museum</p>
+        <p>Candidate place rail: an Omaha station and museum source for Union Station history, rail collections, and public exhibits.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://durhammuseum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="nevada united states us_state us_state_board nevada northern railway ely nevada northern railway living_railroad_museum candidate place rail: a nevada living railroad museum source for steam, shop work, mining history, and destination rail trips. nevada northern railway candidate event rail: check the host source for train rides, shop tours, special events, and current visitor details before you travel." data-country="United States" data-experiences="living_railroad_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Nevada / United States</p>
+        <h3>Nevada Northern Railway</h3>
+        <p class="meta">Ely / Living railroad museum</p>
+        <p>Candidate place rail: a Nevada living railroad museum source for steam, shop work, mining history, and destination rail trips.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://nnry.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="new hampshire united states us_state us_state_board conway scenic railroad north conway conway scenic railroad scenic_heritage_railway candidate place rail: a new hampshire scenic railroad source for mountain routes, station heritage, and family trips. conway scenic railroad candidate event rail: check the host source for route choices, train times, tickets, and station details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">New Hampshire / United States</p>
+        <h3>Conway Scenic Railroad</h3>
+        <p class="meta">North Conway / Scenic heritage railway</p>
+        <p>Candidate place rail: a New Hampshire scenic railroad source for mountain routes, station heritage, and family trips.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.conwayscenic.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="new jersey united states us_state us_state_board whippany railway museum whippany whippany railway museum rail_museum candidate place rail: a new jersey railway museum source for local preservation, excursion leads, and family rail history. whippany railway museum candidate event rail: check the host source for museum days, excursion rides, special events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">New Jersey / United States</p>
+        <h3>Whippany Railway Museum</h3>
+        <p class="meta">Whippany / Railroad museum</p>
+        <p>Candidate place rail: a New Jersey railway museum source for local preservation, excursion leads, and family rail history.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://whippanyrailwaymuseum.net/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="new mexico united states us_state us_state_board cumbres &amp; toltec scenic railroad chama / antonito cumbres &amp; toltec scenic railroad scenic_heritage_railway candidate place rail: a shared new mexico-colorado narrow-gauge source for steam, mountain rail history, and heritage trips. cumbres &amp; toltec scenic railroad candidate event rail: check the host source for current departures, station choice, tickets, and route details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">New Mexico / United States</p>
+        <h3>Cumbres &amp; Toltec Scenic Railroad</h3>
+        <p class="meta">Chama / Antonito / Scenic heritage railway</p>
+        <p>Candidate place rail: a shared New Mexico-Colorado narrow-gauge source for steam, mountain rail history, and heritage trips.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://cumbrestoltec.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="new york united states us_state us_state_board adirondack railroad utica / thendara adirondack railroad scenic_heritage_railway candidate place rail: a new york scenic railroad source for adirondack routes, family rides, and regional rail tourism. adirondack railroad candidate event rail: check the host source for route choices, departures, tickets, and seasonal details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">New York / United States</p>
+        <h3>Adirondack Railroad</h3>
+        <p class="meta">Utica / Thendara / Scenic heritage railway</p>
+        <p>Candidate place rail: a New York scenic railroad source for Adirondack routes, family rides, and regional rail tourism.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://adirondackrr.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="north carolina united states us_state us_state_board north carolina transportation museum spencer north carolina transportation museum transport_museum candidate place rail: a major shop-site museum source for southern rail history, collections, events, and family visits. north carolina transportation museum candidate event rail: check the host source for exhibits, train rides, special events, and current visitor details before you travel." data-country="United States" data-experiences="transport_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">North Carolina / United States</p>
+        <h3>North Carolina Transportation Museum</h3>
+        <p class="meta">Spencer / Transport museum</p>
+        <p>Candidate place rail: a major shop-site museum source for Southern rail history, collections, events, and family visits.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.nctransportationmuseum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="north dakota united states us_state us_state_board north dakota state railroad museum mandan north dakota tourism: north dakota state railroad museum rail_museum candidate place rail: a north dakota museum source for prairie rail history, local collections, and community preservation. north dakota tourism: north dakota state railroad museum candidate event rail: check the host source for open days, exhibits, events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">North Dakota / United States</p>
+        <h3>North Dakota State Railroad Museum</h3>
+        <p class="meta">Mandan / Railroad museum</p>
+        <p>Candidate place rail: a North Dakota museum source for prairie rail history, local collections, and community preservation.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.ndtourism.com/mandan/attractions-entertainment/educational-attractions/north-dakota-state-railroad-museum" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="ohio united states us_state us_state_board age of steam roundhouse museum sugarcreek age of steam roundhouse museum rail_museum candidate place rail: an ohio roundhouse source for steam preservation, shop craft, tours, and serious railroad history. age of steam roundhouse museum candidate event rail: check the host source for tour availability, visitor rules, special programs, and current details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Ohio / United States</p>
+        <h3>Age of Steam Roundhouse Museum</h3>
+        <p class="meta">Sugarcreek / Railroad museum</p>
+        <p>Candidate place rail: an Ohio roundhouse source for steam preservation, shop craft, tours, and serious railroad history.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://ageofsteamroundhouse.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="oklahoma united states us_state us_state_board oklahoma railway museum oklahoma city oklahoma railway museum rail_museum candidate place rail: an oklahoma museum source for rail collections, family rides, volunteer work, and local history. oklahoma railway museum candidate event rail: check the host source for train rides, exhibits, event days, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Oklahoma / United States</p>
+        <h3>Oklahoma Railway Museum</h3>
+        <p class="meta">Oklahoma City / Railroad museum</p>
+        <p>Candidate place rail: an Oklahoma museum source for rail collections, family rides, volunteer work, and local history.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.oklahomarailwaymuseum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="oregon united states us_state us_state_board oregon rail heritage center portland oregon rail heritage center rail_museum candidate place rail: a portland rail heritage source for preserved locomotives, shop craft, and public museum programs. oregon rail heritage center candidate event rail: check the host source for museum hours, excursions, shop events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Oregon / United States</p>
+        <h3>Oregon Rail Heritage Center</h3>
+        <p class="meta">Portland / Railroad museum</p>
+        <p>Candidate place rail: a Portland rail heritage source for preserved locomotives, shop craft, and public museum programs.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://orhf.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="pennsylvania united states us_state us_state_board strasburg rail road strasburg strasburg rail road heritage_train_ride candidate place rail: a pennsylvania heritage railroad source for steam rides, family travel, railroad craft, and living history. strasburg rail road candidate event rail: check the host source for train rides, station details, tickets, and seasonal offerings before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Pennsylvania / United States</p>
+        <h3>Strasburg Rail Road</h3>
+        <p class="meta">Strasburg / Heritage train ride</p>
+        <p>Candidate place rail: a Pennsylvania heritage railroad source for steam rides, family travel, railroad craft, and living history.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.strasburgrailroad.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="rhode island united states us_state us_state_board newport &amp; narragansett bay railroad portsmouth / newport newport &amp; narragansett bay railroad heritage_train_ride candidate place rail: a rhode island rail excursion source for coastal scenery, public rides, and local heritage trips. newport &amp; narragansett bay railroad candidate event rail: check the host source for departures, dining rides, tickets, and current boarding details before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Rhode Island / United States</p>
+        <h3>Newport &amp; Narragansett Bay Railroad</h3>
+        <p class="meta">Portsmouth / Newport / Heritage train ride</p>
+        <p>Candidate place rail: a Rhode Island rail excursion source for coastal scenery, public rides, and local heritage trips.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.trainsri.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="south carolina united states us_state us_state_board south carolina railroad museum winnsboro south carolina railroad museum rail_museum candidate place rail: a south carolina museum and ride source for local preservation, family trips, and rail history. south carolina railroad museum candidate event rail: check the host source for train rides, museum days, special events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">South Carolina / United States</p>
+        <h3>South Carolina Railroad Museum</h3>
+        <p class="meta">Winnsboro / Railroad museum</p>
+        <p>Candidate place rail: a South Carolina museum and ride source for local preservation, family trips, and rail history.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.scrm.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="south dakota united states us_state us_state_board 1880 train hill city / keystone 1880 train scenic_heritage_railway candidate place rail: a black hills railroad source for steam-era scenery, family rides, and south dakota rail tourism. 1880 train candidate event rail: check the host source for schedules, tickets, route details, and seasonal service before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">South Dakota / United States</p>
+        <h3>1880 Train</h3>
+        <p class="meta">Hill City / Keystone / Scenic heritage railway</p>
+        <p>Candidate place rail: a Black Hills railroad source for steam-era scenery, family rides, and South Dakota rail tourism.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.1880train.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="tennessee united states us_state us_state_board tennessee valley railroad museum chattanooga tennessee valley railroad museum living_railroad_museum candidate place rail: a chattanooga living railroad source for rides, shop craft, preservation, and family rail events. tennessee valley railroad museum candidate event rail: check the host source for ride choices, museum access, tickets, and current visitor details before you travel." data-country="United States" data-experiences="living_railroad_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Tennessee / United States</p>
+        <h3>Tennessee Valley Railroad Museum</h3>
+        <p class="meta">Chattanooga / Living railroad museum</p>
+        <p>Candidate place rail: a Chattanooga living railroad source for rides, shop craft, preservation, and family rail events.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.tvrail.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="texas united states us_state us_state_board texas state railroad palestine / rusk texas state railroad heritage_train_ride candidate place rail: an east texas heritage railroad source for public rides, family travel, and destination rail tourism. texas state railroad candidate event rail: check the host source for excursions, tickets, route details, and seasonal offerings before you travel." data-country="United States" data-experiences="heritage_train_ride us_state_board source_rail_to_confirm">
+        <p class="story-label">Texas / United States</p>
+        <h3>Texas State Railroad</h3>
+        <p class="meta">Palestine / Rusk / Heritage train ride</p>
+        <p>Candidate place rail: an East Texas heritage railroad source for public rides, family travel, and destination rail tourism.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://texasstaterailroad.net/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="utah united states us_state us_state_board heber valley railroad heber city heber valley railroad scenic_heritage_railway candidate place rail: a utah scenic railway source for mountain rides, family trips, and local railroad heritage. heber valley railroad candidate event rail: check the host source for ride themes, schedules, tickets, and boarding details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">Utah / United States</p>
+        <h3>Heber Valley Railroad</h3>
+        <p class="meta">Heber City / Scenic heritage railway</p>
+        <p>Candidate place rail: a Utah scenic railway source for mountain rides, family trips, and local railroad heritage.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.hebervalleyrr.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="vermont united states us_state us_state_board green mountain railroad burlington / chester vermont rail system passenger services scenic_heritage_railway candidate place rail: a vermont passenger and scenic rail source for seasonal trips, station towns, and new england rail tourism. vermont rail system passenger services candidate event rail: check the host source for routes, train dates, tickets, and current boarding details before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">Vermont / United States</p>
+        <h3>Green Mountain Railroad</h3>
+        <p class="meta">Burlington / Chester / Scenic heritage railway</p>
+        <p>Candidate place rail: a Vermont passenger and scenic rail source for seasonal trips, station towns, and New England rail tourism.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.rails-vt.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="virginia united states us_state us_state_board virginia museum of transportation roanoke virginia museum of transportation transport_museum candidate place rail: a roanoke transportation museum source for railroad collections, norfolk &amp; western context, and public exhibits. virginia museum of transportation candidate event rail: check the host source for exhibits, programs, tickets, and current visitor details before you travel." data-country="United States" data-experiences="transport_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Virginia / United States</p>
+        <h3>Virginia Museum of Transportation</h3>
+        <p class="meta">Roanoke / Transport museum</p>
+        <p>Candidate place rail: a Roanoke transportation museum source for railroad collections, Norfolk &amp; Western context, and public exhibits.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.vmt.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="washington united states us_state us_state_board northwest railway museum snoqualmie northwest railway museum rail_museum candidate place rail: a pacific northwest railway museum source for depot history, public rides, collections, and family visits. northwest railway museum candidate event rail: check the host source for train rides, museum days, exhibits, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Washington / United States</p>
+        <h3>Northwest Railway Museum</h3>
+        <p class="meta">Snoqualmie / Railroad museum</p>
+        <p>Candidate place rail: a Pacific Northwest railway museum source for depot history, public rides, collections, and family visits.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.trainmuseum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="west virginia united states us_state us_state_board cass scenic railroad state park cass cass scenic railroad state park scenic_heritage_railway candidate place rail: a west virginia mountain railroad source for steam, logging history, state-park trips, and family travel. cass scenic railroad state park candidate event rail: check the host source for ride dates, park details, tickets, and route conditions before you travel." data-country="United States" data-experiences="scenic_heritage_railway us_state_board source_rail_to_confirm">
+        <p class="story-label">West Virginia / United States</p>
+        <h3>Cass Scenic Railroad State Park</h3>
+        <p class="meta">Cass / Scenic heritage railway</p>
+        <p>Candidate place rail: a West Virginia mountain railroad source for steam, logging history, state-park trips, and family travel.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://wvstateparks.com/park/cass-scenic-railroad-state-park/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="wisconsin united states us_state us_state_board east troy railroad museum east troy east troy railroad museum rail_museum candidate place rail: a wisconsin railway museum source for electric railway history, public rides, and family rail events. east troy railroad museum candidate event rail: check the host source for ride days, museum access, special events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Wisconsin / United States</p>
+        <h3>East Troy Railroad Museum</h3>
+        <p class="meta">East Troy / Railroad museum</p>
+        <p>Candidate place rail: a Wisconsin railway museum source for electric railway history, public rides, and family rail events.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.easttroyrr.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="wyoming united states us_state us_state_board cheyenne depot museum cheyenne cheyenne depot museum rail_museum candidate place rail: a wyoming depot museum source for union pacific heritage, station history, and cheyenne rail culture. cheyenne depot museum candidate event rail: check the host source for exhibits, museum days, local rail events, and current visitor details before you travel." data-country="United States" data-experiences="rail_museum us_state_board source_rail_to_confirm">
+        <p class="story-label">Wyoming / United States</p>
+        <h3>Cheyenne Depot Museum</h3>
+        <p class="meta">Cheyenne / Railroad museum</p>
+        <p>Candidate place rail: a Wyoming depot museum source for Union Pacific heritage, station history, and Cheyenne rail culture.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>U.S. state board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.cheyennedepotmuseum.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="canada canada country canada_board exporail, the canadian railway museum saint-constant, quebec exporail rail_museum candidate place rail: a national canadian railway museum source that can lead visitors toward rail history, collections, events, and wider canadian stops. exporail candidate event rail: check the host source for exhibits, public programs, train rides, and current visitor details before you travel." data-country="Canada" data-experiences="rail_museum canada_board source_rail_to_confirm">
+        <p class="story-label">Canada / Canada</p>
+        <h3>Exporail, the Canadian Railway Museum</h3>
+        <p class="meta">Saint-Constant, Quebec / Railroad museum</p>
+        <p>Candidate place rail: a national Canadian railway museum source that can lead visitors toward rail history, collections, events, and wider Canadian stops.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Canada board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://exporail.org/en/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="mexico mexico country mexico_central_caribbean_board museo nacional de los ferrocarriles mexicanos puebla museo nacional de los ferrocarriles mexicanos rail_museum candidate place rail: a national mexican railway museum source for collections, public history, and a strong first stop for mexico rail heritage. museo nacional de los ferrocarriles mexicanos candidate event rail: check the host source for exhibitions, programs, visitor details, and current rail heritage notices before you travel." data-country="Mexico" data-experiences="rail_museum mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Mexico / Mexico</p>
+        <h3>Museo Nacional de los Ferrocarriles Mexicanos</h3>
+        <p class="meta">Puebla / Railroad museum</p>
+        <p>Candidate place rail: a national Mexican railway museum source for collections, public history, and a strong first stop for Mexico rail heritage.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://museoferrocarrilesmexicanos.gob.mx/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="belize belize country mexico_central_caribbean_board belize railway history source rail belize city / national travel belize rail_history_source candidate place rail: start with public belize travel and history sources, then confirm any railway remains or museum leads with a local host source. travel belize candidate event rail: check local tourism and museum sources for heritage walks, history programs, and current visitor details before you travel." data-country="Belize" data-experiences="rail_history_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Belize / Belize</p>
+        <h3>Belize railway history source rail</h3>
+        <p class="meta">Belize City / national / Rail history source</p>
+        <p>Candidate place rail: start with public Belize travel and history sources, then confirm any railway remains or museum leads with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.travelbelize.org/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="costa rica costa rica country mexico_central_caribbean_board instituto costarricense de ferrocarriles san jose / national incofer passenger_rail_source candidate place rail: a national rail source for costa rican railway context, public service leads, and deeper heritage follow-up. incofer candidate event rail: check the host source and local museum sources for public rail notices, heritage references, and visitor details before you travel." data-country="Costa Rica" data-experiences="passenger_rail_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Costa Rica / Costa Rica</p>
+        <h3>Instituto Costarricense de Ferrocarriles</h3>
+        <p class="meta">San Jose / national / Passenger rail source</p>
+        <p>Candidate place rail: a national rail source for Costa Rican railway context, public service leads, and deeper heritage follow-up.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.incofer.go.cr/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="el salvador el salvador country mexico_central_caribbean_board museo del ferrocarril san salvador museo del ferrocarril el salvador rail_museum candidate place rail: a museum source for salvadoran rail heritage and public history; confirm the current official channel before promoting details. museo del ferrocarril el salvador candidate event rail: check the host source for museum notices, public programs, and current visitor details before you travel." data-country="El Salvador" data-experiences="rail_museum mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">El Salvador / El Salvador</p>
+        <h3>Museo del Ferrocarril</h3>
+        <p class="meta">San Salvador / Railroad museum</p>
+        <p>Candidate place rail: a museum source for Salvadoran rail heritage and public history; confirm the current official channel before promoting details.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.instagram.com/museodelferrocarril/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="guatemala guatemala country mexico_central_caribbean_board museo del ferrocarril guatemala city museo del ferrocarril guatemala rail_museum candidate place rail: a guatemalan railway museum source for station history, equipment heritage, and public rail memory. museo del ferrocarril guatemala candidate event rail: check the host source for museum hours, programs, and current visitor details before you travel." data-country="Guatemala" data-experiences="rail_museum mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Guatemala / Guatemala</p>
+        <h3>Museo del Ferrocarril</h3>
+        <p class="meta">Guatemala City / Railroad museum</p>
+        <p>Candidate place rail: a Guatemalan railway museum source for station history, equipment heritage, and public rail memory.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.facebook.com/museo.ferrocarril/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="honduras honduras country mexico_central_caribbean_board honduras rail heritage source rail tegucigalpa / national instituto hondureno de antropologia e historia rail_history_source candidate place rail: start with national heritage sources, then confirm any railroad museum, banana railway, or station-history lead with a local host source. instituto hondureno de antropologia e historia candidate event rail: check national and local heritage sources for public programs, museum days, and current visitor details before you travel." data-country="Honduras" data-experiences="rail_history_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Honduras / Honduras</p>
+        <h3>Honduras rail heritage source rail</h3>
+        <p class="meta">Tegucigalpa / national / Rail history source</p>
+        <p>Candidate place rail: start with national heritage sources, then confirm any railroad museum, banana railway, or station-history lead with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.ihah.hn/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="nicaragua nicaragua country mexico_central_caribbean_board nicaragua rail history source rail managua / national visit nicaragua rail_history_source candidate place rail: start with national tourism and history sources, then confirm any railroad museum, station, or archive lead with a local host source. visit nicaragua candidate event rail: check local museums and tourism sources for rail-history programs, heritage walks, and current visitor details before you travel." data-country="Nicaragua" data-experiences="rail_history_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Nicaragua / Nicaragua</p>
+        <h3>Nicaragua rail history source rail</h3>
+        <p class="meta">Managua / national / Rail history source</p>
+        <p>Candidate place rail: start with national tourism and history sources, then confirm any railroad museum, station, or archive lead with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.visitanicaragua.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="panama panama country mexico_central_caribbean_board panama canal railway panama city / colon panama canal railway company passenger_rail_source candidate place rail: a panama rail source where canal history, passenger travel, and railroad engineering meet. panama canal railway company candidate event rail: check the host source for current service, public travel details, tickets, and route information before you travel." data-country="Panama" data-experiences="passenger_rail_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Panama / Panama</p>
+        <h3>Panama Canal Railway</h3>
+        <p class="meta">Panama City / Colon / Passenger rail source</p>
+        <p>Candidate place rail: a Panama rail source where canal history, passenger travel, and railroad engineering meet.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.panarail.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="cuba cuba country mexico_central_caribbean_board cuba railway source rail havana / national tren cuba passenger_rail_source candidate place rail: a cuba rail source for public railway context; confirm heritage, museum, or tourist-ride leads with a current local host source. tren cuba candidate event rail: check host and local sources for current train notices, rail heritage programs, and visitor details before you travel." data-country="Cuba" data-experiences="passenger_rail_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Cuba / Cuba</p>
+        <h3>Cuba railway source rail</h3>
+        <p class="meta">Havana / national / Passenger rail source</p>
+        <p>Candidate place rail: a Cuba rail source for public railway context; confirm heritage, museum, or tourist-ride leads with a current local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.trencuba.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="jamaica jamaica country mexico_central_caribbean_board jamaica railway corporation kingston / national jamaica railway corporation rail_history_source candidate place rail: a national railway source for jamaican rail history, public rail context, and possible restoration or heritage leads. jamaica railway corporation candidate event rail: check the host source and local heritage sources for railway notices, museum programs, and current visitor details before you travel." data-country="Jamaica" data-experiences="rail_history_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Jamaica / Jamaica</p>
+        <h3>Jamaica Railway Corporation</h3>
+        <p class="meta">Kingston / national / Rail history source</p>
+        <p>Candidate place rail: a national railway source for Jamaican rail history, public rail context, and possible restoration or heritage leads.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://jrc.gov.jm/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="dominican republic dominican republic country mexico_central_caribbean_board dominican rail source rail santo domingo / national opret passenger_rail_source candidate place rail: a modern rail and transit source that can lead toward dominican railroad context, station culture, and public transportation stories. opret candidate event rail: check the host source and local museum sources for rail-related public notices, station programs, and visitor details before you travel." data-country="Dominican Republic" data-experiences="passenger_rail_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Dominican Republic / Dominican Republic</p>
+        <h3>Dominican rail source rail</h3>
+        <p class="meta">Santo Domingo / national / Passenger rail source</p>
+        <p>Candidate place rail: a modern rail and transit source that can lead toward Dominican railroad context, station culture, and public transportation stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.opret.gob.do/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="puerto rico puerto rico territory mexico_central_caribbean_board tren urbano san juan tren urbano passenger_rail_source candidate place rail: a puerto rico rail source for modern urban rail context, station access, and wider island rail-history follow-up. tren urbano candidate event rail: check the host source and local sources for service notices, station programs, and current visitor details before you travel." data-country="Puerto Rico" data-experiences="passenger_rail_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Puerto Rico / Puerto Rico</p>
+        <h3>Tren Urbano</h3>
+        <p class="meta">San Juan / Passenger rail source</p>
+        <p>Candidate place rail: a Puerto Rico rail source for modern urban rail context, station access, and wider island rail-history follow-up.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://trenurbano.pr.gov/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="trinidad and tobago trinidad and tobago country mexico_central_caribbean_board railway building heritage lead port of spain national trust of trinidad and tobago rail_history_source candidate place rail: a heritage-building source that can start a trinidad and tobago rail-history path through stations, architecture, and public memory. national trust of trinidad and tobago candidate event rail: check the host source for tours, heritage programs, and current visitor details before you travel." data-country="Trinidad and Tobago" data-experiences="rail_history_source mexico_central_caribbean_board source_rail_to_confirm">
+        <p class="story-label">Trinidad and Tobago / Trinidad and Tobago</p>
+        <h3>Railway Building heritage lead</h3>
+        <p class="meta">Port of Spain / Rail history source</p>
+        <p>Candidate place rail: a heritage-building source that can start a Trinidad and Tobago rail-history path through stations, architecture, and public memory.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>Mexico, Central America, and Caribbean</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://nationaltrust.tt/location/railway-building/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="argentina argentina country south_america_board tren a las nubes salta tren a las nubes scenic_heritage_railway candidate place rail: an argentine high-country train source for mountain scenery, engineering, tourism, and wider railway storytelling. tren a las nubes candidate event rail: check the host source for current departures, tickets, route details, and seasonal service before you travel." data-country="Argentina" data-experiences="scenic_heritage_railway south_america_board source_rail_to_confirm">
+        <p class="story-label">Argentina / Argentina</p>
+        <h3>Tren a las Nubes</h3>
+        <p class="meta">Salta / Scenic heritage railway</p>
+        <p>Candidate place rail: an Argentine high-country train source for mountain scenery, engineering, tourism, and wider railway storytelling.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://trenalasnubes.com.ar/inicio-es/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="bolivia bolivia country south_america_board bolivia rail source rail la paz / national ferroviaria andina passenger_rail_source candidate place rail: a bolivian rail source for highland railway context, public service leads, and future heritage follow-up. ferroviaria andina candidate event rail: check the host source and local sources for current train notices, heritage programs, and visitor details before you travel." data-country="Bolivia" data-experiences="passenger_rail_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Bolivia / Bolivia</p>
+        <h3>Bolivia rail source rail</h3>
+        <p class="meta">La Paz / national / Passenger rail source</p>
+        <p>Candidate place rail: a Bolivian rail source for highland railway context, public service leads, and future heritage follow-up.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.fca.com.bo/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="brazil brazil country south_america_board trem turistico sao joao del-rei - tiradentes minas gerais vli trem turistico heritage_train_ride candidate place rail: a brazilian tourist railway source for steam-era heritage, mining-region travel, and family railroad stories. vli trem turistico candidate event rail: check the host source for current departures, tickets, museum access, and route details before you travel." data-country="Brazil" data-experiences="heritage_train_ride south_america_board source_rail_to_confirm">
+        <p class="story-label">Brazil / Brazil</p>
+        <h3>Trem Turistico Sao Joao del-Rei - Tiradentes</h3>
+        <p class="meta">Minas Gerais / Heritage train ride</p>
+        <p>Candidate place rail: a Brazilian tourist railway source for steam-era heritage, mining-region travel, and family railroad stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.vli-logistica.com.br/esg/trem-turistico/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="chile chile country south_america_board tren del recuerdo santiago tren del recuerdo heritage_train_ride candidate place rail: a chilean heritage train source for public rides, railway memory, and preserved equipment stories. tren del recuerdo candidate event rail: check the host source for current trips, tickets, boarding details, and seasonal service before you travel." data-country="Chile" data-experiences="heritage_train_ride south_america_board source_rail_to_confirm">
+        <p class="story-label">Chile / Chile</p>
+        <h3>Tren del Recuerdo</h3>
+        <p class="meta">Santiago / Heritage train ride</p>
+        <p>Candidate place rail: a Chilean heritage train source for public rides, railway memory, and preserved equipment stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://trendelrecuerdo.cl/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="colombia colombia country south_america_board tren turistico de la sabana bogota turistren heritage_train_ride candidate place rail: a colombian tourist train source for sabana rail trips, family rides, and regional heritage stories. turistren candidate event rail: check the host source for trip dates, tickets, boarding details, and current visitor information before you travel." data-country="Colombia" data-experiences="heritage_train_ride south_america_board source_rail_to_confirm">
+        <p class="story-label">Colombia / Colombia</p>
+        <h3>Tren Turistico de la Sabana</h3>
+        <p class="meta">Bogota / Heritage train ride</p>
+        <p>Candidate place rail: a Colombian tourist train source for Sabana rail trips, family rides, and regional heritage stories.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://turistren.com.co/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="ecuador ecuador country south_america_board ecuador rail source rail quito / national tren ecuador rail_history_source candidate place rail: an ecuador railway source for mountain rail history and future ride or museum leads; confirm current operations before promoting travel details. tren ecuador candidate event rail: check the host source and local sources for current train notices, museum programs, and visitor details before you travel." data-country="Ecuador" data-experiences="rail_history_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Ecuador / Ecuador</p>
+        <h3>Ecuador rail source rail</h3>
+        <p class="meta">Quito / national / Rail history source</p>
+        <p>Candidate place rail: an Ecuador railway source for mountain rail history and future ride or museum leads; confirm current operations before promoting travel details.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.trenecuador.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="guyana guyana country south_america_board guyana rail heritage source rail georgetown / national national trust of guyana rail_history_source candidate place rail: start with national heritage sources, then confirm station, plantation railway, or archive leads with a local host source. national trust of guyana candidate event rail: check heritage sources for public programs, walking tours, exhibits, and current visitor details before you travel." data-country="Guyana" data-experiences="rail_history_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Guyana / Guyana</p>
+        <h3>Guyana rail heritage source rail</h3>
+        <p class="meta">Georgetown / national / Rail history source</p>
+        <p>Candidate place rail: start with national heritage sources, then confirm station, plantation railway, or archive leads with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://nationaltrust.gov.gy/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="french guiana french guiana territory south_america_board french guiana rail history source rail cayenne / territorial guyane amazonie tourism rail_history_source candidate place rail: start with territorial tourism and heritage sources, then confirm any rail, industrial, or station-history lead with a local host source. guyane amazonie tourism candidate event rail: check local heritage and tourism sources for public history programs and current visitor details before you travel." data-country="French Guiana" data-experiences="rail_history_source south_america_board source_rail_to_confirm">
+        <p class="story-label">French Guiana / French Guiana</p>
+        <h3>French Guiana rail history source rail</h3>
+        <p class="meta">Cayenne / territorial / Rail history source</p>
+        <p>Candidate place rail: start with territorial tourism and heritage sources, then confirm any rail, industrial, or station-history lead with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.guyane-amazonie.fr/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="paraguay paraguay country south_america_board paraguay rail heritage source rail asuncion senatur paraguay rail_history_source candidate place rail: start with national tourism sources, then confirm railway station, museum, or preserved equipment leads with a local host source. senatur paraguay candidate event rail: check official tourism and museum sources for rail-history programs and current visitor details before you travel." data-country="Paraguay" data-experiences="rail_history_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Paraguay / Paraguay</p>
+        <h3>Paraguay rail heritage source rail</h3>
+        <p class="meta">Asuncion / Rail history source</p>
+        <p>Candidate place rail: start with national tourism sources, then confirm railway station, museum, or preserved equipment leads with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.senatur.gov.py/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="peru peru country south_america_board perurail cusco / national perurail passenger_rail_source candidate place rail: a peruvian rail source for mountain routes, destination travel, and broader andes railway storytelling. perurail candidate event rail: check the host source for current train service, tickets, route details, and visitor requirements before you travel." data-country="Peru" data-experiences="passenger_rail_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Peru / Peru</p>
+        <h3>PeruRail</h3>
+        <p class="meta">Cusco / national / Passenger rail source</p>
+        <p>Candidate place rail: a Peruvian rail source for mountain routes, destination travel, and broader Andes railway storytelling.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.perurail.com/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="suriname suriname country south_america_board suriname rail history source rail paramaribo / national suriname tourism board rail_history_source candidate place rail: start with national tourism and heritage sources, then confirm plantation railway, station, or archive leads with a local host source. suriname tourism board candidate event rail: check local heritage and tourism sources for public history programs and current visitor details before you travel." data-country="Suriname" data-experiences="rail_history_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Suriname / Suriname</p>
+        <h3>Suriname rail history source rail</h3>
+        <p class="meta">Paramaribo / national / Rail history source</p>
+        <p>Candidate place rail: start with national tourism and heritage sources, then confirm plantation railway, station, or archive leads with a local host source.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.surinametourism.sr/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="uruguay uruguay country south_america_board uruguay rail source rail montevideo / national afe uruguay passenger_rail_source candidate place rail: a uruguayan rail source for public railway context, station culture, and future heritage follow-up. afe uruguay candidate event rail: check the host source and local sources for public rail notices, heritage events, and visitor details before you travel." data-country="Uruguay" data-experiences="passenger_rail_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Uruguay / Uruguay</p>
+        <h3>Uruguay rail source rail</h3>
+        <p class="meta">Montevideo / national / Passenger rail source</p>
+        <p>Candidate place rail: a Uruguayan rail source for public railway context, station culture, and future heritage follow-up.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.afe.com.uy/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+<article class="place-card candidate-card" data-place-card data-search="venezuela venezuela country south_america_board venezuela rail source rail caracas / national instituto de ferrocarriles del estado passenger_rail_source candidate place rail: a venezuelan rail source for public railway context, station culture, and deeper heritage follow-up. instituto de ferrocarriles del estado candidate event rail: check the host source and local sources for current train notices, heritage references, and visitor details before you travel." data-country="Venezuela" data-experiences="passenger_rail_source south_america_board source_rail_to_confirm">
+        <p class="story-label">Venezuela / Venezuela</p>
+        <h3>Venezuela rail source rail</h3>
+        <p class="meta">Caracas / national / Passenger rail source</p>
+        <p>Candidate place rail: a Venezuelan rail source for public railway context, station culture, and deeper heritage follow-up.</p>
+        <div class="badge-row" aria-label="Where this source rail belongs">
+          <span>South America board</span>
+          <span>Source rail to confirm</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.ife.gob.ve/" target="_blank" rel="noopener noreferrer">Follow the source rail</a></p>
+      </article>
+        </div>
+      </section>
       <section>
         <h2>Source Hubs</h2>
         <p>These association rooms and source rails are the wider discovery rails. Use them when you want a larger starting point, then follow each stop back to its own host source before you make plans.</p>
@@ -1765,7 +2742,7 @@
         visible += 1;
       }
     }
-    count.textContent = visible === 1 ? "1 stop on the board" : visible + " stops on the board";
+    count.textContent = visible === 1 ? "1 route on the board" : visible + " routes on the board";
   }
   search.addEventListener("input", updateBoard);
   country.addEventListener("change", updateBoard);

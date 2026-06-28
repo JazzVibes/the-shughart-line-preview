@@ -285,12 +285,12 @@
       margin-bottom: 18px;
     }
     .places-intro p { margin-top: 0; }
-    .place-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 16px 0 0;
-    }
+	    .place-stats {
+	      display: grid;
+	      grid-template-columns: repeat(4, minmax(0, 1fr));
+	      gap: 10px;
+	      margin: 16px 0 0;
+	    }
     .place-stat {
       border: 1px solid var(--line);
       background: rgba(255, 253, 247, 0.86);
@@ -335,12 +335,23 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-    .place-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-    }
-    .place-card h3 { color: var(--rail); }
+	    .place-grid {
+	      display: grid;
+	      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	      gap: 14px;
+	    }
+	    .place-card h3 { color: var(--rail); }
+	    .candidate-section {
+	      border-top: 3px double var(--rail);
+	      margin-top: 26px;
+	      padding-top: 18px;
+	    }
+	    .candidate-section > p { color: var(--muted); }
+	    .candidate-card {
+	      border-style: dashed;
+	      background: rgba(255, 250, 241, 0.9);
+	    }
+	    .candidate-card .story-label { color: var(--rail); }
     .badge-row {
       display: flex;
       flex-wrap: wrap;

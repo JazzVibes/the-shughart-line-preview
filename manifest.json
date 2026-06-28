@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T19:46:11.057Z",
+  "generatedAt": "2026-06-28T20:17:25.015Z",
   "output": "public-preview",
   "sourceRecords": 29,
   "publicRecords": 29,
@@ -8,6 +8,7 @@
   "globalSources": 14,
   "heritageRailPlaces": 73,
   "heritageRailPlaceHubs": 13,
+  "americasCandidateSourceRails": 77,
   "events": 9,
   "sponsorProspects": 25,
   "publicPages": [
