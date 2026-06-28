@@ -225,7 +225,67 @@
 	      font-family: system-ui, sans-serif;
 	    }
 	    .source-note h3 { color: var(--rail); }
-	    .desks { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); border-top: 2px solid var(--rail); border-bottom: 2px solid var(--rail); margin-top: 18px; }
+	    .about-page {
+	      border: 0;
+	      background: transparent;
+	      padding: 0;
+	    }
+	    .about-hero {
+	      display: grid;
+	      grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+	      gap: 28px;
+	      align-items: start;
+	      border-top: 3px double var(--rail);
+	      border-bottom: 3px double var(--rail);
+	      padding: 24px 0;
+	      margin-bottom: 22px;
+	    }
+	    .about-portrait {
+	      margin: 0;
+	      border: 1px solid rgba(167, 123, 36, 0.58);
+	      background: #fff7df;
+	      padding: 10px;
+	    }
+	    .about-portrait img {
+	      width: 100%;
+	      height: auto;
+	      display: block;
+	      mix-blend-mode: multiply;
+	    }
+	    .about-portrait figcaption {
+	      color: var(--muted);
+	      font: 600 0.78rem/1.35 system-ui, sans-serif;
+	      margin-top: 8px;
+	    }
+	    .about-copy h2 {
+	      margin-top: 0;
+	      color: var(--rail);
+	      font-size: clamp(2.2rem, 5.8vw, 4rem);
+	      line-height: 0.98;
+	    }
+	    .about-deck {
+	      color: var(--muted);
+	      font-size: 1.18rem;
+	      line-height: 1.55;
+	      max-width: 62ch;
+	    }
+	    .about-body {
+	      max-width: 82ch;
+	      margin: 0 auto;
+	    }
+	    .about-body p {
+	      font-size: 1.08rem;
+	      line-height: 1.68;
+	      max-width: 78ch;
+	    }
+	    .about-body .pull-line {
+	      color: var(--rail);
+	      font-size: clamp(1.45rem, 4vw, 2.08rem);
+	      font-weight: 700;
+	      line-height: 1.16;
+	      margin: 28px 0;
+	    }
+		    .desks { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); border-top: 2px solid var(--rail); border-bottom: 2px solid var(--rail); margin-top: 18px; }
 	    .desk { padding: 18px 16px; border-right: 1px dashed var(--line); text-align: center; background: rgba(255, 250, 241, 0.82); }
     .desk:last-child { border-right: 0; }
     .desk .icon { width: 96px; height: 96px; margin: 0 auto 8px; display: grid; place-items: center; background: transparent; }
@@ -440,7 +500,7 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .places-intro, .place-tools, .department-hero { grid-template-columns: 1fr; }
+	      .event-strip, .lead-grid, .lead-story, .feature-hero, .about-hero, .news-archive, .places-intro, .place-tools, .department-hero { grid-template-columns: 1fr; }
       .department-hero-picture {
         width: min(300px, 100%);
         min-height: 220px;
@@ -448,11 +508,13 @@
       .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 560px) {
-      header, main, footer { padding: 16px; }
-      .eyebrow { margin: -16px -16px 16px; padding-inline: 16px; }
-      nav a { flex: 1 1 50%; }
-      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
-      .desks { grid-template-columns: 1fr; }
+	      header, main, footer { padding: 16px; }
+	      .eyebrow { margin: -16px -16px 16px; padding-inline: 16px; }
+	      nav a { flex: 1 1 50%; }
+	      nav a:nth-of-type(5) { flex-basis: 100%; }
+	      nav a:nth-of-type(6), nav a:nth-of-type(7) { flex-basis: 50%; }
+	      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
+	      .desks { grid-template-columns: 1fr; }
       .department-hero-picture { margin-inline: auto; min-height: 190px; }
       .place-stats { grid-template-columns: 1fr; }
       .story-row { grid-template-columns: 1fr; }
@@ -482,6 +544,7 @@
       <a href="../sources/index.html">Directory</a>
       <a href="../archive/2026-06-06/index.html">Archive</a>
       <a href="../submit-news/index.html" aria-current="page">Submit</a>
+      <a href="../about/index.html">About</a>
       <form class="nav-search" role="search" action="../places/index.html">
         <input name="q" type="search" placeholder="Search places, stories, events..." aria-label="Search places, stories, events">
         <button type="submit" aria-label="Search"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="14"/><path d="m39 39 11 11"/></svg></button>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T20:24:04.194Z",
+  "generatedAt": "2026-06-28T20:34:24.260Z",
   "output": "public-preview",
   "sourceRecords": 29,
   "publicRecords": 29,
@@ -19,6 +19,7 @@
     "departments/private-passenger-rail/index.html",
     "departments/pullman-heritage/index.html",
     "departments/signal-and-sound/index.html",
+    "about/index.html",
     "features/larry-as-source/index.html",
     "sources/index.html",
     "places/index.html",
