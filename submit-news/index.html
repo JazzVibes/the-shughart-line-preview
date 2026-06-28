@@ -189,8 +189,8 @@
     @media (max-width: 900px) {
       .masthead { grid-template-columns: 1fr; }
       .ticket, .masthead-art { display: none; }
-      h1, .deck { text-align: left; }
-      .masthead-rule { margin-left: 0; margin-right: auto; width: min(330px, 100%); }
+      h1, .deck { text-align: center; }
+      .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
       .event-strip, .lead-grid, .lead-story, .news-archive { grid-template-columns: 1fr; }
       .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
@@ -201,6 +201,8 @@
       .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
       .desks { grid-template-columns: 1fr; }
       .story-row { grid-template-columns: 1fr; }
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      th, td { min-width: 9rem; }
     }
   </style>
 </head>
