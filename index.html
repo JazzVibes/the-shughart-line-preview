@@ -137,15 +137,96 @@
     .event-chip strong { color: var(--accent); font: 800 0.72rem/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
     .event-chip span { font-weight: 700; }
     .event-chip em { color: var(--muted); font-style: normal; font-size: 0.9rem; }
-    .event-more { padding: 18px 14px; border-left: 1px dashed var(--line); font: 800 0.75rem/1.2 system-ui, sans-serif; text-transform: uppercase; align-self: stretch; display: grid; place-items: center; text-align: center; }
-    .lead-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr); gap: 26px; align-items: stretch; }
-    .lead-story { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; border: 1px solid var(--line); padding: 22px; background: rgba(255, 253, 247, 0.9); }
-    .lead-story h2 { margin-top: 0; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.02; }
-    .story-label { color: var(--accent); font: 800 0.72rem/1.2 system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; }
-    .rail-etching { min-height: 230px; display: grid; place-items: center; background: radial-gradient(circle at 40% 45%, rgba(167,123,36,0.12), transparent 48%); }
-    .rail-etching img { width: min(100%, 390px); height: auto; display: block; mix-blend-mode: multiply; }
-    .desks { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); border-top: 2px solid var(--rail); border-bottom: 2px solid var(--rail); margin-top: 18px; }
-    .desk { padding: 18px 16px; border-right: 1px dashed var(--line); text-align: center; background: rgba(255, 250, 241, 0.82); }
+	    .event-more { padding: 18px 14px; border-left: 1px dashed var(--line); font: 800 0.75rem/1.2 system-ui, sans-serif; text-transform: uppercase; align-self: stretch; display: grid; place-items: center; text-align: center; }
+	    .lead-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr); gap: 26px; align-items: stretch; }
+	    .lead-story { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; border: 1px solid var(--line); padding: 22px; background: rgba(255, 253, 247, 0.9); }
+	    .lead-story h2 { margin-top: 0; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.02; }
+	    .story-label { color: var(--accent); font: 800 0.72rem/1.2 system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; }
+	    .rail-etching { min-height: 230px; display: grid; place-items: center; background: radial-gradient(circle at 40% 45%, rgba(167,123,36,0.12), transparent 48%); }
+	    .rail-etching img { width: min(100%, 390px); height: auto; display: block; mix-blend-mode: multiply; }
+	    .lead-portrait {
+	      border: 1px solid rgba(167, 123, 36, 0.5);
+	      background: #fff7df;
+	      overflow: hidden;
+	    }
+	    .lead-portrait img { width: 100%; max-width: 460px; padding: 0; }
+	    .feature-article {
+	      border: 0;
+	      background: transparent;
+	      padding: 0;
+	    }
+	    .feature-hero {
+	      display: grid;
+	      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+	      gap: 28px;
+	      align-items: start;
+	      border-top: 3px double var(--rail);
+	      border-bottom: 3px double var(--rail);
+	      padding: 24px 0;
+	      margin-bottom: 22px;
+	    }
+	    .feature-article h2 {
+	      margin-top: 0;
+	      font-size: clamp(2.3rem, 6vw, 4.4rem);
+	      line-height: 0.98;
+	    }
+	    .feature-deck {
+	      color: var(--muted);
+	      font-size: 1.18rem;
+	      line-height: 1.55;
+	      max-width: 64ch;
+	    }
+	    .feature-portrait {
+	      margin: 0;
+	      border: 1px solid var(--line);
+	      background: #fff7df;
+	      padding: 10px;
+	    }
+	    .feature-portrait img {
+	      width: 100%;
+	      height: auto;
+	      display: block;
+	      mix-blend-mode: multiply;
+	    }
+	    .feature-portrait figcaption {
+	      color: var(--muted);
+	      font: 600 0.78rem/1.35 system-ui, sans-serif;
+	      margin-top: 8px;
+	    }
+	    .feature-note {
+	      border-left: 4px solid var(--brass);
+	      background: #fff7df;
+	      padding: 12px 14px;
+	      margin: 16px 0 0;
+	      font-family: system-ui, sans-serif;
+	      max-width: 68ch;
+	    }
+	    .feature-body {
+	      max-width: 82ch;
+	      margin: 0 auto;
+	    }
+	    .feature-body p {
+	      font-size: 1.08rem;
+	      line-height: 1.68;
+	      max-width: 78ch;
+	    }
+	    .feature-body .pull-line {
+	      color: var(--rail);
+	      font-size: clamp(1.45rem, 4vw, 2.1rem);
+	      font-weight: 700;
+	      line-height: 1.15;
+	      margin: 28px 0;
+	    }
+	    .source-note {
+	      border-top: 1px solid var(--line);
+	      margin: 28px auto 0;
+	      padding-top: 18px;
+	      max-width: 82ch;
+	      font-family: system-ui, sans-serif;
+	    }
+	    .source-note h3 { color: var(--rail); }
+	    .desks { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); border-top: 2px solid var(--rail); border-bottom: 2px solid var(--rail); margin-top: 18px; }
+	    .desk { padding: 18px 16px; border-right: 1px dashed var(--line); text-align: center; background: rgba(255, 250, 241, 0.82); }
     .desk:last-child { border-right: 0; }
     .desk .icon { width: 96px; height: 96px; margin: 0 auto 8px; display: grid; place-items: center; background: transparent; }
     .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
@@ -218,9 +299,9 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-      .event-strip, .lead-grid, .lead-story, .news-archive, .global-dispatch .section-intro { grid-template-columns: 1fr; }
-      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
+	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .global-dispatch .section-intro { grid-template-columns: 1fr; }
+	      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	    }
     @media (max-width: 560px) {
       header, main, footer { padding: 16px; }
       .eyebrow { margin: -16px -16px 16px; padding-inline: 16px; }
@@ -287,15 +368,16 @@
       <a class="event-more" href="events/index.html">View all events</a>
     </section>
     <section class="lead-grid">
-      <article class="lead-story">
-        <div>
-          <p class="story-label">Featured Story</p>
-          <h2>Start with the source trail, then mark the route</h2>
-          <p>We begin with public railroad and model-train sources: short notes, original links, and a clear route for the people closest to each story to correct the map before anything becomes a claim.</p>
-          <p><a href="https://www.nasg.org/Layouts/AF/indexShughartLarryYNorthern_Florida_Railway.php" target="_blank" rel="noopener noreferrer">Read the source trail</a></p>
-        </div>
-        <div class="rail-etching"><img src="assets/shughart-portal/feature-signal.png" alt=""></div>
-      </article>
+	      <article class="lead-story">
+	        <div>
+	          <p class="story-label">Featured Story</p>
+	          <h2>The Line That Points Back</h2>
+	          <p>A Pennsylvania railroader, a Jacksonville railroad room, and the idea that a useful train site should do what good railroad people have always done: keep the timetable honest, name the source, and get you to the right stop.</p>
+	          <p>Meet this preview&apos;s first standard: source first, magic intact, and every correction welcome before the train leaves the platform.</p>
+	          <p><a href="features/larry-as-source/index.html">Read the feature story</a></p>
+	        </div>
+	        <div class="rail-etching lead-portrait"><img src="assets/story-art/larry-source-portrait-card.png" alt="Hand-drawn feature portrait of Larry Shughart with his dog beside a passenger railcar"></div>
+	      </article>
       <article class="sponsor">
         <p class="story-label">Thanks To Our Sponsors</p>
         <div class="rail-etching"><img src="assets/shughart-portal/sponsor-train.png" alt=""></div>
