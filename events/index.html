@@ -232,32 +232,6 @@
     .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
     .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
-    .global-dispatch {
-      margin-top: 24px;
-      padding: 22px;
-      border-top: 2px solid var(--rail);
-      border-bottom: 2px solid var(--rail);
-      background: rgba(232, 240, 234, 0.72);
-    }
-    .global-dispatch .section-intro {
-      display: grid;
-      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
-      gap: 18px;
-      align-items: end;
-      margin-bottom: 16px;
-    }
-    .global-dispatch h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.04; }
-    .global-dispatch p { margin: 0; }
-    .dispatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-    .dispatch-card {
-      border: 1px solid var(--line);
-      background: rgba(255, 253, 247, 0.92);
-      padding: 14px;
-      min-height: 100%;
-    }
-    .dispatch-card h3 { color: var(--rail); }
-    .dispatch-card .meta { margin: 0 0 8px; }
-    .dispatch-card p { margin: 0 0 10px; }
     .places-intro {
       display: grid;
       grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
@@ -397,7 +371,7 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .global-dispatch .section-intro, .places-intro, .place-tools { grid-template-columns: 1fr; }
+	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .places-intro, .place-tools { grid-template-columns: 1fr; }
 	      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	    }
     @media (max-width: 560px) {
