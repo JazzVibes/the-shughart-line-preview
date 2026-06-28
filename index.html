@@ -378,8 +378,19 @@
     table { border-collapse: collapse; width: 100%; font-family: system-ui, sans-serif; font-size: 0.92rem; background: rgba(255,255,255,0.72); }
     th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--rail-soft); }
-    .sponsor { border-color: var(--accent); background: #fffaf8; }
+    .sponsor { border-color: var(--accent); background: #fffaf8; text-align: center; }
     .sponsor strong { color: var(--accent); }
+    .sponsor-mark {
+      width: min(168px, 72%);
+      margin: 6px auto 14px;
+    }
+    .sponsor-mark img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(126, 58, 53, 0.18);
+      box-shadow: 0 10px 22px rgba(73, 41, 35, 0.16);
+    }
     footer { color: var(--muted); border-top: 1px solid var(--line); font-family: system-ui, sans-serif; font-size: 0.9rem; }
     @media (max-width: 900px) {
       .masthead { grid-template-columns: 1fr; }
@@ -467,10 +478,10 @@
 		      </article>
       <article class="sponsor">
         <p class="story-label">Thanks To Our Sponsors</p>
-        <div class="rail-etching"><img src="assets/shughart-portal/sponsor-train.png" alt=""></div>
-        <h3><strong>Sponsored:</strong> Colonial Pullman</h3>
+        <div class="sponsor-mark"><img src="assets/shughart-portal/colonial-crafts-logo.png" alt="Colonial Crafts logo" loading="eager" decoding="async"></div>
+        <h3><strong>Sponsored:</strong> Colonial Pullman / Colonial Crafts</h3>
         <p>Private passenger rail history, Pullman craft, and heritage trips aboard the restored 1949 Colonial Crafts.</p>
-        <p>The timetable stays with the original sources.</p>
+        <p>The timetable stays with the original sources. This is a good place to begin when you want the private varnish story firsthand.</p>
         <p><a href="https://www.colonialpullman.com/" target="_blank" rel="noopener noreferrer">Visit Colonial Pullman</a></p>
       </article>
     </section>

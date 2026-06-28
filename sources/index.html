@@ -378,8 +378,19 @@
     table { border-collapse: collapse; width: 100%; font-family: system-ui, sans-serif; font-size: 0.92rem; background: rgba(255,255,255,0.72); }
     th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--rail-soft); }
-    .sponsor { border-color: var(--accent); background: #fffaf8; }
+    .sponsor { border-color: var(--accent); background: #fffaf8; text-align: center; }
     .sponsor strong { color: var(--accent); }
+    .sponsor-mark {
+      width: min(168px, 72%);
+      margin: 6px auto 14px;
+    }
+    .sponsor-mark img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(126, 58, 53, 0.18);
+      box-shadow: 0 10px 22px rgba(73, 41, 35, 0.16);
+    }
     footer { color: var(--muted); border-top: 1px solid var(--line); font-family: system-ui, sans-serif; font-size: 0.9rem; }
     @media (max-width: 900px) {
       .masthead { grid-template-columns: 1fr; }
