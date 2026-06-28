@@ -112,6 +112,16 @@
       max-width: 78ch;
       font-family: system-ui, sans-serif;
     }
+    .page-heading {
+      border-bottom: 1px solid var(--line);
+      margin: 0 0 18px;
+      padding-bottom: 12px;
+    }
+    .page-heading h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 5vw, 3.1rem);
+      line-height: 1.04;
+    }
     .event-strip {
       display: grid;
       grid-template-columns: 160px repeat(4, minmax(0, 1fr)) 130px;
@@ -200,7 +210,7 @@
     <div class="masthead">
       <div class="ticket">Preview Issue<strong>001</strong></div>
       <div>
-        <h1>Privacy Draft</h1>
+        <h1>The Shughart Line</h1>
         <div class="masthead-rule" aria-hidden="true">
           <img src="assets/shughart-portal/masthead-bridge-rule.png" alt="">
         </div>
@@ -224,6 +234,10 @@
     </nav>
   </header>
   <main>
+    <section class="page-heading">
+      <p class="story-label">Privacy</p>
+      <h2>Privacy Draft</h2>
+    </section>
     <section class="panel">
       <p>This draft public page explains that the first version uses outbound links, public directory data, source submissions, minimal analytics if approved, and manual correction routes.</p>
       <p>No reader accounts, public lead database, private inquiry records, or private reviewer notes belong in the public alpha page set.</p>

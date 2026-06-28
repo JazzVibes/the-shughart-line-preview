@@ -112,6 +112,16 @@
       max-width: 78ch;
       font-family: system-ui, sans-serif;
     }
+    .page-heading {
+      border-bottom: 1px solid var(--line);
+      margin: 0 0 18px;
+      padding-bottom: 12px;
+    }
+    .page-heading h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 5vw, 3.1rem);
+      line-height: 1.04;
+    }
     .event-strip {
       display: grid;
       grid-template-columns: 160px repeat(4, minmax(0, 1fr)) 130px;
@@ -200,7 +210,7 @@
     <div class="masthead">
       <div class="ticket">Preview Issue<strong>001</strong></div>
       <div>
-        <h1>Source List</h1>
+        <h1>The Shughart Line</h1>
         <div class="masthead-rule" aria-hidden="true">
           <img src="../assets/shughart-portal/masthead-bridge-rule.png" alt="">
         </div>
@@ -224,6 +234,10 @@
     </nav>
   </header>
   <main>
+    <section class="page-heading">
+      <p class="story-label">Directory</p>
+      <h2>Source List</h2>
+    </section>
     <section class="notice">This list uses public-facing details only. Private notes stay out of the public pages.</section>
     <table>
       <thead>
