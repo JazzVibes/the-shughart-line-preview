@@ -126,8 +126,8 @@
     .desks { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); border-top: 2px solid var(--rail); border-bottom: 2px solid var(--rail); margin-top: 18px; }
     .desk { padding: 18px 16px; border-right: 1px dashed var(--line); text-align: center; background: rgba(255, 250, 241, 0.82); }
     .desk:last-child { border-right: 0; }
-    .desk .icon { width: 66px; height: 66px; border-radius: 50%; margin: 0 auto 10px; display: grid; place-items: center; background: transparent; }
-    .desk .icon img { width: 66px; height: 66px; object-fit: cover; border-radius: 50%; mix-blend-mode: multiply; }
+    .desk .icon { width: 96px; height: 96px; margin: 0 auto 8px; display: grid; place-items: center; background: transparent; }
+    .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
     .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
     .news-archive { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 26px; margin-top: 24px; }
@@ -135,7 +135,21 @@
     .story-row { display: grid; grid-template-columns: 86px 1fr; gap: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
     .story-mark { background: var(--paper-deep); border: 1px solid var(--line); display: grid; place-items: center; min-height: 70px; color: var(--rail); }
     .story-mark svg { width: 42px; height: 42px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-    .archive-ticket { width: min(100%, 240px); height: auto; display: block; margin: 4px 0 14px; mix-blend-mode: multiply; }
+    .archive-ticket-wrap { position: relative; width: min(100%, 310px); margin: 4px 0 14px; }
+    .archive-ticket { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+    .archive-ticket-copy {
+      position: absolute;
+      inset: 20% 14%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      pointer-events: none;
+    }
+    .archive-ticket-copy span { color: var(--rail); font: 700 0.64rem/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.14em; }
+    .archive-ticket-copy strong { display: block; color: var(--accent); font-size: 1.35rem; line-height: 1; letter-spacing: 0.05em; margin-top: 2px; }
+    .archive-ticket-copy em { display: block; color: var(--ink); font-style: normal; font-size: 0.95rem; margin-top: 2px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
     article, .panel {
       border: 1px solid var(--line);
