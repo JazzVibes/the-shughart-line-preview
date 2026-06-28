@@ -271,7 +271,7 @@
     .places-intro p { margin-top: 0; }
     .place-stats {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
       margin: 16px 0 0;
     }
@@ -282,29 +282,8 @@
       font-family: system-ui, sans-serif;
     }
     .place-stat strong { display: block; color: var(--accent); font-size: 1.35rem; line-height: 1; }
-    .scale-board {
-      border: 1px solid var(--line);
-      border-left: 5px solid var(--accent);
-      background: rgba(255, 253, 247, 0.9);
-      padding: 18px;
-      margin: 18px 0;
-    }
-    .scale-board h2 { margin-top: 0; color: var(--rail); }
-    .scale-board p { max-width: 74ch; }
-    .scale-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-    .scale-card {
-      border: 1px solid var(--line);
-      background: #fffaf1;
-      padding: 12px;
-    }
-    .scale-card h3 { color: var(--rail); }
-    .scale-number {
-      margin: 0 0 8px;
+    .source-count {
+      margin: 0 0 10px;
       color: var(--accent);
       font: 900 1.55rem/1 system-ui, sans-serif;
     }
@@ -465,69 +444,13 @@
           <p>There are train rides, museums, depots, preserved lines, and railroad rooms in nearly every part of the world. We are building the board one source at a time, then sending you to the host source before you travel.</p>
           <p>This is the first board, not the whole railroad map yet. It gives you a starting route and keeps room for the line to grow.</p>
           <div class="place-stats" aria-label="Directory coverage">
-            <div class="place-stat"><strong>22</strong><span>first stops on the board</span></div>
-            <div class="place-stat"><strong>12</strong><span>countries in this seed</span></div>
-            <div class="place-stat"><strong>6</strong><span>source hubs for the next run</span></div>
-            <div class="place-stat"><strong>1,200+</strong><span>candidate signals in the yard</span></div>
+            <div class="place-stat"><strong>61</strong><span>first stops on the board</span></div>
+            <div class="place-stat"><strong>15</strong><span>countries in this seed</span></div>
+            <div class="place-stat"><strong>12</strong><span>source hubs for the next run</span></div>
           </div>
         </div>
       </section>
       <section class="notice">Confirm dates, hours, tickets, accessibility, and route details with the linked host source. The Shughart Line should help you find the track, not take the timetable away from the railroad that keeps it.</section>
-      <section class="scale-board">
-        <h2>The Board Gets Much Bigger</h2>
-        <p>You are right: the railroad room is much larger than a first board. These source rails already show 1,200+ stops, member lines, museums, tramways, and preservation rooms to sort before deduplication and host-source review.</p>
-        <p>When model clubs, toy-train rooms, depots, archives, historical societies, events, and private passenger rail sources join the route, the finished resource map should run into the thousands. The cards below stay reviewed first stops; the signals here show where the next run comes from.</p>
-        <div class="scale-card-grid">
-<article class="scale-card">
-        <p class="story-label">United States and Canada</p>
-        <h3>HeritageRail Alliance Institutional Members</h3>
-        <p class="scale-number">175+</p>
-        <p>A 2025 HeritageRail Alliance RFP states that the North American alliance maintains over 175 institutional members and dozens of commercial members.</p>
-        <p class="meta">Use as a candidate discovery signal; promote individual stops only after the host source is checked.</p>
-        <p><a href="https://heritagerail.org/wp-content/uploads/2025/04/HeritageRail-Alliance-RFP-for-Administrative-Services.pdf" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
-      </article>
-<article class="scale-card">
-        <p class="story-label">United Kingdom and Ireland</p>
-        <h3>Heritage Railway Association Resources</h3>
-        <p class="scale-number">314</p>
-        <p>The HRA resources page cites 173 working railways, 9 operational tramways, 8 cliff railways, 24 museums and steam centres, and 100 societies, funding groups, and trusts.</p>
-        <p class="meta">Use as a candidate discovery signal; treat the HRA directory as the route back to the host source.</p>
-        <p><a href="https://www.hra.uk.com/resources" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
-      </article>
-<article class="scale-card">
-        <p class="story-label">Europe</p>
-        <h3>FEDECRAIL Network Scope</h3>
-        <p class="scale-number">about 650</p>
-        <p>FEDECRAIL says it represents 58 national European members across 29 countries, encompassing approximately 650 to 700 individual railway attractions.</p>
-        <p class="meta">Use as a candidate discovery signal; deduplicate against national directories before publishing place cards.</p>
-        <p><a href="https://fedecrail.org/join-fedecrail-as-a-commercial-partner-or-trade-associate/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
-      </article>
-<article class="scale-card">
-        <p class="story-label">Australia</p>
-        <h3>Australian Tourist and Heritage Railway Association Members</h3>
-        <p class="scale-number">93</p>
-        <p>The ATHRA members page exposes 93 member-table rows across Australian states and territories.</p>
-        <p class="meta">Use as a candidate discovery signal; check each railway, museum, or tramway at its own host source.</p>
-        <p><a href="https://www.athra.asn.au/membership/members/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
-      </article>
-<article class="scale-card">
-        <p class="story-label">New Zealand and Rarotonga</p>
-        <h3>Federation of Rail Organisations of New Zealand Members</h3>
-        <p class="scale-number">60+</p>
-        <p>FRONZ describes itself as representing more than 60 heritage rail, tramway, and museum groups in New Zealand and Rarotonga.</p>
-        <p class="meta">Use as a candidate discovery signal; keep current trip details with the listed host organization.</p>
-        <p><a href="https://fronz.org.nz/members/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
-      </article>
-<article class="scale-card">
-        <p class="story-label">Asia-Pacific</p>
-        <h3>Asia Pacific Heritage and Tourist Rail Organisation</h3>
-        <p class="scale-number">scope signal</p>
-        <p>APHTRO points toward heritage and tourist railway work across Oceania, East Asia, South Asia, Southeast Asia, and the Middle East.</p>
-        <p class="meta">Use as a candidate discovery rail for regional leads before any place earns a public card.</p>
-        <p><a href="https://aphtro.info/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
-      </article>
-        </div>
-      </section>
       <section class="place-tools" aria-label="Search rail places">
         <label for="place-search">Search by place, city, state, country, railway, museum, or ride
           <input id="place-search" type="search" autocomplete="off" placeholder="Try steam, museum, Pennsylvania, Kyoto, narrow gauge">
@@ -542,9 +465,12 @@
 <option value="France">France</option>
 <option value="Germany">Germany</option>
 <option value="India">India</option>
+<option value="Italy">Italy</option>
 <option value="Japan">Japan</option>
+<option value="Netherlands">Netherlands</option>
 <option value="New Zealand">New Zealand</option>
 <option value="Switzerland">Switzerland</option>
+<option value="Taiwan">Taiwan</option>
 <option value="United Kingdom">United Kingdom</option>
 <option value="United States">United States</option>
           </select>
@@ -573,12 +499,13 @@
 <option value="shop_tour">Shop tour</option>
 <option value="station_history">Station history</option>
 <option value="steam_train_ride">Steam train ride</option>
+<option value="tramway">Tramway</option>
 <option value="transport_history">Transport history</option>
 <option value="western_rail_history">Western rail history</option>
           </select>
         </label>
       </section>
-      <p class="place-count" data-place-count>22 stops on the board</p>
+      <p class="place-count" data-place-count>61 stops on the board</p>
       <section class="place-grid" aria-label="Heritage rail places">
 <article class="place-card" data-place-card data-search="cumbres &amp; toltec scenic railroad united states colorado / new mexico chama / antonito scenic_heritage_railway a high-country narrow-gauge steam ride where the old mountain railroad story still moves on the timetable. cumbres toltec scenic railroad united states steam narrow gauge colorado new mexico chama antonito mountain scenery heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United States" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
         <p class="story-label">United States</p>
@@ -888,10 +815,556 @@
         <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
         <p><a href="https://www.argentina.gob.ar/transporte/fase/museo-nacional-ferroviario" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
       </article>
+<article class="place-card" data-place-card data-search="heart of dixie railroad museum united states alabama calera rail_museum an alabama railroad museum stop for public train rides, preserved equipment, exhibits, and a family route into southern rail history. heart of dixie railroad museum united states alabama calera train rides preserved equipment southern rail history rail_museum heritage_train_ride family_ride rail_history" data-country="United States" data-experiences="rail_museum heritage_train_ride family_ride rail_history">
+        <p class="story-label">United States</p>
+        <h3>Heart of Dixie Railroad Museum</h3>
+        <p class="meta">Calera, Alabama / Railroad museum</p>
+        <p>An Alabama railroad museum stop for public train rides, preserved equipment, exhibits, and a family route into Southern rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Heritage ride</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.hodrrm.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="north alabama railroad museum united states alabama huntsville rail_museum a huntsville rail-preservation stop with museum work, public rides, and a north alabama path into railroad memory. north alabama railroad museum united states huntsville alabama train rides rail history family museum rail_museum heritage_train_ride family_ride rail_history" data-country="United States" data-experiences="rail_museum heritage_train_ride family_ride rail_history">
+        <p class="story-label">United States</p>
+        <h3>North Alabama Railroad Museum</h3>
+        <p class="meta">Huntsville, Alabama / Railroad museum</p>
+        <p>A Huntsville rail-preservation stop with museum work, public rides, and a North Alabama path into railroad memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Heritage ride</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://narm.info/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="arkansas railroad museum united states arkansas pine bluff rail_museum a pine bluff museum stop for arkansas railroad history, preserved equipment, restoration work, and shop-floor rail craft. arkansas railroad museum united states pine bluff locomotives restoration shops rail history rail_museum locomotive_collection shop_tour rail_history" data-country="United States" data-experiences="rail_museum locomotive_collection shop_tour rail_history">
+        <p class="story-label">United States</p>
+        <h3>Arkansas Railroad Museum</h3>
+        <p class="meta">Pine Bluff, Arkansas / Railroad museum</p>
+        <p>A Pine Bluff museum stop for Arkansas railroad history, preserved equipment, restoration work, and shop-floor rail craft.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Shop tour</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.arkansasrailroadmuseum.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="arizona railway museum united states arizona chandler rail_museum a chandler museum stop for arizona railway history, preserved cars, locomotives, and the desert railroad story. arizona railway museum united states chandler arizona locomotives cars desert western rail history rail_museum locomotive_collection family_history_stop western_rail_history" data-country="United States" data-experiences="rail_museum locomotive_collection family_history_stop western_rail_history">
+        <p class="story-label">United States</p>
+        <h3>Arizona Railway Museum</h3>
+        <p class="meta">Chandler, Arizona / Railroad museum</p>
+        <p>A Chandler museum stop for Arizona railway history, preserved cars, locomotives, and the desert railroad story.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Family stop</span>
+          <span>Western rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.azrymuseum.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="colorado railroad museum united states colorado golden rail_museum a golden museum stop for colorado narrow-gauge history, locomotives, rolling stock, mountain rail memory, and family learning. colorado railroad museum united states golden narrow gauge locomotives mountain rail history family rail_museum narrow_gauge locomotive_collection mountain_scenery" data-country="United States" data-experiences="rail_museum narrow_gauge locomotive_collection mountain_scenery">
+        <p class="story-label">United States</p>
+        <h3>Colorado Railroad Museum</h3>
+        <p class="meta">Golden, Colorado / Railroad museum</p>
+        <p>A Golden museum stop for Colorado narrow-gauge history, locomotives, rolling stock, mountain rail memory, and family learning.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Narrow gauge</span>
+          <span>Locomotive collection</span>
+          <span>Mountain scenery</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://coloradorailroadmuseum.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="illinois railway museum united states illinois union rail_museum a large illinois museum stop for operating railway equipment, electric railway history, public rides, and preservation work. illinois railway museum united states union operating railway equipment electric railway public rides preservation rail_museum locomotive_collection heritage_train_ride tramway" data-country="United States" data-experiences="rail_museum locomotive_collection heritage_train_ride tramway">
+        <p class="story-label">United States</p>
+        <h3>Illinois Railway Museum</h3>
+        <p class="meta">Union, Illinois / Railroad museum</p>
+        <p>A large Illinois museum stop for operating railway equipment, electric railway history, public rides, and preservation work.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Heritage ride</span>
+          <span>Tramway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.irm.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="tennessee valley railroad museum united states tennessee chattanooga heritage_train_ride a chattanooga heritage railway stop for public rides, steam and diesel history, preservation, and a living railroad line. tennessee valley railroad museum united states chattanooga tennessee steam diesel heritage train ride family heritage_train_ride steam_train_ride rail_museum family_ride" data-country="United States" data-experiences="heritage_train_ride steam_train_ride rail_museum family_ride">
+        <p class="story-label">United States</p>
+        <h3>Tennessee Valley Railroad Museum</h3>
+        <p class="meta">Chattanooga, Tennessee / Heritage train ride</p>
+        <p>A Chattanooga heritage railway stop for public rides, steam and diesel history, preservation, and a living railroad line.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Steam train ride</span>
+          <span>Railroad museum</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.tvrail.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="western railway museum united states california suisun city rail_museum a northern california museum stop for electric railway preservation, interurban rides, railway collections, and western transit memory. western railway museum united states suisun city california electric railway interurban rides western rail history rail_museum tramway heritage_train_ride western_rail_history" data-country="United States" data-experiences="rail_museum tramway heritage_train_ride western_rail_history">
+        <p class="story-label">United States</p>
+        <h3>Western Railway Museum</h3>
+        <p class="meta">Suisun City, California / Railroad museum</p>
+        <p>A Northern California museum stop for electric railway preservation, interurban rides, railway collections, and western transit memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Tramway</span>
+          <span>Heritage ride</span>
+          <span>Western rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.wrm.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="durango &amp; silverton narrow gauge railroad united states colorado durango / silverton scenic_heritage_railway a colorado narrow-gauge mountain railroad stop where steam, canyon scenery, mining history, and public rail travel still meet. durango silverton narrow gauge railroad united states colorado steam mountain scenery mining heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United States" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
+        <p class="story-label">United States</p>
+        <h3>Durango &amp; Silverton Narrow Gauge Railroad</h3>
+        <p class="meta">Durango / Silverton, Colorado / Scenic heritage railway</p>
+        <p>A Colorado narrow-gauge mountain railroad stop where steam, canyon scenery, mining history, and public rail travel still meet.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Narrow gauge</span>
+          <span>Mountain scenery</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.durangotrain.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="steamtown national historic site united states pennsylvania scranton rail_museum a scranton national historic site stop for steam-era railroading, locomotives, exhibits, preservation, and public history. steamtown national historic site united states scranton pennsylvania steam locomotives national park rail history rail_museum steam_train_ride locomotive_collection rail_history" data-country="United States" data-experiences="rail_museum steam_train_ride locomotive_collection rail_history">
+        <p class="story-label">United States</p>
+        <h3>Steamtown National Historic Site</h3>
+        <p class="meta">Scranton, Pennsylvania / Railroad museum</p>
+        <p>A Scranton national historic site stop for steam-era railroading, locomotives, exhibits, preservation, and public history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Steam train ride</span>
+          <span>Locomotive collection</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.nps.gov/stea/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="b&amp;o railroad museum united states maryland baltimore rail_museum a baltimore museum stop for early american railroad history, landmark equipment, roundhouse memory, and public learning. b and o railroad museum united states baltimore maryland locomotives roundhouse american rail history rail_museum locomotive_collection national_collection rail_history" data-country="United States" data-experiences="rail_museum locomotive_collection national_collection rail_history">
+        <p class="story-label">United States</p>
+        <h3>B&amp;O Railroad Museum</h3>
+        <p class="meta">Baltimore, Maryland / Railroad museum</p>
+        <p>A Baltimore museum stop for early American railroad history, landmark equipment, roundhouse memory, and public learning.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>National collection</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.borail.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="severn valley railway united kingdom england kidderminster / bridgnorth heritage_train_ride a west midlands heritage railway stop for steam rides, preserved stations, railway craft, and a classic british branch-line day out. severn valley railway united kingdom england kidderminster bridgnorth steam heritage railway stations family steam_train_ride heritage_railway station_history family_ride" data-country="United Kingdom" data-experiences="steam_train_ride heritage_railway station_history family_ride">
+        <p class="story-label">United Kingdom</p>
+        <h3>Severn Valley Railway</h3>
+        <p class="meta">Kidderminster / Bridgnorth, England / Heritage train ride</p>
+        <p>A West Midlands heritage railway stop for steam rides, preserved stations, railway craft, and a classic British branch-line day out.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Station history</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://svr.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="north yorkshire moors railway united kingdom england pickering / whitby scenic_heritage_railway a north yorkshire heritage railway stop for steam rides, moorland scenery, preserved stations, and a long public route through railway country. north yorkshire moors railway united kingdom england pickering whitby steam heritage railway moorland scenery steam_train_ride heritage_railway mountain_scenery family_ride" data-country="United Kingdom" data-experiences="steam_train_ride heritage_railway mountain_scenery family_ride">
+        <p class="story-label">United Kingdom</p>
+        <h3>North Yorkshire Moors Railway</h3>
+        <p class="meta">Pickering / Whitby, England / Scenic heritage railway</p>
+        <p>A North Yorkshire heritage railway stop for steam rides, moorland scenery, preserved stations, and a long public route through railway country.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Mountain scenery</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.nymr.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="talyllyn railway united kingdom wales tywyn scenic_heritage_railway a welsh narrow-gauge railway stop for steam, preservation history, mountain scenery, and one of the great volunteer railway stories. talyllyn railway united kingdom wales tywyn narrow gauge steam volunteer heritage railway mountain scenery steam_train_ride narrow_gauge heritage_railway mountain_scenery" data-country="United Kingdom" data-experiences="steam_train_ride narrow_gauge heritage_railway mountain_scenery">
+        <p class="story-label">United Kingdom</p>
+        <h3>Talyllyn Railway</h3>
+        <p class="meta">Tywyn, Wales / Scenic heritage railway</p>
+        <p>A Welsh narrow-gauge railway stop for steam, preservation history, mountain scenery, and one of the great volunteer railway stories.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Narrow gauge</span>
+          <span>Heritage railway</span>
+          <span>Mountain scenery</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.talyllyn.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="west somerset railway united kingdom england bishops lydeard / minehead heritage_train_ride a somerset heritage railway stop for public rides, preserved stations, coastal-country rail travel, and railway craft in motion. west somerset railway united kingdom england bishops lydeard minehead steam heritage railway stations family steam_train_ride heritage_railway station_history family_ride" data-country="United Kingdom" data-experiences="steam_train_ride heritage_railway station_history family_ride">
+        <p class="story-label">United Kingdom</p>
+        <h3>West Somerset Railway</h3>
+        <p class="meta">Bishops Lydeard / Minehead, England / Heritage train ride</p>
+        <p>A Somerset heritage railway stop for public rides, preserved stations, coastal-country rail travel, and railway craft in motion.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Station history</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.west-somerset-railway.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="didcot railway centre united kingdom england didcot rail_museum a great western railway preservation stop for locomotives, demonstration lines, broad railway history, and hands-on heritage learning. didcot railway centre united kingdom england great western railway locomotives steam museum rail history rail_museum locomotive_collection steam_train_ride rail_history" data-country="United Kingdom" data-experiences="rail_museum locomotive_collection steam_train_ride rail_history">
+        <p class="story-label">United Kingdom</p>
+        <h3>Didcot Railway Centre</h3>
+        <p class="meta">Didcot, England / Railroad museum</p>
+        <p>A Great Western Railway preservation stop for locomotives, demonstration lines, broad railway history, and hands-on heritage learning.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Steam train ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://didcotrailwaycentre.org.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="ravenglass &amp; eskdale railway united kingdom england ravenglass / dalegarth scenic_heritage_railway a lake district narrow-gauge railway stop for scenic public rides, valley views, small-railway craft, and family travel. ravenglass eskdale railway united kingdom england lake district narrow gauge scenic family heritage train ride heritage_train_ride narrow_gauge mountain_scenery family_ride" data-country="United Kingdom" data-experiences="heritage_train_ride narrow_gauge mountain_scenery family_ride">
+        <p class="story-label">United Kingdom</p>
+        <h3>Ravenglass &amp; Eskdale Railway</h3>
+        <p class="meta">Ravenglass / Dalegarth, England / Scenic heritage railway</p>
+        <p>A Lake District narrow-gauge railway stop for scenic public rides, valley views, small-railway craft, and family travel.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Narrow gauge</span>
+          <span>Mountain scenery</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://ravenglass-railway.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="crich tramway village united kingdom england crich transport_museum a derbyshire tramway museum stop for operating historic trams, street scenes, transport history, and public rides. crich tramway village united kingdom england derbyshire historic trams transport museum public rides tramway transport_history family_history_stop rail_history" data-country="United Kingdom" data-experiences="tramway transport_history family_history_stop rail_history">
+        <p class="story-label">United Kingdom</p>
+        <h3>Crich Tramway Village</h3>
+        <p class="meta">Crich, England / Transport museum</p>
+        <p>A Derbyshire tramway museum stop for operating historic trams, street scenes, transport history, and public rides.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Tramway</span>
+          <span>Transport history</span>
+          <span>Family stop</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.tramway.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="downpatrick &amp; county down railway united kingdom northern ireland downpatrick heritage_train_ride a northern ireland heritage railway stop for public rides, preservation work, museum context, and local railway memory. downpatrick county down railway united kingdom northern ireland heritage train ride museum rail history heritage_train_ride rail_museum family_ride rail_history" data-country="United Kingdom" data-experiences="heritage_train_ride rail_museum family_ride rail_history">
+        <p class="story-label">United Kingdom</p>
+        <h3>Downpatrick &amp; County Down Railway</h3>
+        <p class="meta">Downpatrick, Northern Ireland / Heritage train ride</p>
+        <p>A Northern Ireland heritage railway stop for public rides, preservation work, museum context, and local railway memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Railroad museum</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.downrail.co.uk/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="alexandra timber tramway and museum australia victoria alexandra rail_museum a victorian timber tramway museum stop for small railway history, public rides, preservation, and local bush-industry memory. alexandra timber tramway museum australia victoria tramway public rides timber railway history tramway rail_museum heritage_train_ride rail_history" data-country="Australia" data-experiences="tramway rail_museum heritage_train_ride rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Alexandra Timber Tramway And Museum</h3>
+        <p class="meta">Alexandra, Victoria / Railroad museum</p>
+        <p>A Victorian timber tramway museum stop for small railway history, public rides, preservation, and local bush-industry memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Tramway</span>
+          <span>Railroad museum</span>
+          <span>Heritage ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://alexandratramway.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="archer park rail museum australia queensland rockhampton rail_museum a rockhampton rail museum stop for station history, preserved railway material, tramway context, and central queensland rail memory. archer park rail museum australia queensland rockhampton station history tramway railway museum rail_museum tramway station_history family_history_stop" data-country="Australia" data-experiences="rail_museum tramway station_history family_history_stop">
+        <p class="story-label">Australia</p>
+        <h3>Archer Park Rail Museum</h3>
+        <p class="meta">Rockhampton, Queensland / Railroad museum</p>
+        <p>A Rockhampton rail museum stop for station history, preserved railway material, tramway context, and Central Queensland rail memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Tramway</span>
+          <span>Station history</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.archerparkrailmuseum.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="atherton-herberton historic railway australia queensland atherton / herberton heritage_train_ride a far north queensland heritage railway stop for public rides, local railway history, restoration work, and community preservation. atherton herberton historic railway australia queensland heritage train ride restoration rail history heritage_train_ride rail_history family_ride heritage_railway" data-country="Australia" data-experiences="heritage_train_ride rail_history family_ride heritage_railway">
+        <p class="story-label">Australia</p>
+        <h3>Atherton-Herberton Historic Railway</h3>
+        <p class="meta">Atherton / Herberton, Queensland / Heritage train ride</p>
+        <p>A Far North Queensland heritage railway stop for public rides, local railway history, restoration work, and community preservation.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Rail history</span>
+          <span>Family ride</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.athrail.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="australian narrow gauge railway museum society australia queensland woodford rail_museum a queensland narrow-gauge railway museum stop for preserved equipment, public rides, and the small-gauge railways that served working communities. australian narrow gauge railway museum society australia queensland woodford narrow gauge train ride rail history rail_museum narrow_gauge heritage_train_ride rail_history" data-country="Australia" data-experiences="rail_museum narrow_gauge heritage_train_ride rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Australian Narrow Gauge Railway Museum Society</h3>
+        <p class="meta">Woodford, Queensland / Railroad museum</p>
+        <p>A Queensland narrow-gauge railway museum stop for preserved equipment, public rides, and the small-gauge railways that served working communities.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Narrow gauge</span>
+          <span>Heritage ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://angrms.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="australian sugar cane railway australia queensland bundaberg heritage_train_ride a bundaberg narrow-gauge railway stop for cane-country rail history, public rides, preservation, and family visits. australian sugar cane railway australia queensland bundaberg narrow gauge cane train family rail history heritage_train_ride narrow_gauge family_ride rail_history" data-country="Australia" data-experiences="heritage_train_ride narrow_gauge family_ride rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Australian Sugar Cane Railway</h3>
+        <p class="meta">Bundaberg, Queensland / Heritage train ride</p>
+        <p>A Bundaberg narrow-gauge railway stop for cane-country rail history, public rides, preservation, and family visits.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Narrow gauge</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.bundabergcanetrains.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="ballarat tramway museum australia victoria ballarat transport_museum a ballarat tramway stop for operating heritage trams, local transport memory, family rides, and preservation craft. ballarat tramway museum australia victoria operating heritage trams transport history family rides tramway transport_history family_history_stop rail_history" data-country="Australia" data-experiences="tramway transport_history family_history_stop rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Ballarat Tramway Museum</h3>
+        <p class="meta">Ballarat, Victoria / Transport museum</p>
+        <p>A Ballarat tramway stop for operating heritage trams, local transport memory, family rides, and preservation craft.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Tramway</span>
+          <span>Transport history</span>
+          <span>Family stop</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://btm.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="bendigo tramways australia victoria bendigo transport_museum a bendigo heritage tramway stop for public rides, restored trams, city history, and a working link to street-rail heritage. bendigo tramways australia victoria heritage tram rides restored trams transport history tramway transport_history heritage_train_ride family_ride" data-country="Australia" data-experiences="tramway transport_history heritage_train_ride family_ride">
+        <p class="story-label">Australia</p>
+        <h3>Bendigo Tramways</h3>
+        <p class="meta">Bendigo, Victoria / Transport museum</p>
+        <p>A Bendigo heritage tramway stop for public rides, restored trams, city history, and a working link to street-rail heritage.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Tramway</span>
+          <span>Transport history</span>
+          <span>Heritage ride</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.bendigotramways.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="bennett brook railway australia western australia whiteman park heritage_train_ride a western australia heritage railway stop for public narrow-gauge rides, preservation, family visits, and local rail history. bennett brook railway australia western australia whiteman park narrow gauge heritage train ride family heritage_train_ride narrow_gauge family_ride rail_history" data-country="Australia" data-experiences="heritage_train_ride narrow_gauge family_ride rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Bennett Brook Railway</h3>
+        <p class="meta">Whiteman Park, Western Australia / Heritage train ride</p>
+        <p>A Western Australia heritage railway stop for public narrow-gauge rides, preservation, family visits, and local rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Narrow gauge</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://bbr.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="byron bay railroad company australia new south wales byron bay heritage_train_ride a byron bay railway stop for public passenger rides, local rail reuse, transport history, and a coastal route back to the track. byron bay railroad company australia new south wales passenger rides transport history heritage railway heritage_train_ride family_ride rail_history transport_history" data-country="Australia" data-experiences="heritage_train_ride family_ride rail_history transport_history">
+        <p class="story-label">Australia</p>
+        <h3>Byron Bay Railroad Company</h3>
+        <p class="meta">Byron Bay, New South Wales / Heritage train ride</p>
+        <p>A Byron Bay railway stop for public passenger rides, local rail reuse, transport history, and a coastal route back to the track.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+          <span>Transport history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://byronbaytrain.com.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="canberra railway museum australia australian capital territory canberra rail_museum a canberra rail museum stop for preserved equipment, regional railway memory, public learning, and australian rail heritage. canberra railway museum australia australian capital territory locomotives rail history preservation rail_museum locomotive_collection family_history_stop rail_history" data-country="Australia" data-experiences="rail_museum locomotive_collection family_history_stop rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Canberra Railway Museum</h3>
+        <p class="meta">Canberra, Australian Capital Territory / Railroad museum</p>
+        <p>A Canberra rail museum stop for preserved equipment, regional railway memory, public learning, and Australian rail heritage.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>Family stop</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.canberrarail.org.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="mary valley rattler australia queensland gympie scenic_heritage_railway a queensland heritage railway stop for public rides through mary valley country, steam heritage, and station-town rail memory. mary valley rattler australia queensland gympie steam heritage railway family ride rail history steam_train_ride heritage_railway family_ride rail_history" data-country="Australia" data-experiences="steam_train_ride heritage_railway family_ride rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Mary Valley Rattler</h3>
+        <p class="meta">Gympie, Queensland / Scenic heritage railway</p>
+        <p>A Queensland heritage railway stop for public rides through Mary Valley country, steam heritage, and station-town rail memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.maryvalleyrattler.com.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="zig zag railway australia new south wales clarence scenic_heritage_railway a blue mountains heritage railway stop for public rides, mountain railway engineering, preserved equipment, and scenic rail history. zig zag railway australia new south wales clarence blue mountains steam heritage railway scenic engineering steam_train_ride heritage_railway mountain_scenery rail_history" data-country="Australia" data-experiences="steam_train_ride heritage_railway mountain_scenery rail_history">
+        <p class="story-label">Australia</p>
+        <h3>Zig Zag Railway</h3>
+        <p class="meta">Clarence, New South Wales / Scenic heritage railway</p>
+        <p>A Blue Mountains heritage railway stop for public rides, mountain railway engineering, preserved equipment, and scenic rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Mountain scenery</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://zigzagrailway.com.au/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="ferrymead heritage park new zealand canterbury christchurch transport_museum a christchurch heritage park stop for transport history, trams, rail preservation, museum streetscapes, and family learning. ferrymead heritage park new zealand christchurch canterbury trams rail museum transport history family tramway rail_museum transport_history family_history_stop" data-country="New Zealand" data-experiences="tramway rail_museum transport_history family_history_stop">
+        <p class="story-label">New Zealand</p>
+        <h3>Ferrymead Heritage Park</h3>
+        <p class="meta">Christchurch, Canterbury / Transport museum</p>
+        <p>A Christchurch heritage park stop for transport history, trams, rail preservation, museum streetscapes, and family learning.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Tramway</span>
+          <span>Railroad museum</span>
+          <span>Transport history</span>
+          <span>Family stop</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.ferrymead.org.nz/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="driving creek railway new zealand waikato coromandel scenic_heritage_railway a coromandel narrow-gauge mountain railway stop for public rides, craft, views, and a distinctive new zealand rail experience. driving creek railway new zealand coromandel waikato narrow gauge mountain railway public rides heritage_train_ride narrow_gauge mountain_scenery family_ride" data-country="New Zealand" data-experiences="heritage_train_ride narrow_gauge mountain_scenery family_ride">
+        <p class="story-label">New Zealand</p>
+        <h3>Driving Creek Railway</h3>
+        <p class="meta">Coromandel, Waikato / Scenic heritage railway</p>
+        <p>A Coromandel narrow-gauge mountain railway stop for public rides, craft, views, and a distinctive New Zealand rail experience.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Narrow gauge</span>
+          <span>Mountain scenery</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://drivingcreek.nz/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="motat new zealand auckland auckland transport_museum an auckland transport museum stop with tramway heritage, technology collections, family learning, and wider transport history. motat new zealand auckland transport museum tramway rail history family learning tramway transport_history family_history_stop rail_history" data-country="New Zealand" data-experiences="tramway transport_history family_history_stop rail_history">
+        <p class="story-label">New Zealand</p>
+        <h3>MOTAT</h3>
+        <p class="meta">Auckland, Auckland / Transport museum</p>
+        <p>An Auckland transport museum stop with tramway heritage, technology collections, family learning, and wider transport history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Tramway</span>
+          <span>Transport history</span>
+          <span>Family stop</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.motat.nz/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="harz narrow gauge railways germany saxony-anhalt / thuringia wernigerode scenic_heritage_railway a german narrow-gauge mountain railway stop for steam travel, harz scenery, public routes, and living railway practice. harz narrow gauge railways germany wernigerode steam narrow gauge mountain scenery heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="Germany" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
+        <p class="story-label">Germany</p>
+        <h3>Harz Narrow Gauge Railways</h3>
+        <p class="meta">Wernigerode, Saxony-Anhalt / Thuringia / Scenic heritage railway</p>
+        <p>A German narrow-gauge mountain railway stop for steam travel, Harz scenery, public routes, and living railway practice.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Narrow gauge</span>
+          <span>Mountain scenery</span>
+          <span>Heritage railway</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.hsb-wr.de" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="chemin de fer de la baie de somme france hauts-de-france saint-valery-sur-somme / le crotoy scenic_heritage_railway a french heritage railway stop for steam rides around the somme bay, coastal scenery, preservation, and public railway history. chemin de fer baie de somme france saint-valery-sur-somme le crotoy steam heritage railway coastal scenery steam_train_ride heritage_railway family_ride rail_history" data-country="France" data-experiences="steam_train_ride heritage_railway family_ride rail_history">
+        <p class="story-label">France</p>
+        <h3>Chemin de Fer de la Baie de Somme</h3>
+        <p class="meta">Saint-Valery-sur-Somme / Le Crotoy, Hauts-de-France / Scenic heritage railway</p>
+        <p>A French heritage railway stop for steam rides around the Somme Bay, coastal scenery, preservation, and public railway history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Family ride</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.chemindefer-baiedesomme.fr/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="museumstoomtram hoorn-medemblik netherlands north holland hoorn / medemblik heritage_train_ride a dutch steam tramway and museum stop for public rides, preserved stations, historic equipment, and family rail heritage. museumstoomtram hoorn medemblik netherlands north holland steam tramway museum heritage railway family steam_train_ride heritage_railway rail_museum family_ride" data-country="Netherlands" data-experiences="steam_train_ride heritage_railway rail_museum family_ride">
+        <p class="story-label">Netherlands</p>
+        <h3>Museumstoomtram Hoorn-Medemblik</h3>
+        <p class="meta">Hoorn / Medemblik, North Holland / Heritage train ride</p>
+        <p>A Dutch steam tramway and museum stop for public rides, preserved stations, historic equipment, and family rail heritage.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Railroad museum</span>
+          <span>Family ride</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.stoomtram.nl/en/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="museo nazionale ferroviario di pietrarsa italy campania naples / portici rail_museum an italian national railway museum stop for locomotives, workshops, national rail memory, and the bay of naples railway story. museo nazionale ferroviario pietrarsa italy naples portici railway museum locomotives national collection rail_museum locomotive_collection national_collection rail_history" data-country="Italy" data-experiences="rail_museum locomotive_collection national_collection rail_history">
+        <p class="story-label">Italy</p>
+        <h3>Museo Nazionale Ferroviario di Pietrarsa</h3>
+        <p class="meta">Naples / Portici, Campania / Railroad museum</p>
+        <p>An Italian national railway museum stop for locomotives, workshops, national rail memory, and the Bay of Naples railway story.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Locomotive collection</span>
+          <span>National collection</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://www.fondazionefs.it/en/explore-museum/visit-pietrarsa.html" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="alishan forest railway taiwan chiayi county chiayi / alishan scenic_heritage_railway a taiwan mountain railway stop for forest railway history, scenic public travel, engineering heritage, and high-country rail memory. alishan forest railway taiwan chiayi alishan mountain railway narrow gauge forest railway history heritage_train_ride mountain_scenery narrow_gauge rail_history" data-country="Taiwan" data-experiences="heritage_train_ride mountain_scenery narrow_gauge rail_history">
+        <p class="story-label">Taiwan</p>
+        <h3>Alishan Forest Railway</h3>
+        <p class="meta">Chiayi / Alishan, Chiayi County / Scenic heritage railway</p>
+        <p>A Taiwan mountain railway stop for forest railway history, scenic public travel, engineering heritage, and high-country rail memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Mountain scenery</span>
+          <span>Narrow gauge</span>
+          <span>Rail history</span>
+        </div>
+        <p class="meta">Map pin: city and region ready; exact pin waits for source review.</p>
+        <p><a href="https://afrch.forest.gov.tw/EN" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
       </section>
       <section>
         <h2>Source Hubs</h2>
-        <p>These association rooms are the wider discovery rails. We use them to find more stops, then check the host source before anything earns a public place on the board.</p>
+        <p>These association rooms and source rails are the wider discovery rails. We use them to find more stops, then check the host source before anything earns a public place on the board.</p>
         <div class="source-hub-grid">
 <article class="source-hub">
         <p class="story-label">United States and Canada</p>
@@ -934,6 +1407,54 @@
         <p>An Asia-Pacific heritage and tourist rail stop for regional discovery before each place is checked against its host source.</p>
         <p class="meta">Good for: Heritage Railway, Tourist Railway, International Directory</p>
         <p><a href="https://aphtro.info/" target="_blank" rel="noopener noreferrer">Follow this discovery rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">United States and Canada</p>
+        <h3>HeritageRail Alliance Institutional Members</h3>
+        <p class="source-count">175+</p>
+        <p>A 2025 HeritageRail Alliance RFP states that the North American alliance maintains over 175 institutional members and dozens of commercial members.</p>
+        <p class="meta">Use as a candidate discovery signal; promote individual stops only after the host source is checked.</p>
+        <p><a href="https://heritagerail.org/wp-content/uploads/2025/04/HeritageRail-Alliance-RFP-for-Administrative-Services.pdf" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">United Kingdom and Ireland</p>
+        <h3>Heritage Railway Association Resources</h3>
+        <p class="source-count">314</p>
+        <p>The HRA resources page cites 173 working railways, 9 operational tramways, 8 cliff railways, 24 museums and steam centres, and 100 societies, funding groups, and trusts.</p>
+        <p class="meta">Use as a candidate discovery signal; treat the HRA directory as the route back to the host source.</p>
+        <p><a href="https://www.hra.uk.com/resources" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">Europe</p>
+        <h3>FEDECRAIL Network Scope</h3>
+        <p class="source-count">about 650</p>
+        <p>FEDECRAIL says it represents 58 national European members across 29 countries, encompassing approximately 650 to 700 individual railway attractions.</p>
+        <p class="meta">Use as a candidate discovery signal; deduplicate against national directories before publishing place cards.</p>
+        <p><a href="https://fedecrail.org/join-fedecrail-as-a-commercial-partner-or-trade-associate/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">Australia</p>
+        <h3>Australian Tourist and Heritage Railway Association Members</h3>
+        <p class="source-count">93</p>
+        <p>The ATHRA members page exposes 93 member-table rows across Australian states and territories.</p>
+        <p class="meta">Use as a candidate discovery signal; check each railway, museum, or tramway at its own host source.</p>
+        <p><a href="https://www.athra.asn.au/membership/members/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">New Zealand and Rarotonga</p>
+        <h3>Federation of Rail Organisations of New Zealand Members</h3>
+        <p class="source-count">60+</p>
+        <p>FRONZ describes itself as representing more than 60 heritage rail, tramway, and museum groups in New Zealand and Rarotonga.</p>
+        <p class="meta">Use as a candidate discovery signal; keep current trip details with the listed host organization.</p>
+        <p><a href="https://fronz.org.nz/members/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
+      </article>
+<article class="source-hub">
+        <p class="story-label">Asia-Pacific</p>
+        <h3>Asia Pacific Heritage and Tourist Rail Organisation</h3>
+        <p class="source-count">scope signal</p>
+        <p>APHTRO points toward heritage and tourist railway work across Oceania, East Asia, South Asia, Southeast Asia, and the Middle East.</p>
+        <p class="meta">Use as a candidate discovery rail for regional leads before any place earns a public card.</p>
+        <p><a href="https://aphtro.info/" target="_blank" rel="noopener noreferrer">Follow this source rail</a></p>
       </article>
         </div>
       </section>
