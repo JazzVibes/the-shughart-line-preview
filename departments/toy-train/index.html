@@ -345,11 +345,51 @@
 	      text-transform: uppercase;
 	      letter-spacing: 0.14em;
 	    }
-	    .route-note {
-	      color: var(--muted);
-	      font-family: system-ui, sans-serif;
-	      font-size: 0.88rem;
-	    }
+		    .route-note {
+		      color: var(--muted);
+		      font-family: system-ui, sans-serif;
+		      font-size: 0.88rem;
+		    }
+    .site-search-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      max-width: 780px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.88);
+    }
+    .site-search-form input {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      color: var(--ink);
+      padding: 11px 12px;
+      font: 600 1rem/1.2 system-ui, sans-serif;
+    }
+    .site-search-form button {
+      border: 1px solid var(--rail);
+      background: var(--rail);
+      color: #fffaf1;
+      padding: 0 18px;
+      font: 800 0.8rem/1.2 system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .site-search-summary {
+      color: var(--muted);
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+    }
+    .site-search-results {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .site-search-result {
+      border-left: 4px solid var(--brass);
+    }
+    .site-search-result h3 a { color: var(--rail); }
 	    .places-intro {
 	      display: grid;
 	      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
@@ -513,8 +553,9 @@
 	      nav a { flex: 1 1 50%; }
 	      nav a:nth-of-type(5) { flex-basis: 100%; }
 	      nav a:nth-of-type(6), nav a:nth-of-type(7) { flex-basis: 50%; }
-	      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
-	      .desks { grid-template-columns: 1fr; }
+		      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
+      .site-search-form { grid-template-columns: 1fr; }
+		      .desks { grid-template-columns: 1fr; }
       .department-hero-picture { margin-inline: auto; min-height: 190px; }
       .place-stats { grid-template-columns: 1fr; }
       .story-row { grid-template-columns: 1fr; }
@@ -545,8 +586,8 @@
       <a href="../../archive/2026-06-06/index.html">Archive</a>
       <a href="../../submit-news/index.html">Submit</a>
       <a href="../../about/index.html">About</a>
-      <form class="nav-search" role="search" action="../../places/index.html">
-        <input name="q" type="search" placeholder="Search places, stories, events..." aria-label="Search places, stories, events">
+      <form class="nav-search" role="search" action="../../search/index.html">
+        <input name="q" type="search" placeholder="Search the whole line..." aria-label="Search the whole website">
         <button type="submit" aria-label="Search"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="14"/><path d="m39 39 11 11"/></svg></button>
       </form>
     </nav>
@@ -705,6 +746,13 @@
       </article>
 <article class="route-card host-source">
         <p class="route-kind">Host Source</p>
+        <h3>Maerklineum</h3>
+        <p class="meta">Toy train and model railway heritage | Marklin, Model Railway, Toy Train, Museum</p>
+        <p>A German model railway museum where Maerklin history, toy-train craft, and a large operating railroad stay in public view.</p>
+        <p><a href="https://www.maerklineum.de/en/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
+      </article>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
         <h3>HZERO Model Railway Museum</h3>
         <p class="meta">Model railway museums and attractions | Model railroad, Museum, Italy, Visitor Experience</p>
         <p>A Florence model railway museum where craft, travel, and imagination meet.</p>
@@ -716,6 +764,13 @@
         <p class="meta">Model railway museums and attractions | Model railroad, Museum, Japan, Visitor Experience</p>
         <p>A Yokohama model railway museum built around a major international collection.</p>
         <p><a href="https://www.hara-mrm.com/english/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
+      </article>
+<article class="route-card host-source">
+        <p class="route-kind">Host Source</p>
+        <h3>Kamin Science Center Miniature Railroad &amp; Village</h3>
+        <p class="meta">Toy train and model railroad on-ramp | Model railroad, Miniature Village, Family Visit, Pittsburgh History</p>
+        <p>A Pittsburgh miniature railroad and village where family wonder carries regional history around the room.</p>
+        <p><a href="https://kaminsciencecenter.org/exhibits/miniature-railroad/" target="_blank" rel="noopener noreferrer">Visit host source</a></p>
       </article>
 <article class="route-card host-source">
         <p class="route-kind">Host Source</p>

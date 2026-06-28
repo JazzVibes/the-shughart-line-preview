@@ -345,11 +345,51 @@
 	      text-transform: uppercase;
 	      letter-spacing: 0.14em;
 	    }
-	    .route-note {
-	      color: var(--muted);
-	      font-family: system-ui, sans-serif;
-	      font-size: 0.88rem;
-	    }
+		    .route-note {
+		      color: var(--muted);
+		      font-family: system-ui, sans-serif;
+		      font-size: 0.88rem;
+		    }
+    .site-search-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      max-width: 780px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.88);
+    }
+    .site-search-form input {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      color: var(--ink);
+      padding: 11px 12px;
+      font: 600 1rem/1.2 system-ui, sans-serif;
+    }
+    .site-search-form button {
+      border: 1px solid var(--rail);
+      background: var(--rail);
+      color: #fffaf1;
+      padding: 0 18px;
+      font: 800 0.8rem/1.2 system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .site-search-summary {
+      color: var(--muted);
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+    }
+    .site-search-results {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .site-search-result {
+      border-left: 4px solid var(--brass);
+    }
+    .site-search-result h3 a { color: var(--rail); }
 	    .places-intro {
 	      display: grid;
 	      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
@@ -513,8 +553,9 @@
 	      nav a { flex: 1 1 50%; }
 	      nav a:nth-of-type(5) { flex-basis: 100%; }
 	      nav a:nth-of-type(6), nav a:nth-of-type(7) { flex-basis: 50%; }
-	      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
-	      .desks { grid-template-columns: 1fr; }
+		      .nav-search { flex: 1 1 100%; margin-left: 0; border-top: 1px dashed var(--line); }
+      .site-search-form { grid-template-columns: 1fr; }
+		      .desks { grid-template-columns: 1fr; }
       .department-hero-picture { margin-inline: auto; min-height: 190px; }
       .place-stats { grid-template-columns: 1fr; }
       .story-row { grid-template-columns: 1fr; }
@@ -545,8 +586,8 @@
       <a href="../archive/2026-06-06/index.html">Archive</a>
       <a href="../submit-news/index.html">Submit</a>
       <a href="../about/index.html">About</a>
-      <form class="nav-search" role="search" action="../places/index.html">
-        <input name="q" type="search" placeholder="Search places, stories, events..." aria-label="Search places, stories, events">
+      <form class="nav-search" role="search" action="../search/index.html">
+        <input name="q" type="search" placeholder="Search the whole line..." aria-label="Search the whole website">
         <button type="submit" aria-label="Search"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="14"/><path d="m39 39 11 11"/></svg></button>
       </form>
     </nav>
@@ -566,7 +607,7 @@
           <p>There are train rides, museums, depots, preserved lines, and railroad rooms in nearly every part of the world. We are building the board one source at a time, then sending you to the host source before you travel.</p>
           <p>This is the first board, not the whole railroad map yet. It gives you a starting route and keeps room for the line to grow.</p>
           <div class="place-stats" aria-label="Directory coverage">
-            <div class="place-stat"><strong>174</strong><span>first stops on the board</span></div>
+            <div class="place-stat"><strong>176</strong><span>first stops on the board</span></div>
             <div class="place-stat"><strong>24</strong><span>countries on the board</span></div>
             <div class="place-stat"><strong>77</strong><span>Americas starting points</span></div>
             <div class="place-stat"><strong>48</strong><span>wider rooms to follow</span></div>
@@ -702,13 +743,16 @@
 <option value="local_rail_history">Local Rail History</option>
 <option value="locomotive_collection">Locomotive collection</option>
 <option value="locomotives">Locomotives</option>
+<option value="manufacturer_history">Manufacturer History</option>
 <option value="mexican_rail_history">Mexican Rail History</option>
 <option value="mexico_central_caribbean_board">Mexico, Central America, and Caribbean</option>
 <option value="midwest">Midwest</option>
 <option value="miniature_railway">Miniature railway</option>
+<option value="miniature_village">Miniature Village</option>
 <option value="miniature_world">Miniature World</option>
 <option value="mining_railway">Mining railway</option>
 <option value="model_railroad">Model railroad</option>
+<option value="model_railway">Model Railway</option>
 <option value="model_trains">Model Trains</option>
 <option value="mountain_rail_context">Mountain rail context</option>
 <option value="mountain_railroad">Mountain Railroad</option>
@@ -749,6 +793,7 @@
 <option value="rail_preservation">Rail Preservation</option>
 <option value="rail_travel">Rail Travel</option>
 <option value="railroad_artifacts">Railroad Artifacts</option>
+<option value="regional_history">Regional History</option>
 <option value="research_archive">Research Archive</option>
 <option value="restoration">Restoration</option>
 <option value="riverboat">Riverboat</option>
@@ -779,6 +824,7 @@
 <option value="tickets">Tickets</option>
 <option value="tourist_railway">Tourist Railway</option>
 <option value="toy_train">Toy Train</option>
+<option value="toy_train_history">Toy Train History</option>
 <option value="toy_train_museum">Toy Train Museum</option>
 <option value="toy_trains">Toy trains</option>
 <option value="traction_heritage">Traction Heritage</option>
@@ -801,7 +847,7 @@
           </select>
         </label>
       </section>
-      <p class="place-count" data-place-count>251 routes on the board</p>
+      <p class="place-count" data-place-count>253 routes on the board</p>
       <section class="place-grid" aria-label="Heritage rail places">
 <article class="place-card" data-place-card data-search="cumbres &amp; toltec scenic railroad united states colorado / new mexico chama / antonito scenic_heritage_railway a high-country narrow-gauge steam ride where the old mountain railroad story still moves on the timetable. cumbres toltec scenic railroad united states steam narrow gauge colorado new mexico chama antonito mountain scenery heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United States" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
         <p class="story-label">United States</p>
@@ -3221,6 +3267,34 @@
         </div>
         <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
         <p><a href="https://www.nrm.gov.tw/en/cp.aspx?n=3388" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="maerklineum germany baden-wuerttemberg goeppingen model_railroad_museum a goeppingen model railway museum where visitors can follow maerklin history, toy-train craft, and a large operating model railroad back to the host source. maerklineum goeppingen germany marklin model railway toy train museum family visit model_railway toy_train_history family_visit manufacturer_history" data-country="Germany" data-experiences="model_railway toy_train_history family_visit manufacturer_history">
+        <p class="story-label">Germany</p>
+        <h3>Maerklineum</h3>
+        <p class="meta">Goeppingen, Baden-Wuerttemberg / Model Railroad Museum</p>
+        <p>A Goeppingen model railway museum where visitors can follow Maerklin history, toy-train craft, and a large operating model railroad back to the host source.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Model Railway</span>
+          <span>Toy Train History</span>
+          <span>Family Visit</span>
+          <span>Manufacturer History</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.maerklineum.de/en/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="kamin science center miniature railroad &amp; village united states pennsylvania pittsburgh model_railroad_museum a pittsburgh miniature railroad and village where model trains carry western pennsylvania history, family memory, and visitor wonder in one room. kamin science center miniature railroad village pittsburgh pennsylvania united states model railroad family visit western pennsylvania history model_railroad miniature_village family_visit regional_history" data-country="United States" data-experiences="model_railroad miniature_village family_visit regional_history">
+        <p class="story-label">United States</p>
+        <h3>Kamin Science Center Miniature Railroad &amp; Village</h3>
+        <p class="meta">Pittsburgh, Pennsylvania / Model Railroad Museum</p>
+        <p>A Pittsburgh miniature railroad and village where model trains carry Western Pennsylvania history, family memory, and visitor wonder in one room.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Model railroad</span>
+          <span>Miniature Village</span>
+          <span>Family Visit</span>
+          <span>Regional History</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://kaminsciencecenter.org/exhibits/miniature-railroad/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
       </article>
       </section>
       <section class="starter-section">
