@@ -229,12 +229,54 @@
 	    .desk { padding: 18px 16px; border-right: 1px dashed var(--line); text-align: center; background: rgba(255, 250, 241, 0.82); }
     .desk:last-child { border-right: 0; }
     .desk .icon { width: 96px; height: 96px; margin: 0 auto 8px; display: grid; place-items: center; background: transparent; }
-    .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
-    .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
-    .places-intro {
-      display: grid;
-      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
+	    .desk .icon img { width: 96px; height: 96px; object-fit: contain; mix-blend-mode: multiply; }
+	    .desk h3 { color: var(--rail); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.05em; }
+	    .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
+	    .department-hero {
+	      display: grid;
+	      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+	      gap: 24px;
+	      align-items: start;
+	      border-top: 3px double var(--rail);
+	      border-bottom: 1px solid var(--line);
+	      padding: 20px 0;
+	      margin-bottom: 18px;
+	    }
+	    .department-hero h2 {
+	      margin: 0;
+	      color: var(--rail);
+	      font-size: clamp(2rem, 5vw, 3.5rem);
+	      line-height: 1;
+	    }
+	    .department-deck {
+	      margin-top: 0;
+	      color: var(--muted);
+	      font-size: 1.08rem;
+	      line-height: 1.55;
+	    }
+	    .route-grid {
+	      display: grid;
+	      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	      gap: 12px;
+	    }
+	    .route-card h3 { color: var(--rail); }
+	    .route-card.source-rail { border-color: rgba(167, 123, 36, 0.7); }
+	    .route-kind {
+	      display: inline-block;
+	      margin: 0 0 8px;
+	      color: var(--accent);
+	      font: 800 0.68rem/1.2 system-ui, sans-serif;
+	      text-transform: uppercase;
+	      letter-spacing: 0.14em;
+	    }
+	    .route-note {
+	      color: var(--muted);
+	      font-family: system-ui, sans-serif;
+	      font-size: 0.88rem;
+	    }
+	    .places-intro {
+	      display: grid;
+	      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 1fr);
       gap: 18px;
       align-items: start;
       border-top: 3px double var(--rail);
@@ -371,7 +413,7 @@
       .ticket, .masthead-art { display: none; }
       h1, .deck { text-align: center; }
       .masthead-rule { margin-left: auto; margin-right: auto; width: min(330px, 100%); }
-	      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .places-intro, .place-tools { grid-template-columns: 1fr; }
+		      .event-strip, .lead-grid, .lead-story, .feature-hero, .news-archive, .places-intro, .place-tools, .department-hero { grid-template-columns: 1fr; }
 	      .desks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	    }
     @media (max-width: 560px) {
@@ -460,7 +502,7 @@
       </article>
     </section>
     <section class="desks" aria-label="Editorial desks">
-      <article class="desk">
+	      <article class="desk">
         <div class="icon"><img src="assets/shughart-portal/icon-s-gauge.png" alt=""></div>
         <h3>S Gauge / American Flyer</h3>
         <ul>
@@ -469,7 +511,7 @@
           <li>Layouts and operations</li>
           <li>Club happenings</li>
         </ul>
-        <a href="https://www.nasg.org/" target="_blank" rel="noopener noreferrer">Browse all S gauge</a>
+        <a href="departments/s-gauge-american-flyer/index.html">Enter the S gauge room</a>
       </article>
 <article class="desk">
         <div class="icon"><img src="assets/shughart-portal/icon-collector.png" alt=""></div>
@@ -480,7 +522,7 @@
           <li>Lionel and tinplate</li>
           <li>Auction and meet notes</li>
         </ul>
-        <a href="https://www.tcatrains.org/about-tca/" target="_blank" rel="noopener noreferrer">Explore toy trains</a>
+        <a href="departments/toy-train/index.html">Enter the toy train room</a>
       </article>
 <article class="desk">
         <div class="icon"><img src="assets/shughart-portal/icon-florida.png" alt=""></div>
@@ -491,7 +533,7 @@
           <li>Museums and displays</li>
           <li>Stories from the right-of-way</li>
         </ul>
-        <a href="places/index.html">Find rail places</a>
+        <a href="departments/rail-heritage/index.html">Enter rail heritage</a>
       </article>
 <article class="desk">
         <div class="icon"><img src="assets/shughart-portal/icon-private-varnish.png" alt=""></div>
@@ -502,7 +544,7 @@
           <li>Charters and excursions</li>
           <li>Rules of the road</li>
         </ul>
-        <a href="https://www.colonialpullman.com/about" target="_blank" rel="noopener noreferrer">Visit passenger rail</a>
+        <a href="departments/private-passenger-rail/index.html">Enter private passenger rail</a>
       </article>
 <article class="desk">
         <div class="icon"><img src="assets/shughart-portal/icon-pullman.png" alt=""></div>
@@ -513,7 +555,7 @@
           <li>Restoration notes</li>
           <li>Company-town memory</li>
         </ul>
-        <a href="https://friendsofpullman.com/" target="_blank" rel="noopener noreferrer">Explore Pullman</a>
+        <a href="departments/pullman-heritage/index.html">Enter Pullman heritage</a>
       </article>
 <article class="desk">
         <div class="icon"><img src="assets/shughart-portal/icon-signal.png" alt=""></div>
@@ -524,9 +566,9 @@
           <li>Trackside culture</li>
           <li>Music on the line</li>
         </ul>
-        <a href="https://fcwinds.org/home/endowed-chairs" target="_blank" rel="noopener noreferrer">Check signal &amp; sound</a>
+        <a href="departments/signal-and-sound/index.html">Enter signal and sound</a>
       </article>
-    </section>
+	    </section>
     <section class="news-archive">
       <section>
       <h2>Latest Stories</h2>
