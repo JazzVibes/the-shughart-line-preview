@@ -132,8 +132,9 @@
     .desk ul { list-style: none; padding: 0; margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
     .news-archive { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 26px; margin-top: 24px; }
     .story-list { display: grid; gap: 12px; }
-    .story-row { display: grid; grid-template-columns: 86px 1fr; gap: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
-    .story-mark { background: var(--paper-deep); border: 1px solid var(--line); display: grid; place-items: center; min-height: 70px; color: var(--rail); }
+    .story-row { display: grid; grid-template-columns: minmax(138px, 0.42fr) minmax(0, 1fr); gap: 16px; padding-top: 12px; border-top: 1px solid var(--line); align-items: center; }
+    .story-mark { background: var(--paper-deep); border: 1px solid var(--line); display: grid; place-items: center; min-height: 104px; aspect-ratio: 13 / 8; color: var(--rail); overflow: hidden; }
+    .story-mark img { width: 100%; height: 100%; object-fit: contain; padding: 8px; display: block; mix-blend-mode: multiply; }
     .story-mark svg { width: 42px; height: 42px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
     .archive-ticket-wrap { position: relative; width: min(100%, 310px); margin: 4px 0 14px; }
     .archive-ticket { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
@@ -324,7 +325,7 @@
       <h2>Latest Stories</h2>
       <div class="story-list">
         <article class="story-row">
-          <div class="story-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 42h50M12 48h40M15 50a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm14 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm20 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="M10 34h18l5-10h12l7 10h5v8H10zM29 34h21M14 28h10m23-10v9M41 18h12"/><path d="M17 31h5m14 0h5m6 0h4"/></svg></div>
+          <div class="story-mark"><img src="assets/story-art/nasg-source-trail.png" alt="Engraved S-gauge train beside a source map and rail lantern" loading="lazy"></div>
           <div>
             <p class="story-label">Feature</p>
             <h3>NASG keeps the S-gauge source trail on the right track</h3>
@@ -333,7 +334,7 @@
           </div>
         </article>
 <article class="story-row">
-          <div class="story-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 18h32v32H16zM16 26h32M23 14v8m18-8v8"/><path d="M23 34h6m6 0h6M23 42h6m6 0h6"/></svg></div>
+          <div class="story-mark"><img src="assets/story-art/florida-rail-fair.png" alt="Engraved Florida rail fair with model-train tables and depot hall" loading="lazy"></div>
           <div>
             <p class="story-label">Events</p>
             <h3>Florida Rail Fair gives the ticker a first practical stop</h3>
@@ -342,7 +343,7 @@
           </div>
         </article>
 <article class="story-row">
-          <div class="story-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M14 25h36v18H14zM20 20h24v5M18 48h28M23 43v5m18-5v5"/><circle cx="23" cy="48" r="3"/><circle cx="41" cy="48" r="3"/></svg></div>
+          <div class="story-mark"><img src="assets/story-art/private-varnish-context.png" alt="Engraved private passenger railcar with timetable and source papers" loading="lazy"></div>
           <div>
             <p class="story-label">Operating Rules</p>
             <h3>Private-car sources belong in context, not sales copy</h3>
