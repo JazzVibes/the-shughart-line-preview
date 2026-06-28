@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Draft - The Shughart Line</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #52606d;
+      --line: #cfd7df;
+      --paper: #f7f9fb;
+      --accent: #8a2f1f;
+      --accent-soft: #fff1ed;
+      --rail: #1f5f6b;
+      --rail-soft: #e9f6f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: white;
+      line-height: 1.5;
+    }
+    header, main, footer { max-width: 1120px; margin: 0 auto; padding: 24px; }
+    header { border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--accent); font: 700 0.8rem/1.2 system-ui, sans-serif; text-transform: uppercase; }
+    h1 { margin: 6px 0 10px; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 28px 0 12px; font-size: 1.45rem; letter-spacing: 0; }
+    h3 { margin: 0 0 6px; font-size: 1.05rem; letter-spacing: 0; }
+    p { max-width: 72ch; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; font-family: system-ui, sans-serif; }
+    nav a {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      padding: 8px 10px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.92rem;
+    }
+    nav a[aria-current="page"] { background: var(--rail-soft); border-color: var(--rail); }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      padding: 12px 14px;
+      max-width: 78ch;
+      font-family: system-ui, sans-serif;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    article, .panel {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 16px;
+      background: var(--paper);
+    }
+    .meta { color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.9rem; }
+    a { color: var(--rail); }
+    table { border-collapse: collapse; width: 100%; font-family: system-ui, sans-serif; font-size: 0.92rem; }
+    th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--rail-soft); }
+    .sponsor { border-color: var(--accent); background: #fffaf8; }
+    .sponsor strong { color: var(--accent); }
+    footer { color: var(--muted); border-top: 1px solid var(--line); font-family: system-ui, sans-serif; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Public preview</div>
+    <h1>Privacy Draft</h1>
+    <p>This public preview shows the shape of a bulletin board, source list, event page, archive, and correction route. It is not a final public launch.</p>
+    <nav aria-label="Preview navigation">
+      <a href="index.html">Front</a>
+      <a href="sources/index.html">Sources</a>
+      <a href="events/index.html">Events</a>
+      <a href="archive/2026-06-06/index.html">Archive</a>
+      <a href="submit-news/index.html">Submit</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="accessibility.html">Accessibility</a>
+    </nav>
+  </header>
+  <main>
+    <section class="panel">
+      <p>This draft public page explains that the first version uses outbound links, public directory data, source submissions, minimal analytics if approved, and manual correction routes.</p>
+      <p>No reader accounts, public lead database, private inquiry records, or private reviewer notes belong in the public alpha page set.</p>
+    </section>
+  </main>
+  <footer>
+    Generated public preview. Public launch remains blocked until approval, source review, workload, sponsor, and privacy gates close.
+  </footer>
+</body>
+</html>

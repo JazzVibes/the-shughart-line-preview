@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-06-28T00:33:22.324Z",
+  "output": "public-preview",
+  "sourceRecords": 29,
+  "publicRecords": 29,
+  "events": 9,
+  "sponsorProspects": 25,
+  "publicPages": [
+    "index.html",
+    "sources/index.html",
+    "events/index.html",
+    "archive/2026-06-06/index.html",
+    "submit-news/index.html",
+    "privacy.html",
+    "accessibility.html"
+  ],
+  "privatePages": [],
+  "publicPreviewPackage": true,
+  "publicPreviewBoundary": "Generated from public-safe fields only. Private review pages are omitted from this package."
+}
