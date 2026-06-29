@@ -607,7 +607,7 @@
           <p>There are train rides, museums, depots, preserved lines, and railroad rooms in nearly every part of the world. We are building the board one source at a time, then sending you to the host source before you travel.</p>
           <p>This is the first board, not the whole railroad map yet. It gives you a starting route and keeps room for the line to grow.</p>
           <div class="place-stats" aria-label="Directory coverage">
-            <div class="place-stat"><strong>248</strong><span>first stops on the board</span></div>
+            <div class="place-stat"><strong>256</strong><span>first stops on the board</span></div>
             <div class="place-stat"><strong>30</strong><span>countries on the board</span></div>
             <div class="place-stat"><strong>77</strong><span>Americas starting points</span></div>
             <div class="place-stat"><strong>49</strong><span>wider rooms to follow</span></div>
@@ -711,6 +711,7 @@
 <option value="cruise_rail">Cruise rail</option>
 <option value="depot_history">Depot History</option>
 <option value="depot_museum">Depot Museum</option>
+<option value="depot_setting">Depot Setting</option>
 <option value="dome_railcar">Dome railcar</option>
 <option value="education">Education</option>
 <option value="electric_railway">Electric Railway</option>
@@ -726,10 +727,12 @@
 <option value="family_programming">Family Programming</option>
 <option value="family_ride">Family ride</option>
 <option value="family_train_ride">Family Train Ride</option>
+<option value="family_trip">Family Trip</option>
 <option value="family_visit">Family Visit</option>
 <option value="flagstop_train">Flagstop train</option>
 <option value="forestry_history">Forestry History</option>
 <option value="former_roundhouse">Former Roundhouse</option>
+<option value="freight_railroad_context">Freight Railroad Context</option>
 <option value="glacier_route">Glacier route</option>
 <option value="guatemala_rail_history">Guatemala Rail History</option>
 <option value="hands_on_museum">Hands On Museum</option>
@@ -743,6 +746,7 @@
 <option value="high_speed_rail_context">High-speed rail context</option>
 <option value="historic_district">Historic District</option>
 <option value="historic_homes">Historic Homes</option>
+<option value="historic_railway">Historic Railway</option>
 <option value="historic_shops">Historic Shops</option>
 <option value="historic_station">Historic Station</option>
 <option value="historical_society">Historical Society</option>
@@ -760,6 +764,7 @@
 <option value="international_railway">International Railway</option>
 <option value="interurban_railway">Interurban Railway</option>
 <option value="iowa">Iowa</option>
+<option value="island_rail_history">Island Rail History</option>
 <option value="island_railway">Island Railway</option>
 <option value="labor_history">Labor History</option>
 <option value="lake_erie_region">Lake Erie Region</option>
@@ -801,16 +806,19 @@
 <option value="national_historic_site">National Historic Site</option>
 <option value="national_historical_park">National Historical Park</option>
 <option value="national_park">National Park</option>
+<option value="national_park_gateway">National Park Gateway</option>
 <option value="national_park_route">National Park Route</option>
 <option value="new_england_rail_history">New England Rail History</option>
 <option value="new_york_central">New York Central</option>
 <option value="nickel_plate">Nickel Plate</option>
+<option value="nickel_plate_history">Nickel Plate History</option>
 <option value="northern_bc_rail_history">Northern Bc Rail History</option>
 <option value="o_gauge">O Gauge</option>
 <option value="oklahoma_rail_history">Oklahoma Rail History</option>
 <option value="ontario_rail_history">Ontario Rail History</option>
 <option value="operating_museum">Operating Museum</option>
 <option value="outback_scenery">Outback scenery</option>
+<option value="ozark_scenery">Ozark Scenery</option>
 <option value="pacific_northwest_rail_history">Pacific Northwest history</option>
 <option value="paraguay_rail_history">Paraguay Rail History</option>
 <option value="passenger_car">Passenger Car</option>
@@ -845,14 +853,17 @@
 <option value="rail_heritage">Rail heritage</option>
 <option value="rail_history">Rail history</option>
 <option value="rail_history_source">Rail history source</option>
+<option value="rail_hotel_context">Rail Hotel Context</option>
 <option value="rail_museum">Railroad museum</option>
 <option value="rail_preservation">Rail Preservation</option>
 <option value="rail_travel">Rail Travel</option>
+<option value="railbike_ride">Railbike Ride</option>
 <option value="railroad_artifacts">Railroad Artifacts</option>
 <option value="railroad_room">Railroad Room</option>
 <option value="railroad_theme_park">Railroad Theme Park</option>
 <option value="railroad_worker_history">Railroad Worker History</option>
 <option value="railway_cultural_space">Railway Cultural Space</option>
+<option value="red_clay_valley">Red Clay Valley</option>
 <option value="regional_history">Regional History</option>
 <option value="research_archive">Research Archive</option>
 <option value="restoration">Restoration</option>
@@ -900,6 +911,7 @@
 <option value="toy_train_on_ramp">Toy Train On Ramp</option>
 <option value="toy_trains">Toy trains</option>
 <option value="traction_heritage">Traction Heritage</option>
+<option value="train_excursions">Train Excursions</option>
 <option value="train_ride">Train Ride</option>
 <option value="tramway">Tramway</option>
 <option value="tramway_ride">Tramway Ride</option>
@@ -927,7 +939,7 @@
           </select>
         </label>
       </section>
-      <p class="place-count" data-place-count>325 routes on the board</p>
+      <p class="place-count" data-place-count>333 routes on the board</p>
       <section class="place-grid" aria-label="Heritage rail places">
 <article class="place-card" data-place-card data-search="cumbres &amp; toltec scenic railroad united states colorado / new mexico chama / antonito scenic_heritage_railway a high-country narrow-gauge steam ride where the old mountain railroad story still moves on the timetable. cumbres toltec scenic railroad united states steam narrow gauge colorado new mexico chama antonito mountain scenery heritage railway steam_train_ride narrow_gauge mountain_scenery heritage_railway" data-country="United States" data-experiences="steam_train_ride narrow_gauge mountain_scenery heritage_railway">
         <p class="story-label">United States</p>
@@ -4383,6 +4395,118 @@
         </div>
         <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
         <p><a href="https://www.mrym.org/stair-tower-signals" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="grand canyon railway united states arizona williams / grand canyon village heritage_train_ride an arizona train route where a depot town, canyon country, and family rail travel meet before the host timetable takes over. grand canyon railway united states arizona williams grand canyon village heritage train national park gateway family rail travel heritage_train_ride national_park_gateway family_trip rail_hotel_context" data-country="United States" data-experiences="heritage_train_ride national_park_gateway family_trip rail_hotel_context">
+        <p class="story-label">United States</p>
+        <h3>Grand Canyon Railway</h3>
+        <p class="meta">Williams / Grand Canyon Village, Arizona / Heritage train ride</p>
+        <p>An Arizona train route where a depot town, canyon country, and family rail travel meet before the host timetable takes over.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>National Park Gateway</span>
+          <span>Family Trip</span>
+          <span>Rail Hotel Context</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.thetrain.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="arkansas &amp; missouri railroad united states arkansas / missouri springdale / van buren scenic_heritage_railway an ozark-region railroad route where public excursions ride over a working railroad source trail. arkansas missouri railroad united states arkansas missouri springdale van buren ozark excursion train scenic heritage railway excursion_train ozark_scenery family_trip freight_railroad_context" data-country="United States" data-experiences="excursion_train ozark_scenery family_trip freight_railroad_context">
+        <p class="story-label">United States</p>
+        <h3>Arkansas &amp; Missouri Railroad</h3>
+        <p class="meta">Springdale / Van Buren, Arkansas / Missouri / Scenic heritage railway</p>
+        <p>An Ozark-region railroad route where public excursions ride over a working railroad source trail.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Excursion Train</span>
+          <span>Ozark Scenery</span>
+          <span>Family Trip</span>
+          <span>Freight Railroad Context</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.amrailroad.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="wilmington &amp; western railroad united states delaware wilmington / greenbank heritage_train_ride a delaware heritage railway where the red clay valley gives families a public ride into local railroad memory. wilmington western railroad united states delaware wilmington greenbank red clay valley steam train heritage railway family ride steam_train_ride heritage_railway family_trip red_clay_valley" data-country="United States" data-experiences="steam_train_ride heritage_railway family_trip red_clay_valley">
+        <p class="story-label">United States</p>
+        <h3>Wilmington &amp; Western Railroad</h3>
+        <p class="meta">Wilmington / Greenbank, Delaware / Heritage train ride</p>
+        <p>A Delaware heritage railway where the Red Clay Valley gives families a public ride into local railroad memory.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Steam train ride</span>
+          <span>Heritage railway</span>
+          <span>Family Trip</span>
+          <span>Red Clay Valley</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://wwrr.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="hawaiian railway society united states hawaii ewa / oahu rail_museum an oahu railway society and ride where island railroad history stays close to the public source. hawaiian railway society united states hawaii oahu ewa rail museum historic railway family ride island rail history rail_museum historic_railway family_ride island_rail_history" data-country="United States" data-experiences="rail_museum historic_railway family_ride island_rail_history">
+        <p class="story-label">United States</p>
+        <h3>Hawaiian Railway Society</h3>
+        <p class="meta">Ewa / Oahu, Hawaii / Railroad museum</p>
+        <p>An Oahu railway society and ride where island railroad history stays close to the public source.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Historic Railway</span>
+          <span>Family ride</span>
+          <span>Island Rail History</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.hawaiianrailway.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="nickel plate express united states indiana noblesville heritage_train_ride an indiana train and railbike route where the nickel plate name gives visitors a friendly doorway into local rail history. nickel plate express united states indiana noblesville excursion train railbikes family trip nickel plate railroad history excursion_train railbike_ride family_trip nickel_plate_history" data-country="United States" data-experiences="excursion_train railbike_ride family_trip nickel_plate_history">
+        <p class="story-label">United States</p>
+        <h3>Nickel Plate Express</h3>
+        <p class="meta">Noblesville, Indiana / Heritage train ride</p>
+        <p>An Indiana train and railbike route where the Nickel Plate name gives visitors a friendly doorway into local rail history.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Excursion Train</span>
+          <span>Railbike Ride</span>
+          <span>Family Trip</span>
+          <span>Nickel Plate History</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://nickelplateexpress.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="abilene &amp; smoky valley railroad united states kansas abilene heritage_train_ride a kansas heritage railway where abilene depot memory and prairie railroad travel stay on the public board. abilene smoky valley railroad united states kansas abilene heritage train depot history prairie rail family ride heritage_train_ride depot_history family_trip prairie_rail_history" data-country="United States" data-experiences="heritage_train_ride depot_history family_trip prairie_rail_history">
+        <p class="story-label">United States</p>
+        <h3>Abilene &amp; Smoky Valley Railroad</h3>
+        <p class="meta">Abilene, Kansas / Heritage train ride</p>
+        <p>A Kansas heritage railway where Abilene depot memory and prairie railroad travel stay on the public board.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Heritage ride</span>
+          <span>Depot History</span>
+          <span>Family Trip</span>
+          <span>Prairie Rail History</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://asvrr.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="lake superior railroad museum united states minnesota duluth rail_museum a duluth rail museum stop where lake superior railroad memory, depot setting, and public excursions share the same room. lake superior railroad museum united states minnesota duluth rail museum train excursions depot family rail history rail_museum train_excursions family_history_stop depot_setting" data-country="United States" data-experiences="rail_museum train_excursions family_history_stop depot_setting">
+        <p class="story-label">United States</p>
+        <h3>Lake Superior Railroad Museum</h3>
+        <p class="meta">Duluth, Minnesota / Railroad museum</p>
+        <p>A Duluth rail museum stop where Lake Superior railroad memory, depot setting, and public excursions share the same room.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Railroad museum</span>
+          <span>Train Excursions</span>
+          <span>Family stop</span>
+          <span>Depot Setting</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://lsrm.org/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
+      </article>
+<article class="place-card" data-place-card data-search="heber valley railroad united states utah heber city scenic_heritage_railway a utah scenic railway where mountain views, seasonal trains, and family railroad trips meet the host timetable. heber valley railroad united states utah heber city scenic train heritage railway mountain scenery family trip scenic_train heritage_railway family_trip mountain_scenery" data-country="United States" data-experiences="scenic_train heritage_railway family_trip mountain_scenery">
+        <p class="story-label">United States</p>
+        <h3>Heber Valley Railroad</h3>
+        <p class="meta">Heber City, Utah / Scenic heritage railway</p>
+        <p>A Utah scenic railway where mountain views, seasonal trains, and family railroad trips meet the host timetable.</p>
+        <div class="badge-row" aria-label="What you can find here">
+          <span>Scenic Train</span>
+          <span>Heritage railway</span>
+          <span>Family Trip</span>
+          <span>Mountain scenery</span>
+        </div>
+        <p class="meta">Map: city and region are enough to start; confirm the exact stop with the host source.</p>
+        <p><a href="https://www.hebertrain.com/" target="_blank" rel="noopener noreferrer">Visit the host source</a></p>
       </article>
       </section>
       <section class="starter-section">
